@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="Struts2_admin" extends="struts-default"> 						
+		<action name="Download" class="testPaperAction" method="download">
+			<!-- 配置文件下载允许的类型 -->
+			
+			<result name="success" type="stream">  
+				
+				<param name="contentType">application/msword;charset=ISO8859-1</param> 
+				<param name="bufferSize">4096</param>  
+				<param name="inputName">inputStream</param> 
+				<param name="contentDisposition">attachment;filename="${downloadFileName}"</param>
+			</result>
+			<result name="input">/public/error.jsp</result>
+			
+		</action>
+		<action name="adminLogin" class="adminAction" method="login">
+			<result name="success">/admin/admin_default.jsp</result>
+			<result name="input">/login.jsp</result>
+			
+		</action>
+		<action name="adminLogout" class="adminAction" method="logout">
+			<result name="success">/login.jsp</result>
+			<result name="success1">/public/success.jsp</result>	
+		</action>
+		
+		<action name="adminChangePassword" class="adminAction" method="changePassword">
+			<result name="success" type="chain">
+				<param name="actionName">adminLogout</param>
+			</result>
+			<result name="fail">/public/error.jsp</result>
+		</action>
+		
+		<action name="uploadQuestions" class="readXlsAction" method="uploadQuestions">
+			<result name="success">/admin/admin_luTiBatchAdd.jsp</result>
+			<result name="fail">/public/error.jsp</result>
+		</action>
+	</package> 
+	
+</struts>
+

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+	<context:annotation-config />
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="configLocation"
+			value="classpath:/hibernate.cfg.xml">
+		</property>
+	</bean>
+
+	<bean id="txManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<tx:annotation-driven transaction-manager="txManager" />
+
+	<bean id="studentDao" class="com.aspsystem.dao.StudentDaoImpl" />
+	<bean id="studentSerivce" class="com.aspsystem.serivce.StudentSerivceImpl" />
+	<bean id="studentAction" class="com.aspsystem.action.StudentAction" />
+	
+	<bean id="aanswerNoteDao" class="com.aspsystem.dao.AanswerNoteDaoImpl" />
+	<bean id="aanswerNoteSerivce" class="com.aspsystem.serivce.AanswerNoteSerivceImpl" />
+	<bean id="aanswerNoteAction" class="com.aspsystem.action.AanswerNoteAction" />
+	
+	<bean id="adminDao" class="com.aspsystem.dao.AdminDaoImpl" />
+	<bean id="adminSerivce" class="com.aspsystem.serivce.AdminSerivceImpl" />
+	<bean id="adminAction" class="com.aspsystem.action.AdminAction" />
+	
+	<bean id="classRankDao" class="com.aspsystem.dao.ClassRankDaoImpl" />
+	<bean id="classRankSerivce" class="com.aspsystem.serivce.ClassRankSerivceImpl" />
+	<bean id="classRankAction" class="com.aspsystem.action.ClassRankAction" />
+	
+	<bean id="courseDao" class="com.aspsystem.dao.CourseDaoImpl" />
+	<bean id="courseSerivce" class="com.aspsystem.serivce.CourseSerivceImpl" />
+	<bean id="courseAction" class="com.aspsystem.action.CourseAction" />
+	
+	<bean id="examDao" class="com.aspsystem.dao.ExamDaoImpl" />
+	<bean id="examSerivce" class="com.aspsystem.serivce.ExamSerivceImpl" />
+	<bean id="examAction" class="com.aspsystem.action.ExamAction" />
+	
+	<bean id="gradeDao" class="com.aspsystem.dao.GradeDaoImpl" />
+	<bean id="gradeSerivce" class="com.aspsystem.serivce.GradeSerivceImpl" />
+	<bean id="gradeAction" class="com.aspsystem.action.GradeAction" />
+	
+	<bean id="myClassDao" class="com.aspsystem.dao.MyClassDaoImpl" />
+	<bean id="myClassSerivce" class="com.aspsystem.serivce.MyClassSerivceImpl" />
+	<bean id="myClassAction" class="com.aspsystem.action.MyClassAction" />
+	
+	<bean id="questionsDao" class="com.aspsystem.dao.QuestionsDaoImpl" />
+	<bean id="questionsSerivce" class="com.aspsystem.serivce.QuestionsSerivceImpl" />
+	<bean id="questionsAction" class="com.aspsystem.action.QuestionsAction" />
+	
+	<bean id="teacherDao" class="com.aspsystem.dao.TeacherDaoImpl" />
+	<bean id="teacherSerivce" class="com.aspsystem.serivce.TeacherSerivceImpl" />
+	<bean id="teacherAction" class="com.aspsystem.action.TeacherAction" />
+	
+	<bean id="myDaoParent" class="com.aspsystem.util.MyDaoParent"/>
+	<bean id="testPaperAction" class="com.aspsystem.action.TestPaperAction"/>
+	<bean id="readXlsAction" class="com.aspsystem.action.ReadXlsAction"/>
+</beans>
+
+

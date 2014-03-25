@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="struts-paymentMethod" extends="struts-default"> 
+	
+		<!-- 分页显示支付信息 -->
+		<action name="showPaymentMethod_by_page" class="paymentMethodAction" method="showPaymentMethod_by_page">
+			<result name="success">/admin/showPaymentMethod.jsp</result>	
+			<result name="input">/admin/fail.jsp</result>		
+		</action>
+		
+		<!-- 查找支付方式 -->
+		<action name="findPaymentMethod" class="paymentMethodAction" method="findPaymentMethod">			
+		</action>
+		
+		<!-- 添加支付方式 -->
+		<action name="addPaymentMethod" class="paymentMethodAction" method="addPaymentMethod">		
+			<result name="success" type="chain">showPaymentMethod_by_page</result>	
+			<result name="input">/admin/fail.jsp</result>	
+		</action>
+
+		<!-- 修改支付方式 -->
+		<action name="changePaymentMethodName" class="paymentMethodAction" method="changePaymentMethodName">			
+		</action>
+		
+		<!-- 查看支付方式有没有使用 -->
+		<action name="findPaymentMethod_use" class="paymentMethodAction" method="findPaymentMethod_use">			
+		</action>
+		<action name="findAllPaymentMethod" class="paymentMethodAction" method="findAllPaymentMethod"></action>
+	</package> 
+</struts>

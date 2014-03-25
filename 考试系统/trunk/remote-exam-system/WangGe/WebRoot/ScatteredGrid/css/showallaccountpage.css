@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+#box1
+    {
+        width:500px;
+        height:25px;
+        }
+    #shang,#xia,#shang2,#xia2,#shang3,#xia3,#shang4,#xia4,#shang5,#xia5
+    {
+        width:420px;
+        height:25px;
+        margin:5px;
+        float:left;
+        }
+     .abc
+     {
+         display:none;
+         }
+    #btn,#btn2,#btn3,#btn4,#btn5
+    {
+        position:relative;
+        left:5px;
+        top:4px;
+        border-style:none;
+        width:45px;
+        height:25px;
+        background-color:White;
+        }
+    input,textarea{ 
+		border: 1px solid #f00;
+		background: #fcc;
+	}
+	#div_sure{
+		width:590px;
+        height:auto;
+        float:right;
+	}
+	
+	.text_red{
+	color: red;
+}
+
+.text_black{
+	color: black;
+}
+ 

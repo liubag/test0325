@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+.mydnew_break {
+    background-color: #FFFFFF;
+    line-height: 18px;
+    padding: 12px 0 11px;
+    width: 960px;
+}
+.addr_list{
+	margin-top:10px;	
+}
+.addr_list th{
+	background: none repeat scroll 0 0 #F9F9F9;
+    border: 0 none;
+    color: #444444;
+    height: 30px;
+    line-height: 30px;
+	width: 798px;
+} 
+.addr_list th.consignee{
+	 width: 12%;
+}
+.addr_list th.addr_detail{
+	
+}
+.addr_list th.phone{
+	 width: 12%;
+}
+.addr_list th.operate{
+	 width: 13%;
+}
+.addr_list td{
+	height:30px;
+}
+.title h3 {
+    background: none repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #999;
+    font-weight: bold;
+    margin: 0;
+	padding:10px 0 10px 0; 
+}
+.lable{
+	width:100px;
+	text-align:right;
+}
+ .addNewAddr tr{
+	height: 30px;
+}

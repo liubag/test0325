@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 配置文件说明， sitemap根节点,title是页面上显示的内容，
+	href是超链接，path是该请求页面的物理路径
+-->
+<sitemaps isroot="true">
+	<sitemap title="管理员后台首页" href="admin_default.jsp">
+		<node  title="录题" path="/admin/admin_luTiAdd.jsp" href="admin/admin_luTiAdd.jsp"/>
+		<node  title="题库管理" path="/admin/admin_luTiManager.jsp" href="admin/showQuestions_by_page.do"/>
+	</sitemap>
+	
+	<sitemap title="教师后台首页" href="yueJuan.jsp">
+		<node  title="查看成绩" path="/teacher/teacher_checkGrades.jsp" href="gainExamByTime.do"/>
+	</sitemap>
+</sitemaps>
+	

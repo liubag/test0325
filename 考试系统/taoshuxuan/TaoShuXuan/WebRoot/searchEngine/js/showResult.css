@@ -1,0 +1,148 @@
+#search_info{
+	   border-bottom: 1px solid #CCCCCC;
+    height: 30px;
+    overflow: hidden;
+    padding: 10px 0 4px;
+    width: 800px;
+}
+.clearfix:after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+.result_list li {
+    border-bottom: 1px solid #DDDDDD;
+    display: block;
+    overflow: hidden;
+    padding: 18px 10px 14px;
+    vertical-align: middle;
+    width: 772px;
+}
+.result_list .listitem {
+    display: inline;
+    float: left;
+    line-height: 18px;
+}
+.result_list .pic {
+    border: 1px solid #DDDDDD;
+    height: 150px;
+    margin: 2px 0;
+    position: relative;
+    width: 150px;
+}
+.result_list .book_detail {
+    float: right;
+    overflow: hidden;
+    padding-left: 12px;
+    width: 576px;
+}
+
+.result_list .tip_list {
+    overflow: hidden;
+    width: 576px;
+}
+.result_list .tip_list li {
+    border: medium none;
+    height: auto;
+    padding: 0;
+    width: 576px;
+}
+
+.result_list .tip_list .main_title {
+    font-size: 14px;
+    height: 20px;
+}
+
+.result_list .tip_list .sub_title {
+    color: #666666;
+    font-size: 12px;
+    height: 27px;
+}
+
+.result_list .tip_list .star_level {
+    color: #666666;
+    height: 18px;
+    padding-top: 8px;
+}
+.result_list .tip_list .sub_title p {
+    background: url("../image/underline.png") repeat-x scroll left bottom transparent;
+    padding: 2px 0 7px;
+}
+img {
+    border: 0 none;
+}
+
+.result_list .tip_list .publisher_info {
+    color: #666666;
+    height: 18px;
+    overflow: hidden;
+}
+
+.result_list a{
+	color: #1A66B3;
+}
+.result_list a:hover{
+	text-decoration: underline;
+}
+.result_list .tip_list .book_content {
+    color: #878787;
+    height: 36px;
+    margin-top: 2px;
+}
+
+.result_list .tip_list .operate {
+    height: 23px;
+    overflow: hidden;
+    width: 158px;
+}
+
+.result_list .tip_list .price {
+    height: 18px;
+    overflow: hidden;
+    padding: 3px 0 2px;
+}
+
+.result_list .tip_list .price .price_d {
+    color: #CC3300;
+    font-family: Arial;
+    font-weight: bold;
+}
+.result_list .tip_list .price em {
+    padding-left: 1px;
+}
+.result_list .tip_list .price .price_m {
+    background: url("../image/bg_price_del.png") repeat-x scroll 0 9px transparent;
+    color: #9C9C9C;
+    font-family: Arial;
+    margin-left: 10px;
+}
+.result_list .tip_list .price .discount {
+    color: #5EA593;
+    margin: 0;
+    padding-left: 8px;
+}
+.result_list .tip_list .panel {
+    float: right;
+    margin-top: 8px;
+}
+.book_content p{
+	line-height:18px;
+}
+
+#book_img img{
+	max-height:150px;
+	max-width:150px;
+}
+#table2{
+	width:800px;
+}
+
+.keyword_font{
+	color: red;
+    font-size: 14px;
+    font-weight: bold;
+}

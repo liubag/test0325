@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="Struts2_questions" extends="struts-default"> 						
+		<action name="addQuestions" class="questionsAction" method="addQuestions">
+			<result name="success" type="chain">showQuestions_by_page</result>
+			<result name="input">/public/error.jsp</result>
+		</action>
+		
+		<action name="showQuestions_by_page" class="questionsAction" method="showQuestions_by_page">
+			<result name="success">/admin/admin_luTiManager.jsp</result>
+			<result name="input">/public/error.jsp</result>
+		</action>
+		
+		<action name="findQuestions" class="questionsAction" method="findQuestions">
+			
+		</action>
+		
+		<action name="checkQuestions" class="questionsAction" method="checkQuestions">
+			
+		</action>
+		
+		<action name="updateQuestions" class="questionsAction" method="updateQuestions">
+			<result name="success" type="chain">showQuestions_by_page</result>
+			<result name="input">/public/error.jsp</result>
+		</action>
+		
+		<action name="delQuestions" class="questionsAction" method="delQuestions">
+			<result name="success" type="chain">showQuestions_by_page</result>
+			<result name="input">/public/error.jsp</result>
+		</action>
+		
+		<action name="deletQuestionsBatch" class="questionsAction" method="deletQuestionsBatch">
+			<result name="success" type="chain">showQuestions_by_page</result>
+			<result name="input">/public/error.jsp</result>
+		</action>
+	</package> 
+	
+</struts>
+

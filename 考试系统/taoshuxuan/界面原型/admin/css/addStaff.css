@@ -1,0 +1,39 @@
+table{
+	text-align:center;
+	margin:0 auto;
+	font-size:16px;
+	margin-top: 30px;
+	
+}
+tr{
+	padding-top:10px;
+	line-height:40px;
+}
+td{
+	padding:20px,20px,20px,20px;
+}
+.button{
+	margin-top:10px;
+	margin-right:5px;
+}
+a {
+    color: #1A66B3;
+    text-decoration: none;
+}
+.mydnew_break {
+    background-color: #FFFFFF;
+    line-height: 18px;
+    padding: 12px 0 11px;
+    width: 960px;
+}
+.archives_title h2 {
+   background: none repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #999999;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 0;
+	font-size: 12px;
+}
+
+
+	

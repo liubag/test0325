@@ -1,0 +1,919 @@
+H2 {
+	FONT-SIZE: 12px; FONT-WEIGHT: normal;  margin: 0;
+}
+}
+H3 {
+	FONT-SIZE: 12px; FONT-WEIGHT: normal
+}
+.price_m {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; TEXT-DECORATION: line-through
+}
+.price_d {
+	FONT-FAMILY: Arial, Helvetica, sans-serif; COLOR: #c30
+}
+.login_content {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 20px; MARGIN: 0px auto; PADDING-LEFT: 108px; WIDTH: 750px; PADDING-RIGHT: 104px; FONT-FAMILY: Arial,"ËÎÌו"; BACKGROUND: #fff; COLOR: #404040; FONT-SIZE: 15px; PADDING-TOP: 20px
+}
+.login_content A {
+	FONT-FAMILY: "ËÎÌו"; COLOR: #1a66b3; TEXT-DECORATION: none
+}
+.login_content A:hover {
+	TEXT-DECORATION: underline
+}
+.login_content .login_content_dash {
+	POSITION: relative; WIDTH: 747px; PADDING-RIGHT: 3px; BACKGROUND: #e8e8e8
+}
+.login_content .login_content_dasht {
+	POSITION: absolute; LINE-HEIGHT: 0; WIDTH: 3px; DISPLAY: block; BACKGROUND: #fff; HEIGHT: 3px; FONT-SIZE: 0px; OVERFLOW: hidden; RIGHT: 0px; TOP: 0px
+}
+.login_content .login_content_dashb {
+	LINE-HEIGHT: 0; WIDTH: 747px; BACKGROUND: #e8e8e8; HEIGHT: 3px; MARGIN-LEFT: 3px; CLEAR: both; FONT-SIZE: 0px
+}
+.login_content .login_content_border {
+	BORDER-BOTTOM: #bfbfbf 1px solid; BORDER-LEFT: #bfbfbf 1px solid; PADDING-BOTTOM: 4px; PADDING-LEFT: 5px; WIDTH: 735px; PADDING-RIGHT: 5px; BACKGROUND: #fff; CLEAR: both; BORDER-TOP: #bfbfbf 1px solid; BORDER-RIGHT: #bfbfbf 1px solid; PADDING-TOP: 4px
+}
+.login_content_border H2 {
+	WIDTH: 735px; DISPLAY: block; BACKGROUND: url(../images/bg_login_t.gif) no-repeat 0px 0px; HEIGHT: 54px
+}
+.login_content_border H2 SPAN IMG {
+	MARGIN-TOP: -6px; DISPLAY: block; FLOAT: left
+}
+.login_content_border H2 A {
+	COLOR: #666
+}
+.login_content_border H2 A:hover {
+	COLOR: #666
+}
+.reg_title {
+	PADDING-LEFT: 102px;
+}
+.reg_title .img_welcome {
+	FLOAT: left
+}
+.regprompt {
+	FLOAT: right
+}
+.regprompt SPAN {
+	
+}
+.regprompt .txt_blue {
+	COLOR: #3366cc
+}
+.regprompt .txt_red {
+	COLOR: #cc3300
+}
+.reg_fail LI .button {
+	COLOR: #c30
+}
+.login_content_border .login_title_email_ok {
+	BACKGROUND: url(../images/email_reg_titlebar_1.gif) no-repeat; HEIGHT: 25px
+}
+.login_content_border .login_title_email_ok P {
+	TEXT-ALIGN: center; WIDTH: 49%; FLOAT: left;margin:0;
+}
+.login_content_border .login_title_email_ok P SPAN {
+	LINE-HEIGHT: 25px; DISPLAY: inline-block; COLOR: #999999
+}
+.login_content_border .login_title_email_ok P.nonce SPAN {
+	COLOR: #663300; FONT-WEIGHT: bold
+}
+.login_content_border .login_title {
+	BACKGROUND: url(../images/mobile_reg_bar.gif) no-repeat; HEIGHT: 25px
+}
+.login_content_border .title_2 {
+	BACKGROUND: url(../images/mobile_reg_bar_2.gif)
+}
+.login_content_border .reg_complete {
+	BACKGROUND: url(../images/mobile_reg_bar_3.gif) no-repeat; HEIGHT: 25px
+}
+.login_content_border .login_title P {
+	TEXT-ALIGN: center; WIDTH: 33%; FLOAT: left; PADDING-TOP: 1px
+}
+.login_content_border .login_title P SPAN {
+	LINE-HEIGHT: 25px; DISPLAY: inline-block; COLOR: #999999
+}
+.login_content_border .login_title P.nonce SPAN {
+	COLOR: #663300; FONT-WEIGHT: bold
+}
+.login_content_border .login_form {
+	WIDTH: 735px; PADDING-TOP: 20px
+}
+.login_content_border .login_form P {
+	WIDTH: 735px; HEIGHT: 46px; CLEAR: both
+}
+.login_content_border .login_form P * {
+	DISPLAY: block; FLOAT: left
+}
+.login_content_border .login_form P LABEL {
+	TEXT-ALIGN: right; WIDTH: 182px; HEIGHT: 33px; FONT-SIZE: 14px; PADDING-TOP: 13px
+}
+.login_form_input {
+	BORDER-BOTTOM: #b6b6b6 1px solid; BORDER-LEFT: #686868 1px solid; PADDING-BOTTOM: 0px; MARGIN-TOP: 10px; PADDING-LEFT: 0px; WIDTH: 220px; PADDING-RIGHT: 0px; BACKGROUND: url(../images/bg_login_input.gif) no-repeat 0px 0px; HEIGHT: 24px; BORDER-TOP: #686868 1px solid; BORDER-RIGHT: #b6b6b6 1px solid; PADDING-TOP: 0px
+}
+.login_form_input INPUT {
+	BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 0px; MARGIN: 0px; BORDER-LEFT-STYLE: none; PADDING-LEFT: 10px; WIDTH: 200px; PADDING-RIGHT: 10px; FONT: bold 15px/24px Arial; BORDER-TOP-STYLE: none; BACKGROUND: none transparent scroll repeat 0% 0%; HEIGHT: 24px; BORDER-RIGHT-STYLE: none; PADDING-TOP: 0px
+}
+.login_content_border .login_form P A {
+	DISPLAY: inline-block; FLOAT: none; COLOR: #1a66b3
+}
+.login_content_border .login_form P A:hover {
+	DISPLAY: inline-block; FLOAT: none; COLOR: #1a66b3
+}
+.login_form P.hint {
+	BACKGROUND: #edffd5
+}
+.login_form P.wrong .login_form_input {
+	BACKGROUND: url(../images/bg_login_input2.gif) no-repeat 0px 0px
+}
+.login_form_hint {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 33px; PADDING-LEFT: 10px; WIDTH: 300px; PADDING-RIGHT: 0px; HEIGHT: 36px; PADDING-TOP: 8px
+}
+.login_form_wrong {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 33px; PADDING-LEFT: 10px; WIDTH: 300px; PADDING-RIGHT: 0px; HEIGHT: 36px; PADDING-TOP: 8px
+}
+.login_form_ok {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 33px; PADDING-LEFT: 10px; WIDTH: 300px; PADDING-RIGHT: 0px; HEIGHT: 36px; PADDING-TOP: 8px
+}
+.login_form_hint SPAN {
+	LINE-HEIGHT: 16px !important; FLOAT: none !important; CLEAR: both; VERTICAL-ALIGN: middle
+}
+.login_form_wrong SPAN {
+	LINE-HEIGHT: 16px !important; FLOAT: none !important; CLEAR: both; VERTICAL-ALIGN: middle
+}
+.login_form_hint {
+	COLOR: #6e932d
+}
+.login_form_wrong {
+	PADDING-LEFT: 14px !important; WIDTH: 167px !important; PADDING-RIGHT: 2px; BACKGROUND: url(../images/bg_login_wrong.gif) no-repeat 3px 4px; COLOR: #c30
+}
+.login_form_ok {
+	BACKGROUND: url(../images/pic_login_ok.gif) no-repeat 7px 17px
+}
+.login_form_input .validate {
+	COLOR: #878787; FONT-SIZE: 12px; FONT-WEIGHT: normal
+}
+.login_content_border .login_form .form_validate {
+	HEIGHT: 54px
+}
+.login_form_validate {
+	BORDER-BOTTOM: #e2e2e2 1px solid; BORDER-LEFT: #e2e2e2 1px solid; MARGIN-TOP: 2px; WIDTH: 220px; HEIGHT: 50px; BORDER-TOP: #e2e2e2 1px solid; BORDER-RIGHT: #e2e2e2 1px solid
+}
+.form_validate .login_form_hint {
+	LINE-HEIGHT: 48px !important; COLOR: #878787
+}
+.login_content_border .login_form P.form_validate_btn {
+	PADDING-LEFT: 183px; WIDTH: 552px; HEIGHT: 54px
+}
+.form_validate_btn .form_refer {
+	BORDER-BOTTOM-STYLE: none; LINE-HEIGHT: 0; MARGIN-TOP: 8px; TEXT-INDENT: -999px; BORDER-LEFT-STYLE: none; WIDTH: 154px; BORDER-TOP-STYLE: none;  HEIGHT: 39px; BORDER-RIGHT-STYLE: none; FONT-SIZE: 0px; CURSOR: pointer
+}
+.form_validate_btn .form_refer_02 {
+	BORDER-BOTTOM-STYLE: none; LINE-HEIGHT: 0; MARGIN-TOP: 8px; TEXT-INDENT: -999px; BORDER-LEFT-STYLE: none; WIDTH: 154px; BORDER-TOP-STYLE: none; BACKGROUND: url(../images/btn_login_refer1.gif) no-repeat 0px 0px; HEIGHT: 39px; BORDER-RIGHT-STYLE: none; FONT-SIZE: 0px; CURSOR: pointer
+}
+.form_validate_btn .form_refer_02 {
+	BACKGROUND: url(../images/btn_login_refer2.gif) no-repeat 0px 0px
+}
+.login_content_border .login_form P.form_copyright {
+	PADDING-BOTTOM: 9px; PADDING-LEFT: 183px; WIDTH: 552px; PADDING-RIGHT: 0px; PADDING-TOP: 18px
+}
+.login_form .form_copyright INPUT {
+	MARGIN: -2px 5px -4px -4px
+}
+.form_copyright .login_form_wrong {
+	MARGIN-TOP: -15px
+}
+.login_content_border .login_form P.form_copyright A {
+	COLOR: #404040
+}
+.login_content_border .login_form P.form_copyright A:hover {
+	COLOR: #404040
+}
+.login_questing_border {
+	PADDING-BOTTOM: 26px; PADDING-LEFT: 95px; WIDTH: 640px; PADDING-RIGHT: 0px; BACKGROUND: url(../images/bg_3x169.gif) repeat-x 0px 0px; PADDING-TOP: 21px
+}
+.login_questing_border H3 {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 40px; PADDING-RIGHT: 0px; COLOR: #898989; FONT-SIZE: 14px; PADDING-TOP: 0px
+}
+.login_questing_border P {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 40px; PADDING-RIGHT: 0px; COLOR: #898989; FONT-SIZE: 14px; PADDING-TOP: 0px
+}
+.login_questing_border H3 {
+	LINE-HEIGHT: 29px; BACKGROUND: url(../images/icon_question.gif) no-repeat 0px 0px; HEIGHT: 29px; FONT-WEIGHT: bold
+}
+.login_questing_border P {
+	LINE-HEIGHT: 22px; HEIGHT: 22px; PADDING-TOP: 4px
+}
+.login_questing_border P A.button {
+	TEXT-ALIGN: center; WIDTH: 75px; DISPLAY: inline-block; BACKGROUND: url(../images/btn_75x22.gif) no-repeat 0px 0px; HEIGHT: 21px; COLOR: #404040; MARGIN-LEFT: 6px; FONT-SIZE: 14px; PADDING-TOP: 1px
+}
+.reg_fail LI .button {
+	TEXT-ALIGN: center; WIDTH: 75px; DISPLAY: inline-block; BACKGROUND: url(../images/btn_75x22.gif) no-repeat 0px 0px; HEIGHT: 21px; COLOR: #404040; MARGIN-LEFT: 6px; FONT-SIZE: 14px; PADDING-TOP: 1px
+}
+.login_questing_border P A.button:hover {
+	BACKGROUND: url(../images/btn_75x22_mo.gif) no-repeat 0px 0px; TEXT-DECORATION: none
+}
+.reg_fail LI .button:hover {
+	BACKGROUND: url(../images/btn_75x22_mo.gif) no-repeat 0px 0px; TEXT-DECORATION: none
+}
+.login_mail_border .login_mail_title {
+	PADDING-BOTTOM: 17px; LINE-HEIGHT: 22px; PADDING-LEFT: 134px; WIDTH: 551px; PADDING-RIGHT: 50px; BACKGROUND: url(../images/icon_mail.gif) no-repeat 75px 35px; FONT-SIZE: 14px; PADDING-TOP: 40px
+}
+.login_mail_border .login_button {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 19px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND: url(../images/bg_button_b.gif) no-repeat center bottom; PADDING-TOP: 0px
+}
+.login_mail_border .login_button A {
+	LINE-HEIGHT: 33px; DISPLAY: inline-block; BACKGROUND: url(../images/btn_r.gif) no-repeat right top; HEIGHT: 33px; COLOR: #712a00 !important; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.form_repeat_btn A {
+	LINE-HEIGHT: 33px; DISPLAY: inline-block; BACKGROUND: url(../images/btn_r.gif) no-repeat right top; HEIGHT: 33px; COLOR: #712a00 !important; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.login_mail_border .login_button A {
+	LINE-HEIGHT: 33px; DISPLAY: inline-block; BACKGROUND: url(../images/btn_r.gif) no-repeat right top; HEIGHT: 33px; COLOR: #712a00 !important; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.form_repeat_btnemail A {
+	LINE-HEIGHT: 33px; DISPLAY: inline-block; BACKGROUND: url(../images/btn_r.gif) no-repeat right top; HEIGHT: 33px; COLOR: #712a00 !important; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.login_mail_border .login_button A .login_button_l {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 17px; PADDING-RIGHT: 17px; DISPLAY: inline-block; BACKGROUND: url(../images/btn_l.gif) no-repeat 0px 0px; HEIGHT: 33px; CURSOR: pointer; PADDING-TOP: 0px
+}
+.form_repeat_btn A .login_button_l {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 17px; PADDING-RIGHT: 17px; DISPLAY: inline-block; BACKGROUND: url(../images/btn_l.gif) no-repeat 0px 0px; HEIGHT: 33px; CURSOR: pointer; PADDING-TOP: 0px
+}
+.login_mail_border .login_button A .login_button_l {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 17px; PADDING-RIGHT: 17px; DISPLAY: inline-block; BACKGROUND: url(../images/btn_l.gif) no-repeat 0px 0px; HEIGHT: 33px; CURSOR: pointer; PADDING-TOP: 0px
+}
+.form_repeat_btnemail A .login_button_l {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 17px; PADDING-RIGHT: 17px; DISPLAY: inline-block; BACKGROUND: url(../images/btn_l.gif) no-repeat 0px 0px; HEIGHT: 33px; CURSOR: pointer; PADDING-TOP: 0px
+}
+.login_mail_border .login_button A .login_button_l SPAN {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; DISPLAY: inline-block; FONT-FAMILY: Arial; PADDING-TOP: 0px
+}
+.form_repeat_btn A .login_button_l SPAN {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; DISPLAY: inline-block; FONT-FAMILY: Arial; PADDING-TOP: 0px
+}
+.login_mail_border .login_button A .login_button_l SPAN {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; DISPLAY: inline-block; FONT-FAMILY: Arial; PADDING-TOP: 0px
+}
+.form_repeat_btnemail A .login_button_l SPAN {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 5px; PADDING-RIGHT: 5px; DISPLAY: inline-block; FONT-FAMILY: Arial; PADDING-TOP: 0px
+}
+.login_mail_border .login_button A:hover {
+	BACKGROUND-POSITION: right bottom; COLOR: #712a00 !important; TEXT-DECORATION: none
+}
+.form_repeat_btn A:hover {
+	BACKGROUND-POSITION: right bottom; COLOR: #712a00 !important; TEXT-DECORATION: none
+}
+.login_mail_border .login_button A:hover .login_button_l {
+	BACKGROUND-POSITION: left bottom
+}
+.form_repeat_btn A:hover .login_button_l {
+	BACKGROUND-POSITION: left bottom
+}
+.login_mail_border .login_button A:hover .login_button_l {
+	BACKGROUND-POSITION: left bottom
+}
+.form_repeat_btnemail A:hover .login_button_l {
+	BACKGROUND-POSITION: left bottom
+}
+.login_mail_title SPAN.border_bot_phone {
+	FONT-SIZE: 12px !important; FONT-WEIGHT: normal
+}
+.login_mail_border P.border_bot_phone02 {
+	PADDING-BOTTOM: 13px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; FONT-WEIGHT: bold; PADDING-TOP: 8px
+}
+.login_mail_border P.clearfix LABEL {
+	FLOAT: left; PADDING-TOP: 1px
+}
+.login_mail_border P.clearfix INPUT {
+	BORDER-BOTTOM: #dadada 1px solid; BORDER-LEFT: #dadada 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 5px; WIDTH: 255px; PADDING-RIGHT: 0px; FLOAT: left; HEIGHT: 24px; BORDER-TOP: #dadada 1px solid; BORDER-RIGHT: #dadada 1px solid; PADDING-TOP: 0px
+}
+.login_mail_border P.clearfix SPAN.hint {
+	PADDING-BOTTOM: 3px; PADDING-LEFT: 57px; PADDING-RIGHT: 0px; DISPLAY: inline-block; COLOR: #878787; FONT-SIZE: 12px; PADDING-TOP: 3px
+}
+.login_mail_title P.validate_phone {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 30px; PADDING-LEFT: 57px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 12px
+}
+.login_mail_border P.validate_phone IMG {
+	FLOAT: left; MARGIN-RIGHT: 5px
+}
+.login_succeed_border .login_phone_title01 {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 158px; PADDING-RIGHT: 0px; PADDING-TOP: 39px
+}
+.login_succeed_border .login_phone_title01 P.clearfix SPAN {
+	FONT-SIZE: 12px
+}
+.login_succeed_border .login_phone_title01 P.clearfix SPAN B {
+	PADDING-RIGHT: 5px; FONT-SIZE: 18px
+}
+.login_phone_title01 P {
+	PADDING-TOP: 16px
+}
+.login_phone_title01 P.validate_phone {
+	PADDING-BOTTOM: 49px; PADDING-LEFT: 84px
+}
+.login_questing_border P .btn_resendmsg {
+	TEXT-ALIGN: center; LINE-HEIGHT: 18px; WIDTH: 151px; DISPLAY: inline-block; BACKGROUND: url(../images/lbl_sendmsg.gif) no-repeat; HEIGHT: 18px; COLOR: #404040; FONT-SIZE: 12px
+}
+.login_succeed_border .login_phone_title02 {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 186px; PADDING-RIGHT: 0px; BACKGROUND: url(../images/icon_phone.gif) no-repeat 141px 48px; PADDING-TOP: 54px
+}
+.login_succeed_border .login_phone_title02 P.gray_87 {
+	PADDING-BOTTOM: 114px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; COLOR: #878787; FONT-SIZE: 12px; PADDING-TOP: 8px
+}
+.login_mail_title P.validate_phone02 {
+	PADDING-BOTTOM: 28px
+}
+.login_content_border P.msg_hint {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 174px; WIDTH: 431px; PADDING-RIGHT: 0px; HEIGHT: 33px; FONT-SIZE: 14px; PADDING-TOP: 2px
+}
+.login_content_border .login_form P.form_repeat_btn {
+	PADDING-BOTTOM: 29px; PADDING-LEFT: 231px; WIDTH: 504px; PADDING-RIGHT: 0px; MARGIN-BOTTOM: 8px; BACKGROUND: url(../images/bg_button_b2.gif) no-repeat 231px bottom; HEIGHT: 33px; PADDING-TOP: 12px
+}
+.login_content_border .login_form P.form_repeat_btnemail {
+	PADDING-BOTTOM: 29px; PADDING-LEFT: 231px; WIDTH: 504px; PADDING-RIGHT: 0px; MARGIN-BOTTOM: 8px; BACKGROUND: url(../images/bg_button_b2.gif) no-repeat 231px bottom; HEIGHT: 33px; PADDING-TOP: 12px
+}
+.login_content_border .login_form P.form_repeat_btn A {
+	FONT-SIZE: 16px
+}
+.login_content_border .login_form P.form_repeat_btnemail A {
+	FONT-SIZE: 16px
+}
+.login_content_border P.msg_hint2 {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 140px; WIDTH: 465px; PADDING-RIGHT: 0px; HEIGHT: 33px; FONT-SIZE: 14px; PADDING-TOP: 2px
+}
+.login_content_border .login_form2 P LABEL {
+	WIDTH: 231px; FONT-SIZE: 14px
+}
+.login_form2 .login_form_hint {
+	PADDING-LEFT: 10px; WIDTH: 272px
+}
+.login_form2 .login_form_wrong {
+	PADDING-LEFT: 10px; WIDTH: 272px
+}
+.login_form2 .login_form_ok {
+	PADDING-LEFT: 10px; WIDTH: 272px
+}
+.login_form_wrong2 {
+	WIDTH: 181px !important; BACKGROUND: url(../images/bg_login_wrong2.gif) no-repeat 3px 4px; COLOR: #c30
+}
+.login_mail_border2 .login_mail_point {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 22px; PADDING-LEFT: 134px; PADDING-RIGHT: 50px; COLOR: #c30; FONT-SIZE: 14px; PADDING-TOP: 27px
+}
+.login_mail_border2 .login_mail_point SPAN {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 6px; PADDING-RIGHT: 6px; DISPLAY: inline-block; FONT: bold 14px/22px Arial; PADDING-TOP: 0px
+}
+.login_mail_border2 .login_mail_title {
+	PADDING-BOTTOM: 17px; LINE-HEIGHT: 22px; PADDING-LEFT: 134px; PADDING-RIGHT: 50px; BACKGROUND-POSITION: 75px 5px; PADDING-TOP: 10px
+}
+.login_succeed_border .login_mail_title {
+	PADDING-BOTTOM: 17px; LINE-HEIGHT: 24px; PADDING-LEFT: 180px; WIDTH: 545px; PADDING-RIGHT: 10px; BACKGROUND: url(../images/icon_succeed.gif) no-repeat 101px 32px; FONT-SIZE: 14px; PADDING-TOP: 26px
+}
+.login_succeed_border .login_mail_title P.gray_87 {
+	PADDING-BOTTOM: 46px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; COLOR: #878787; FONT-SIZE: 12px; PADDING-TOP: 8px
+}
+.login_succeed_border .login_phone_title01 P.clearfix .login_wrong {
+	LINE-HEIGHT: 25px; PADDING-LEFT: 10px; WIDTH: 204px; DISPLAY: inline-block; HEIGHT: 25px; COLOR: #cc3300; FONT-SIZE: 12px; OVERFLOW: hidden
+}
+.login_succeed_border .login_mail_title .login_wrong {
+	LINE-HEIGHT: 25px; PADDING-LEFT: 10px; WIDTH: 204px; DISPLAY: inline-block; HEIGHT: 25px; COLOR: #cc3300; FONT-SIZE: 12px; OVERFLOW: hidden
+}
+.login_succeed_goon {
+	PADDING-BOTTOM: 0px; MARGIN: 17px auto 0px; PADDING-LEFT: 101px; PADDING-RIGHT: 0px; BACKGROUND: url(../images/dash_3x1.gif) repeat-x 0px 0px; PADDING-TOP: 0px
+}
+.login_succeed_goon P {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 14px; PADDING-TOP: 24px
+}
+.login_succeed_goon P SPAN {
+	FONT-FAMILY: Arial; COLOR: #2f8500; FONT-WEIGHT: bold
+}
+.login_succeed_goon P A {
+	COLOR: #1a66b3; FONT-SIZE: 12px
+}
+.login_succeed_goon P A:hover {
+	COLOR: #1a66b3; FONT-SIZE: 12px
+}
+.login_succeed_goon .form_repeat_btn {
+	PADDING-BOTTOM: 29px; PADDING-LEFT: 0px; PADDING-RIGHT: 25px; BACKGROUND: url(../images/bg_button_b3.gif) no-repeat 0px bottom; FLOAT: left; HEIGHT: 33px; PADDING-TOP: 7px
+}
+.login_succeed_goon .form_repeat_btnemail {
+	PADDING-BOTTOM: 29px; PADDING-LEFT: 0px; PADDING-RIGHT: 25px; BACKGROUND: url(../images/bg_button_b3.gif) no-repeat 0px bottom; FLOAT: left; HEIGHT: 33px; PADDING-TOP: 7px
+}
+.login_succeed_area {
+	LINE-HEIGHT: 23px; MARGIN-TOP: 12px; DISPLAY: inline-block; BACKGROUND: url(../images/bg_area_c.gif) repeat-x 0px 0px; FLOAT: left; HEIGHT: 23px; COLOR: #333333
+}
+.login_succeed_area SPAN {
+	DISPLAY: block; FLOAT: left; HEIGHT: 23px
+}
+.login_succeed_area SPAN FONT.txt_go {
+	COLOR: #cc3300
+}
+.login_succeed_area .bg_l {
+	WIDTH: 4px; PADDING-RIGHT: 5px; BACKGROUND: url(../images/bg_area_l.gif) no-repeat left 0px
+}
+.login_succeed_area .bg_r {
+	PADDING-LEFT: 5px; WIDTH: 4px; BACKGROUND: url(../images/bg_area_r.gif) no-repeat right 0px
+}
+.login_succeed_area SPAN A {
+	PADDING-LEFT: 8px; DISPLAY: inline-block; COLOR: #1a66b3
+}
+.login_succeed_area SPAN A:hover {
+	PADDING-LEFT: 8px; DISPLAY: inline-block; COLOR: #1a66b3
+}
+.back_tips {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 102px; WIDTH: 633px; PADDING-RIGHT: 0px; BACKGROUND: url(../images/bg_login_b.gif) no-repeat left top; HEIGHT: 17px; FONT-SIZE: 14px; PADDING-TOP: 33px
+}
+.login_content_border .login_form3 P LABEL {
+	WIDTH: 208px; FONT-SIZE: 14px
+}
+.login_form3 .login_form_hint {
+	PADDING-LEFT: 10px; WIDTH: 295px
+}
+.login_form3 .login_form_wrong {
+	PADDING-LEFT: 10px; WIDTH: 295px
+}
+.login_form3 .login_form_ok {
+	PADDING-LEFT: 10px; WIDTH: 295px
+}
+.login_content_border .login_form3 P.form_repeat_btn {
+	PADDING-LEFT: 208px; WIDTH: 527px; BACKGROUND-POSITION: 208px bottom
+}
+.back_mail {
+	PADDING-BOTTOM: 70px
+}
+.login_content_border .reset_form {
+	BACKGROUND: url(../images/bg_login_b.gif) no-repeat left top; PADDING-TOP: 31px
+}
+.login_content_border .reset_form P LABEL {
+	WIDTH: 214px; FONT-SIZE: 14px
+}
+.reset_form .login_form_hint {
+	PADDING-LEFT: 10px; WIDTH: 289px
+}
+.reset_form .login_form_wrong {
+	PADDING-LEFT: 10px; WIDTH: 289px
+}
+.reset_form .login_form_ok {
+	PADDING-LEFT: 10px; WIDTH: 289px
+}
+.login_content_border .reset_form P.form_repeat_btn {
+	PADDING-LEFT: 214px; WIDTH: 521px; BACKGROUND: url(../images/bg_button_b3.gif) no-repeat 214px bottom; FONT-SIZE: 14px
+}
+.login_content_border .reset_form P.form_repeat_btn2 {
+	PADDING-LEFT: 214px; WIDTH: 521px; BACKGROUND: url(../images/bg_button_b3.gif) no-repeat 214px bottom; FONT-SIZE: 14px
+}
+.login_content_border .reset_form P.form_repeat_btn A .login_button_l {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 30px; PADDING-RIGHT: 30px; PADDING-TOP: 0px
+}
+.login_content_border .login_form P.passwordok {
+	LINE-HEIGHT: 28px; PADDING-LEFT: 45px; WIDTH: 588px; BACKGROUND: url(../images/icon_passwordok.gif) no-repeat left top; HEIGHT: 28px; MARGIN-LEFT: 102px; FONT-SIZE: 14px
+}
+.login_content_border .reset_form P.form_repeat_btn2 {
+	PADDING-LEFT: 147px; BACKGROUND-POSITION: 194px bottom
+}
+.login_content_border .reset_form P.form_repeat_btn2 A {
+	FONT-SIZE: 14px
+}
+.form_repeat_btn2 SPAN {
+	LINE-HEIGHT: 33px; MARGIN-RIGHT: 5px
+}
+.form_repeat_btn2 .back {
+	MARGIN-LEFT: 20px
+}
+.form_repeat_btn2 .back A {
+	BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #1a66b3 !important; FONT-WEIGHT: normal
+}
+.form_repeat_btn2 .back A:hover {
+	BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #1a66b3 !important; FONT-WEIGHT: normal
+}
+.form_repeat_btn2 .back A:hover {
+	TEXT-DECORATION: underline
+}
+.login_content_border .reset_form P.form_repeat_btn2 A .login_button_l {
+	PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 17px; PADDING-RIGHT: 17px; PADDING-TOP: 0px
+}
+.homepage_prefer {
+	MARGIN: 29px auto 0px; WIDTH: 720px
+}
+.homepage_prefer H2 {
+	PADDING-BOTTOM: 1px; MARGIN: 0px auto; PADDING-LEFT: 13px; WIDTH: 707px; PADDING-RIGHT: 0px; BACKGROUND: url(../images/bg_prefer_1x26.gif) repeat-x 50% bottom; HEIGHT: 25px; PADDING-TOP: 0px
+}
+.homepage_prefer H2 SPAN {
+	POSITION: relative; TEXT-ALIGN: center; PADDING-BOTTOM: 0px; LINE-HEIGHT: normal; PADDING-LEFT: 0px; WIDTH: 99px; PADDING-RIGHT: 6px; DISPLAY: block; BACKGROUND: url(../images/bg_prefer01.gif) no-repeat 0px 0px; FLOAT: left; HEIGHT: 19px; CURSOR: pointer; PADDING-TOP: 6px
+}
+.homepage_prefer H2 .nonce {
+	Z-INDEX: 20; PADDING-BOTTOM: 0px; MARGIN: -2px 0px -7px; PADDING-LEFT: 0px; WIDTH: 102px; PADDING-RIGHT: 3px; BACKGROUND: url(../images/bg_prefer02.gif) no-repeat; HEIGHT: 25px; COLOR: #853200; FONT-SIZE: 14px; FONT-WEIGHT: bold; PADDING-TOP: 9px
+}
+.homepage_prefer H2 SPAN IMG {
+	POSITION: absolute; RIGHT: 2px
+}
+.homepage_prefer H2 SPAN .hot {
+	WIDTH: 23px; HEIGHT: 11px; TOP: -4px
+}
+.homepage_prefer H2 .nonce .hot {
+	TOP: -2px
+}
+.homepage_prefer H2 SPAN .buy {
+	WIDTH: 27px; HEIGHT: 18px; TOP: -10px
+}
+.homepage_prefer H2 .nonce .buy {
+	TOP: -8px
+}
+.homepage_prefer UL {
+	BORDER-BOTTOM: #c3c3c3 1px solid; BORDER-LEFT: #c3c3c3 1px solid; PADDING-BOTTOM: 0px; MARGIN: 0px auto; PADDING-LEFT: 2px; WIDTH: 715px; PADDING-RIGHT: 1px; DISPLAY: block; HEIGHT: 347px; BORDER-TOP: #c3c3c3 1px; BORDER-RIGHT: #c3c3c3 1px solid; PADDING-TOP: 7px
+}
+.homepage_prefer UL LI {
+	PADDING-BOTTOM: 7px; PADDING-LEFT: 17px; WIDTH: 110px; PADDING-RIGHT: 16px; DISPLAY: block; FLOAT: left; HEIGHT: 151px; OVERFLOW: hidden; PADDING-TOP: 10px
+}
+.homepage_prefer UL LI P {
+	DISPLAY: block
+}
+.homepage_prefer UL LI .pic {
+	TEXT-ALIGN: center; MARGIN: 0px auto 5px; WIDTH: 100px; HEIGHT: 100px; OVERFLOW: hidden
+}
+.homepage_prefer UL LI .name {
+	TEXT-ALIGN: left; LINE-HEIGHT: 16px; WIDTH: 110px; HEIGHT: 32px; OVERFLOW: hidden; WORD-BREAK: break-all
+}
+.homepage_prefer UL LI .price {
+	TEXT-ALIGN: center
+}
+.homepage_prefer UL LI .price_m {
+	FONT-SIZE: 10px
+}
+.homepage_prefer UL LI .price_d {
+	FONT-WEIGHT: bold
+}
+.homepage_prefer A {
+	COLOR: #404040
+}
+.homepage_prefer A:hover {
+	COLOR: #404040
+}
+.help {
+	TEXT-ALIGN: right; PADDING-RIGHT: 12px
+}
+.help A {
+	COLOR: #333333
+}
+.step SPAN {
+	COLOR: #999999
+}
+.login_email_validate {
+	PADDING-BOTTOM: 17px; LINE-HEIGHT: 24px; PADDING-LEFT: 180px; WIDTH: 505px; PADDING-RIGHT: 50px; BACKGROUND: url(../images/icon_mail.gif) no-repeat 101px 32px; HEIGHT: 100px; PADDING-TOP: 26px
+}
+.login_email_validate P {
+	FONT-SIZE: 14px
+}
+.login_email_validate P SPAN {
+	FONT-FAMILY: Arial; COLOR: #2f8500; FONT-WEIGHT: bold
+}
+.login_email_validate P A {
+	COLOR: #1a66b3; FONT-SIZE: 12px
+}
+.login_succeed_goon P A:hover {
+	COLOR: #1a66b3; FONT-SIZE: 12px
+}
+.login_email_validate .form_repeat_btn {
+	PADDING-BOTTOM: 29px; PADDING-LEFT: 0px; PADDING-RIGHT: 25px; BACKGROUND: url(../images/bg_button_b3.gif) no-repeat 0px bottom; FLOAT: left; PADDING-TOP: 7px
+}
+.login_know {
+	PADDING-BOTTOM: 30px; PADDING-LEFT: 180px; PADDING-RIGHT: 0px; CLEAR: left; PADDING-TOP: 10px
+}
+.login_know > P {
+	
+}
+.login_mail_border .login_know P {
+	FONT-SIZE: 12px
+}
+.login_know .login_succeed_area {
+	
+}
+.login_know P {
+	
+}
+.login_know P SPAN.txt_red {
+	COLOR: #cc3300
+}
+.login_mail_border2 .linemsg1 {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 200px; PADDING-RIGHT: 50px; PADDING-TOP: 27px
+}
+.border-bot {
+	BORDER-BOTTOM: #999999 1px dotted
+}
+.login_content_border P.msg_warn {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 110px; WIDTH: 620px; PADDING-RIGHT: 0px; PADDING-TOP: 2px
+}
+.login_content_border .login_form P.msg_warn FONT {
+	
+}
+.txt_email {
+	COLOR: #333333; FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.login_content_border .layout-reg {
+	HEIGHT: 100px
+}
+.login_mail_border P {
+	FONT-SIZE: 14px
+}
+.login_mail_border P.reg_sucess {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 22px; PADDING-LEFT: 180px; PADDING-RIGHT: 50px; PADDING-TOP: 27px
+}
+.login_mail_border P.reg_login {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 260px; PADDING-RIGHT: 0px; PADDING-TOP: 5px
+}
+.login_content_border .reg_fail {
+	PADDING-BOTTOM: 20px; PADDING-LEFT: 178px; PADDING-RIGHT: 0px; PADDING-TOP: 20px
+}
+.reg_fail P {
+	
+}
+.reg_fail P.row1 {
+	FONT-WEIGHT: bold; PADDING-TOP: 20px
+}
+.reg_fail P.row2 {
+	PADDING-BOTTOM: 5px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; PADDING-TOP: 10px
+}
+.reg_fail UL.row3 {
+	
+}
+.row3 {
+	
+}
+.row3 LI {
+	PADDING-LEFT: 18px; BACKGROUND: url(../images/ico_item_point.gif) no-repeat 0px 5px; HEIGHT: 24px; FONT-SIZE: 14px
+}
+.mobile_login_title {
+	BACKGROUND: url(../images/mobile_reg_bar.gif) no-repeat; HEIGHT: 25px
+}
+.mobile_login_title P {
+	FLOAT: left; PADDING-TOP: 2px;margin:0;
+}
+.mobile_login_title P.one {
+	PADDING-LEFT: 87px
+}
+.mobile_login_title P.two {
+	PADDING-LEFT: 140px
+}
+.mobile_login_title P.three {
+	PADDING-LEFT: 160px
+}
+.mobile_login_title P.nonce {
+	COLOR: #663300; FONT-WEIGHT: bold
+}
+.mobile_login_title P.gray {
+	COLOR: #999999
+}
+.login_content_border .login_form P.form_mobile {
+	BACKGROUND-COLOR: #edffd5
+}
+.form_mobile SPAN {
+	
+}
+.form_mobile SPAN.login_form_hint {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 0px; PADDING-TOP: 13px
+}
+.login_mail_border .login_mobile_border {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 24px; PADDING-LEFT: 180px; WIDTH: 498px; PADDING-RIGHT: 57px; BACKGROUND: url(../images/icon_succeed02.png) no-repeat 112px 32px; FONT-SIZE: 14px; PADDING-TOP: 26px
+}
+.login_mobile_border .form_repeat_btn {
+	PADDING-BOTTOM: 29px; MARGIN: 13px 0px 0px 143px; PADDING-LEFT: 0px; PADDING-RIGHT: 25px; BACKGROUND: url(../images/bg_button_b3.gif) no-repeat 0px bottom; HEIGHT: 33px; PADDING-TOP: 7px
+}
+.login_mobile_border .form_repeat_btnemail {
+	PADDING-BOTTOM: 29px; MARGIN: 13px 0px 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 25px; BACKGROUND: url(../images/bg_button_b3.gif) no-repeat 0px bottom; HEIGHT: 33px; PADDING-TOP: 7px
+}
+.shortmsg {
+	MARGIN: 0px auto
+}
+.msg_title_bar_2 {
+	BACKGROUND: url(../images/mobile_reg_bar_2.gif)
+}
+.mobile_login_content {
+	BORDER-BOTTOM: #999999 1px dotted; PADDING-BOTTOM: 20px; PADDING-LEFT: 100px; PADDING-RIGHT: 0px; FONT-SIZE: 14px; PADDING-TOP: 20px
+}
+.mobile_login_content P {
+	
+}
+.mobile_login_content P.ct {
+	PADDING-BOTTOM: 10px; COLOR: #333333; FONT-WEIGHT: bold
+}
+.mobile_login_content P SPAN {
+	
+}
+.mobile_login_content P SPAN.lbl_mobile {
+	
+}
+.mobile_login_form {
+	PADDING-LEFT: 60px; WIDTH: 735px; PADDING-TOP: 20px
+}
+.mobile_login_form P {
+	WIDTH: 735px; HEIGHT: 30px; CLEAR: both
+}
+.mobile_login_form P * {
+	DISPLAY: block; FLOAT: left
+}
+.mobile_login_form P LABEL {
+	TEXT-ALIGN: right; WIDTH: 182px; FONT-SIZE: 14px
+}
+.mobile_login_form P SPAN.txt_mobile {
+	FONT-SIZE: 14px; FONT-WEIGHT: bold
+}
+.mobile_login_form P SPAN.btn_changeMobile {
+	COLOR: #3366cc; MARGIN-LEFT: 20px; CURSOR: pointer
+}
+.mobile_validate {
+	MARGIN-TOP: 0px
+}
+.btn_binding {
+	MARGIN: 10px 0px 10px 182px; WIDTH: 154px; DISPLAY: block; BACKGROUND: url(../images/btn_bindmobile.gif) no-repeat; HEIGHT: 39px
+}
+.btn_binding_hover {
+	MARGIN: 10px 0px 10px 182px; WIDTH: 154px; DISPLAY: block; BACKGROUND: url(../images/btn_bindmobile_hover.gif) no-repeat; HEIGHT: 39px
+}
+P.memo {
+	PADDING-LEFT: 40px; WIDTH: 450px
+}
+.memo SPAN {
+	
+}
+.memo SPAN.s1 {
+	PADDING-RIGHT: 5px; FLOAT: left
+}
+.memo SPAN.btn_resendmsg {
+	TEXT-ALIGN: center; PADDING-LEFT: 8px; WIDTH: 151px; BACKGROUND: url(../images/lbl_sendmsg.gif) no-repeat
+}
+.layout-changemobile {
+	BORDER-BOTTOM: #999999 1px solid; BORDER-LEFT: #999999 1px solid; WIDTH: 465px; BACKGROUND: #fff; HEIGHT: 272px; BORDER-TOP: #999999 1px solid; BORDER-RIGHT: #999999 1px solid
+}
+.layout-changemobile SPAN {
+	
+}
+.mobile_form {
+	
+}
+.mobile_form {
+	PADDING-TOP: 20px
+}
+.mobile_form P {
+	WIDTH: 460px; HEIGHT: 46px; CLEAR: both; FONT-SIZE: 12px
+}
+.mobile_form P * {
+	DISPLAY: block; FLOAT: left
+}
+.mobile_form P LABEL {
+	TEXT-ALIGN: right; WIDTH: 120px; HEIGHT: 33px; FONT-SIZE: 14px; PADDING-TOP: 13px
+}
+P.btn_changemobile BUTTON.form_refer {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; LINE-HEIGHT: 0; MARGIN-TOP: 8px; TEXT-INDENT: -999px; WIDTH: 154px; BACKGROUND: url(../images/btn_changemobile.gif) no-repeat; HEIGHT: 39px; FONT-SIZE: 0px; BORDER-TOP: medium none; CURSOR: pointer; BORDER-RIGHT: medium none
+}
+.mobile_form P SPAN.login_form_hint {
+	WIDTH: 100px
+}
+.mobile_form P SPAN.login_form_wrong {
+	WIDTH: 100px
+}
+.mobile_form P SPAN.login_form_ok {
+	WIDTH: 100px
+}
+.dialog_title {
+	BORDER-BOTTOM: #999999 1px solid; HEIGHT: 30px
+}
+.dialog_title H3 {
+	PADDING-BOTTOM: 8px; PADDING-LEFT: 8px; PADDING-RIGHT: 8px; FLOAT: left; FONT-SIZE: 14px; FONT-WEIGHT: bold; PADDING-TOP: 8px
+}
+.dialog_title SPAN.btn_close {
+	WIDTH: 20px; DISPLAY: block; BACKGROUND: url(../images/btn_close.gif) no-repeat 0px center; FLOAT: right; HEIGHT: 30px
+}
+.mobile_form P.btn_changemobile {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 120px; WIDTH: 160px; PADDING-RIGHT: 0px; PADDING-TOP: 18px
+}
+.login_form_hint FONT.lfh_f {
+	WIDTH: 50px
+}
+.login_form_hint A.lfh_a {
+	
+}
+.mobile_login_form_wrong {
+	LINE-HEIGHT: 44px; PADDING-LEFT: 14px !important; WIDTH: 100px !important; PADDING-RIGHT: 2px; COLOR: #c30
+}
+.login_content_border H2.reg_success_title {
+	BACKGROUND: url(../images/reg_success_bar.jpg) no-repeat 0px bottom
+}
+.reg_success_title P {
+	PADDING-BOTTOM: 10px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; COLOR: #333333; FONT-SIZE: 14px; PADDING-TOP: 10px
+}
+.reg_memo {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 180px; PADDING-RIGHT: 0px; PADDING-TOP: 20px
+}
+.reg_memo P {
+	COLOR: #999999; FONT-SIZE: 12px
+}
+.reg_mail_border {
+	HEIGHT: 194px
+}
+.reg_mail_border .login_mail_title {
+	PADDING-BOTTOM: 17px; LINE-HEIGHT: 22px; PADDING-LEFT: 134px; WIDTH: 551px; PADDING-RIGHT: 50px; BACKGROUND: url(../images/icon_mail.gif) no-repeat 75px 35px; FONT-SIZE: 14px; PADDING-TOP: 40px
+}
+.reg_mail_border .login_mail_title SPAN {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 6px; PADDING-RIGHT: 6px; DISPLAY: inline-block; FONT: bold 14px/22px Arial; PADDING-TOP: 0px
+}
+.reg_mail_title {
+	PADDING-BOTTOM: 20px; PADDING-LEFT: 148px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+.reg_mail_title P {
+	
+}
+.reg_mail_title P SPAN {
+	
+}
+.reg_mail_title P SPAN.btn_submit {
+	MARGIN-TOP: 10px; PADDING-LEFT: 221px; WIDTH: 77px; DISPLAY: block; BACKGROUND: url(../images/btn_submit_email.gif) no-repeat 180px 0px; HEIGHT: 26px; CURSOR: pointer
+}
+.msg_title_bar_3 {
+	BACKGROUND: url(../images/mobile_reg_bar_3.gif) no-repeat
+}
+.windows_btnrepeat {
+	BORDER-BOTTOM: #727272 1px solid; POSITION: absolute; BORDER-LEFT: #727272 1px solid; PADDING-BOTTOM: 0px; LINE-HEIGHT: 16px; PADDING-LEFT: 13px; PADDING-RIGHT: 13px; DISPLAY: none; BACKGROUND: #fff8cc; FLOAT: left; HEIGHT: 36px; FONT-SIZE: 12px; BORDER-TOP: #727272 1px solid; BORDER-RIGHT: #727272 1px solid; PADDING-TOP: 6px; TOP: 20px; LEFT: 20px
+}
+.windows_btnrepeat P {
+	POSITION: relative; FLOAT: left; HEIGHT: 36px
+}
+.windows_btnrepeat SPAN {
+	DISPLAY: block
+}
+.windows_btnrepeat P IMG {
+	POSITION: absolute; BOTTOM: -8px; LEFT: 42%
+}
+.login_mail_title SPAN.border_bot_phone {
+	FONT-SIZE: 12px !important; FONT-WEIGHT: normal
+}
+.login_mail_border P.border_bot_phone02 {
+	PADDING-BOTTOM: 13px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; FONT-WEIGHT: bold; PADDING-TOP: 8px
+}
+.login_mail_border P.clearfix LABEL {
+	FLOAT: left; PADDING-TOP: 1px
+}
+.login_mail_border P.clearfix INPUT {
+	BORDER-BOTTOM: #dadada 1px solid; BORDER-LEFT: #dadada 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 5px; WIDTH: 255px; PADDING-RIGHT: 0px; FLOAT: left; HEIGHT: 24px; BORDER-TOP: #dadada 1px solid; BORDER-RIGHT: #dadada 1px solid; PADDING-TOP: 0px
+}
+.login_mail_border P.clearfix SPAN.hint {
+	PADDING-BOTTOM: 3px; PADDING-LEFT: 57px; PADDING-RIGHT: 0px; DISPLAY: inline-block; COLOR: #878787; FONT-SIZE: 12px; PADDING-TOP: 3px
+}
+.login_mail_title P.validate_phone {
+	PADDING-BOTTOM: 0px; LINE-HEIGHT: 30px; PADDING-LEFT: 57px; PADDING-RIGHT: 0px; FONT-SIZE: 12px; PADDING-TOP: 12px
+}
+.login_mail_border P.validate_phone IMG {
+	FLOAT: left; MARGIN-RIGHT: 5px
+}
+.login_succeed_border .login_phone_title01 {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 158px; PADDING-RIGHT: 0px; PADDING-TOP: 39px
+}
+.login_succeed_border .login_phone_title01 P.clearfix SPAN {
+	FONT-SIZE: 12px
+}
+.login_succeed_border .login_phone_title01 P.clearfix SPAN B {
+	PADDING-RIGHT: 5px; FONT-SIZE: 18px
+}
+.login_phone_title01 P {
+	PADDING-TOP: 16px
+}
+.login_phone_title01 P.validate_phone {
+	PADDING-BOTTOM: 49px; PADDING-LEFT: 84px
+}
+.login_succeed_border .login_phone_title02 {
+	PADDING-BOTTOM: 0px; PADDING-LEFT: 186px; PADDING-RIGHT: 0px; BACKGROUND: url(../images/icon_phone.gif) no-repeat 141px 48px; PADDING-TOP: 54px
+}
+.login_succeed_border .login_phone_title02 P.gray_87 {
+	PADDING-BOTTOM: 114px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; COLOR: #878787; FONT-SIZE: 12px; PADDING-TOP: 8px
+}
+.login_mail_title P.validate_phone02 {
+	PADDING-BOTTOM: 28px
+}
+.login_form .intensity {
+	LINE-HEIGHT: 24px; MARGIN-TOP: 10px; PADDING-LEFT: 8px; COLOR: #525252
+}
+.login_form .intensity .strip_w {
+	BORDER-BOTTOM: #dcdcdc 1px solid; BORDER-LEFT: #dcdcdc 1px solid; MARGIN: 0px 8px; WIDTH: 122px; DISPLAY: inline-block; FLOAT: none; HEIGHT: 10px; VERTICAL-ALIGN: middle; OVERFLOW: hidden; BORDER-TOP: #dcdcdc 1px solid; BORDER-RIGHT: #dcdcdc 1px solid
+}
+.login_form .intensity .strip_w SPAN {
+	BORDER-BOTTOM: #fff 1px solid; BORDER-LEFT: #fff 1px solid; WIDTH: 120px; DISPLAY: block; BACKGROUND: url(../images/password_bg.gif) repeat-x 0px 0px; FLOAT: none; HEIGHT: 8px; OVERFLOW: hidden; BORDER-TOP: #fff 1px solid; BORDER-RIGHT: #fff 1px solid
+}
+.login_form .intensity .strip_w SPAN SPAN {
+	BORDER-RIGHT-WIDTH: 0px; WIDTH: 40px; BACKGROUND-POSITION: 0px -8px; BORDER-TOP-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px
+}
+.login_form .intensity .strip_w SPAN .strip_middle {
+	WIDTH: 80px; BACKGROUND-POSITION: 0px -16px
+}
+.login_form .intensity .strip_w SPAN .strip_strong {
+	WIDTH: 120px; BACKGROUND-POSITION: 0px -24px
+}
+.login_form .intensity .tips_txt {
+	PADDING-LEFT: 23px; BACKGROUND: url(../images/pic_login_ok.gif) no-repeat 0px 7px; COLOR: #525252; _background-position: 0 6px
+}
+.login_form .intensity .tips_txt I {
+	LIST-STYLE-TYPE: none; FONT-STYLE: normal; PADDING-RIGHT: 8px; DISPLAY: inline; FLOAT: none; COLOR: #e46a4b
+}
+.login_form .intensity .tips_txt .tips_y {
+	COLOR: #e79433
+}
+.login_form .intensity .tips_txt .tips_g {
+	COLOR: #87a035
+}

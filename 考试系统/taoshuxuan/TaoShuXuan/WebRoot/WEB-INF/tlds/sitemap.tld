@@ -1,0 +1,20 @@
+
+<taglib xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-jsptaglibrary_2_1.xsd"
+    version="2.1">
+    
+    <description>站点导航标签</description>
+	<display-name>myTaglib siteMap</display-name>
+	<tlib-version>1.1</tlib-version>    
+    <short-name>tagUtil</short-name>
+    <uri>http://tag.forever.org/jsp/tagutil/sitemap</uri>
+
+    <tag>
+		<description>面包屑标签</description>
+		<name>siteMap</name>
+		<tag-class>com.bookshop.util.SiteMapTag</tag-class>
+		<body-content>empty</body-content>
+    </tag>
+    
+</taglib>

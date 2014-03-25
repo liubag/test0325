@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans>  
+    <bean name="Questions" class="com.test.entity.Questions">  
+        <property name="course" position="1" ></property>  
+        <property name="type" position="2" ></property>  
+        <property name="topic" position="3" ></property>  
+        <property name="options" position="4" ></property>  
+        <property name="answer" position="5" ></property>  
+        <property name="analysis" position="6" ></property>  
+        <property name="teacher" position="7" ></property>  
+    </bean>  
+</beans>  

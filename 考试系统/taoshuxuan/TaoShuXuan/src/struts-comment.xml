@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="struts-comment" extends="struts-default"> 
+		<!-- 获取图书的评论记录 -->
+		<action name="findComment" class="commentAction" method="findComment">			
+		</action>
+		
+	</package> 
+</struts>

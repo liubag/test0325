@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+element.style {
+    display: block;
+}
+.box {
+    display: none;
+    padding-bottom: 20px;
+    position: relative;
+    text-align: left;
+    width: 280px;
+}
+.box fieldset {
+    border: 0 none;
+}
+.close {
+    background: url("../images/close.png") no-repeat scroll 0 0 transparent;
+    display: block;
+    height: 17px;
+    outline: medium none;
+    position: absolute;
+    right: 8px;
+    text-indent: -9999px;
+    top: 0;
+    width: 33px;
+}
+.top_h4 {
+    background: url("../images/login_box_title_bg.png") repeat-x scroll 0 0 transparent;
+    color: #232324;
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 36px;
+    margin-bottom: 20px;
+    text-indent: 23px;
+}
+.label {
+    padding-left: 23px;
+}
+.label p {
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+.label input {
+    background: none repeat scroll 0 0 #F7F7F7;
+    border: 1px solid #CAEDBE;
+    font: 12px "Bitstream Vera Sans","Trebuchet MS",Geneva,Verdana,Arial,Helvetica,sans-serif;
+    height: 20px;
+    margin-bottom: 20px;
+    padding-left: 3px;
+    padding-top: 2px;
+    width: 227px;
+}
+.label input:hover, .label input:focus {
+    border: 1px solid #B2E06E;
+}
+.box fieldset span a {
+    color: #63AA49;
+    display: block;
+    float: left;
+    font-size: 12px;
+    line-height: 24px;
+    margin-right: 15px;
+    text-align: center;
+    text-decoration: none;
+    width: auto;
+}
+.box span a:hover {
+    color: #000000;
+}
+.box .button2 a {
+    background: url("../images/button2.gif") no-repeat scroll 0 0 transparent;
+    color: #232324;
+    margin-left: 23px !important;
+    width: 65px;
+}
+.box .button2 a:hover {
+    background: none repeat scroll 0 0 #7E7E7D;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+	
+    .drag{
+          position:absolute;
+          width:100px; height:100px;
+          border:1px solid #96C2F1; background-color: #EFF7FF;
+          cursor:move; line-height:100px; text-align:center;
+    } 
+

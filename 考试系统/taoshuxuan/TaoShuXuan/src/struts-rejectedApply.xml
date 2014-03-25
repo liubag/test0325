@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="struts-rejectedApply" extends="struts-default"> 
+		<!-- 显示待审核退货申请 -->
+		<action name="show_rejectedApply" class="rejectedApplyAction" method="show_rejectedApply">
+			<result name="0">/staff/audit_rejected.jsp</result>
+			<result name="1">/staff/complete_rejected.jsp</result>
+			<result name="2">/staff/show_audit_fail_rejected.jsp</result>
+			<result name="3">/staff/worked_rejected.jsp</result>
+			<result name="input"></result>
+		</action>
+		<!-- 根据ID获取申请 -->
+		<action name="showRejectedById" class="rejectedApplyAction" method="showRejectedById">
+			<result name="success">show_rejected_by_id.jsp</result>
+			<result name="input"></result>
+		</action>
+		<!-- 审核退货申请 -->
+		<action name="audit_rejectedApply" class="rejectedApplyAction" method="audit_rejectedApply">
+		</action>
+		<action name="complete_rejectedApply" class="rejectedApplyAction" method="complete_rejectedApply">
+		</action>
+	</package> 
+</struts>

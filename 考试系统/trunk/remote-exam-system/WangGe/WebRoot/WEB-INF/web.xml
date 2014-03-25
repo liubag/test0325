@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" 
+	xmlns="http://java.sun.com/xml/ns/javaee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	
+	
+	<!--  -->
+	<filter>
+		<filter-name>scatteredGridUserFilter</filter-name>
+		<filter-class>com.OnlineGridShop.Filter.ScatteredGridUserFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>scatteredGridUserFilter</filter-name>
+		<url-pattern>/ScatteredGrid/manage/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>ultimateAdminFilter</filter-name>
+		<filter-class>com.OnlineGridShop.Filter.UltimateAdminFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>ultimateAdminFilter</filter-name>
+		<url-pattern>/admin/*</url-pattern>
+	</filter-mapping>
+	
+	
+	<filter>
+		<filter-name>brandOwnerFilter</filter-name>
+		<filter-class>com.OnlineGridShop.Filter.BrandOwnerFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>brandOwnerFilter</filter-name>
+		<url-pattern>/Brand/brandmanage/*</url-pattern>
+	</filter-mapping>
+	
+	
+	<filter>
+		<filter-name>gridOwnerFilter</filter-name>
+		<filter-class>com.OnlineGridShop.Filter.GridOwnerFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>gridOwnerFilter</filter-name>
+		<url-pattern>/Brand/gridmanage/*</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>salesmanFilter</filter-name>
+		<filter-class>com.OnlineGridShop.Filter.SalesmanFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>salesmanFilter</filter-name>
+		<url-pattern>/Brand/salesmanage/*</url-pattern>
+	</filter-mapping>
+	
+	<!-- 会员登录过滤器配置 -->
+	<filter>
+		<filter-name>audienceLoginFilter</filter-name>
+		<filter-class>com.OnlineGridShop.audience.filter.AudienceLoginFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>audienceLoginFilter</filter-name>
+		<url-pattern>/audience/audiencemanage/*</url-pattern>
+	</filter-mapping>
+	
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:bean.xml</param-value>
+	</context-param>
+	<!-- 对Spring容器进行实例化 -->
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+
+	<filter>
+		<filter-name>OpenSessionInViewFilter</filter-name>
+		<filter-class>org.springframework.orm.hibernate3.support.OpenSessionInViewFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>OpenSessionInViewFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+ 	
+ 	
+ 	
+ 	<!--  todo 真正使用或调试使用
+ 	<servlet>
+		<servlet-name>onlineGridShopServlet</servlet-name>
+		<servlet-class>com.OnlineGridShop.Servlet.OnlineGridShopServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+ 	 -->
+ 	
+ 	
+ 	<!--  启动优化关键字计时器 -->
+ 	<servlet>
+		<servlet-name>suggestionServlet</servlet-name>
+		<servlet-class>com.searchEngine.servlet.SuggestionServlet</servlet-class>
+		<load-on-startup>0</load-on-startup>
+	</servlet>
+ 	
+ 	<servlet>
+		<servlet-name>RandomGraphics2</servlet-name>
+		<servlet-class>com.OnlineGridShop.Servlet.RandomGraphics2</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>RandomGraphics2</servlet-name>
+		<url-pattern>/randomGraphics2</url-pattern>
+	</servlet-mapping>
+ <!-- 	
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>
+			org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>*.do</url-pattern>
+		<url-pattern>*.jsp</url-pattern>
+	</filter-mapping>  
+	 -->
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>
+			com.OnlineGridShop.Filter.MyStrutsPrepareAndExecuteFilter</filter-class>
+		<init-param>
+			<param-name>noFilter</param-name>
+			<param-value>/WangGe/uploadImage.html</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<!-- 图片上传的SERVLET  -->
+ <servlet>
+  <servlet-name>UploadImage</servlet-name>
+  <servlet-class>com.OnlineGridShop.Servlet.UploadImage</servlet-class>
+  <!-- 上传图片保存的目录 -->
+  <init-param>
+   <param-name>UPLOAD_PATH</param-name>
+   <param-value>../WGPhoto/uploadImg/</param-value>
+  </init-param>
+  <!-- 限制上传图片的大小，单位字节(缺省值为1MB) -->
+  <init-param>
+   <param-name>MAX_SIZE</param-name>
+   <param-value>1024000</param-value>
+  </init-param>
+  <init-param>
+  <!-- 上传图片的类型(缺省值为gif, jpg, jpeg, png, bmp) -->
+   <param-name>IMAGETYPES</param-name>
+   <param-value>jpg,png,bmp,jpeg,gif</param-value>
+  </init-param>
+  <!-- 上传图片的宽度，大于此宽度时图片会被压缩(缺省为不限定) -->
+  <init-param>
+   <param-name>MAX_WIDTH</param-name>
+   <param-value>500</param-value>
+  </init-param>
+  <!-- 上传图片的高度，大于此高度时图片会被压缩(缺省为不限定) -->
+  <init-param>
+   <param-name>MAX_HEIGHT</param-name>
+   <param-value>500</param-value>
+  </init-param>
+ </servlet>
+  <!-- 图片上传管理的SERVLET  -->
+ <servlet>
+  <servlet-name>UploadImageManager</servlet-name>
+  <servlet-class>com.OnlineGridShop.Servlet.UploadImageManager</servlet-class>
+   <!-- 上传图片保存的目录 -->
+  <init-param>
+   <param-name>UPLOAD_PATH</param-name>
+   <param-value>uploadImg/</param-value>
+  </init-param>
+ </servlet>
+  <!-- 附件上传的SERVLET  -->
+ <servlet>
+  <servlet-name>UploadAccessory</servlet-name>
+  <servlet-class>com.elkan.kindeditor.upload.UploadAccessory</servlet-class>
+  <!-- 上传附件保存的目录 -->
+  <init-param>
+   <param-name>UPLOAD_PATH</param-name>
+   <param-value>uploadAttach/</param-value>
+  </init-param>
+  <!-- 上传附件的大小，单位字节(缺省为1MB) -->
+  <init-param>
+   <param-name>MAX_SIZE</param-name>
+   <param-value>1000000</param-value>
+  </init-param>
+  <!-- 上传文件的类型(缺省为doc, xls, ppt, pdf, txt, rar, zip) -->
+  <init-param>
+   <param-name>FILETYPES</param-name>
+   <param-value>doc,xls,ppt,zip,rar,txt</param-value>
+  </init-param>
+ </servlet>
+ <servlet-mapping>
+  <servlet-name>UploadImage</servlet-name>
+  <url-pattern>/uploadImage.html</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>UploadImageManager</servlet-name>
+  <url-pattern>/uploadImgManager.html</url-pattern>
+ </servlet-mapping>
+ <servlet-mapping>
+  <servlet-name>UploadAccessory</servlet-name>
+  <url-pattern>/uploadAccessory.html</url-pattern>
+ </servlet-mapping>
+	
+	
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <login-config>
+  <auth-method>BASIC</auth-method>
+ </login-config>
+</web-app>

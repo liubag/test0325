@@ -1,0 +1,78 @@
+<?xml version='1.0' encoding='utf-8'?> 
+<!DOCTYPE hibernate-configuration    
+PUBLIC "-//Hibernate/Hibernate Configuration DTD//EN"    
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd"> 
+
+
+<hibernate-configuration>
+
+<session-factory>
+
+	<property name="default_schema">dbo</property>
+
+	<property name="myeclipse.connection.profile">WangGe</property>
+
+	<property name="connection.url">
+		jdbc:sqlserver://localhost:1433;DatabaseName=WangGe
+	</property>
+
+	<property name="connection.username">sa</property>
+
+	<property name="connection.password">1234</property>
+
+	<property name="connection.driver_class">
+		com.microsoft.sqlserver.jdbc.SQLServerDriver
+	</property>
+	<!--<property name="hibernate.query.factory_class">
+		org.hibernate.hql.classic.ClassicQueryTranslatorFactory
+	</property>
+	--><!-- Echo all executed SQL to stdout -->
+	<property name="show_sql">true</property>
+	<!-- Drop and re-create the database schema on startup -->
+	<!-- <property name="hbm2ddl.auto">create</property> -->
+	<property name="dialect">
+		org.hibernate.dialect.SQLServerDialect
+	</property>
+
+
+	<mapping class="com.OnlineGridShop.audience.Entity.Audience" />
+	<mapping class="com.OnlineGridShop.audience.Entity.Attention" />
+	<mapping class="com.OnlineGridShop.admin.Entity.UltimateAdmin" />
+	<!-- scattered散租 -->
+	<mapping
+		class="com.OnlineGridShop.scattered.Entity.ScatteredGridUser" />
+	<mapping class="com.OnlineGridShop.scattered.Entity.ScatteredGrid" />
+	<mapping
+		class="com.OnlineGridShop.scattered.Entity.ScatteredGridDoGoodsNote" />
+	<mapping
+		class="com.OnlineGridShop.scattered.Entity.ScatteredGridGoods" />
+	<mapping
+		class="com.OnlineGridShop.scattered.Entity.ScatteredGridPreferential" />
+	<mapping
+		class="com.OnlineGridShop.scattered.Entity.ScatteredGridRendtypeMake" />
+
+	<mapping class="com.OnlineGridShop.scattered.Entity.GridType" />
+	<mapping class="com.OnlineGridShop.scattered.Entity.GoodsType" />
+	<mapping
+		class="com.OnlineGridShop.scattered.Entity.ScatteredGridAgreement" />
+	<mapping
+		class="com.OnlineGridShop.scattered.Entity.ScatteredGridAccounts" />
+	<mapping class="com.OnlineGridShop.brand.Entity.Brandgrid" />
+	<mapping class="com.OnlineGridShop.brand.Entity.BrandgridGoods" />
+	<mapping class="com.OnlineGridShop.brand.Entity.BrandgridGrid" />
+	<mapping class="com.OnlineGridShop.brand.Entity.BrandgridGridOwner" />
+	<mapping class="com.OnlineGridShop.brand.Entity.BrandgridGridtype" />
+	<mapping class="com.OnlineGridShop.brand.Entity.BrandgridOwner" />
+	<mapping
+		class="com.OnlineGridShop.brand.Entity.BrandgridPreferential" />
+	<mapping class="com.OnlineGridShop.brand.Entity.BrandgridSalesman" />
+	<mapping class="com.OnlineGridShop.brand.Entity.BrandgridSellnote" />
+	<mapping class="com.OnlineGridShop.brand.Entity.BrandgridInfocote" />
+	<mapping class="com.OnlineGridShop.brand.Entity.BrandgridGradenote" />
+	<!--
+	搜索引擎关键字词库
+	-->
+	<mapping class="com.searchEngine.entity.KeyWord" />
+</session-factory>
+
+</hibernate-configuration>

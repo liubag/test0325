@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans>  
+    <bean>  
+        <property name="entityName" value="BrandgridGoods"></property>  
+        <property name="rowName" value="goods_name"></property>  
+        <property name="orderBy" value="LZ_datetime desc"></property>
+        <property name="otherWhere" value="sure_status='5'"></property>
+        <property name="entityName2" value="ScatteredGridGoods"></property>  
+        <property name="rowName2" value="goods_name"></property>  
+        <property name="orderBy2" value="LZ_datetime desc"></property>
+        <property name="otherWhere2" value="Status='1'"></property>
+        <property name="perFolioAmount" value="8"></property>  
+        <property name="keyWords_max" value="1000"></property>  
+        <property name="startTime" value="'00:00:01'"></property> 
+        <property name="updataKeyWordDays" value="20"></property> 
+        <property name="showperFolioAmount" value="50"></property> 
+    </bean>  
+</beans>  

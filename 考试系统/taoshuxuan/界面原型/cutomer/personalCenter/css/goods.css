@@ -1,0 +1,280 @@
+@charset "utf-8";
+/* CSS Document */
+
+.main{
+ 	background-color: #FFFFFF;
+    margin: 0 auto;
+    width: 960px;
+}
+.left{
+	float: left;
+    margin-bottom: -10px;
+    width: 190px;
+}
+.right{
+	float: right;
+    padding-left: 10px;
+    width: 760px
+}
+.sideBar{
+	padding-bottom: 10px;
+}
+h1,h2,h3,h4,h5{
+	color: #404040;
+    font-family: 宋体,Arial,Helvetica,sans-serif;
+    font-size: 12px;
+}
+.side_title {
+    background: url("../images/bg_sidebar_r.gif") no-repeat scroll right top transparent;
+    display: block;
+    font-weight: bold;
+    line-height: 14px;
+    padding: 8px 0 6px 17px;
+}
+.side_main {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color #E0E0E0 #E0E0E0;
+    border-right: 1px solid #E0E0E0;
+    border-style: none solid solid;
+    border-width: medium 1px 1px;
+    padding: 0 1px 1px;
+    width: 186px;
+}
+.sideBar .side_main ul {
+    border: 1px solid #F4F4F4;
+    display: block;
+    padding: 9px 4px 6px;
+    width: 176px;
+}
+.sideBar .photo li {
+    border-bottom: 1px solid #F4F4F4;
+    line-height: 18px;
+    padding: 5px 6px;
+}
+.sideBar .photo li a, .sideBar .photo li a:hover {
+    
+    color: #666666;
+    display: block;
+    height: 18px;
+    overflow: hidden;
+    padding-left: 12px;
+    width: 152px;
+}
+.sideBar .photo li a:hover {
+    color: #FF6600;
+}
+.sideBar .photo .more {
+    height: 14px;
+    line-height: 14px;
+    padding-bottom: 0;
+    padding-right: 8px;
+    text-align: right;
+}
+.sideBar .photo .more a, .sideBar .photo .more a:hover {
+    background: none repeat scroll 0 0 transparent;
+    height: 14px;
+    line-height: 14px;
+    width: auto;
+}
+.book_title{
+    background: url("../images/dashed2.gif") repeat-x scroll left bottom transparent;
+    margin-bottom: 18px;
+    padding-bottom: 10px;
+
+}
+
+.right .book_title h1{
+	color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+    margin-bottom: 18px;
+    overflow: hidden;
+    padding: 4px 15px 0 0;
+}
+.right .showBook {
+    float: left;
+    padding-left: 22px;
+    position: relative;
+    width: 260px;
+}
+.right .privilege{
+	background-color: #FEF9F2;
+    border-bottom: 1px solid #F9F2EA;
+    border-top: 1px solid #F9F2EA;
+    line-height: 14px;
+    margin-bottom: 6px;
+    padding: 10px 0 11px 5px;
+    width: 360px;
+}
+.infoBook{
+	float:left;
+	width: 476px;
+}
+.right .infoBook p {
+    height: 26px;
+    line-height: 26px;
+    padding-bottom: 4px;
+}
+.right .infoBook .book_detailed {
+    border-top: 1px solid #EDEDED;
+    line-height: 21px;
+    margin-top: 12px;
+    padding-top: 10px;
+    width: 476px;
+}
+.right .infoBook .book_detailed li {
+    float: left;
+    width: 474px;
+}
+.right .book_detailed li span {
+    float: left;
+    line-height: 21px;
+    width: 158px;
+}
+.property {
+    background-color: #FFF8E7;
+    border: 1px solid #FFEFD2;
+    margin-top: 14px;
+    padding: 16px 5px 17px 6px;
+    width: 352px;
+}
+
+.clearfix:after {
+    clear: both;
+    content: " ";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+	margin-bottom: 10px;
+}
+.introduceBook{
+	margin-top: 20px;
+    width: 760px;
+	float:right;
+}
+.introduceBook_title{
+	background-color: #999;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 30px;
+    margin-top: 12px;
+    padding-left: 20px;
+}
+.content h4{
+	background-color: #F3F3F3;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 24px;
+    margin-top: 12px;
+    padding-left: 20px;
+}
+.content_text {
+    line-height: 26px;
+    overflow: hidden;
+    padding: 15px 15px 18px 20px;
+    width: 730px;
+}
+.comment{
+	margin-top: 20px;
+    width: 760px;
+}
+.comment h2{
+	background: url("../images/bg_intro.gif") no-repeat scroll right -29px transparent;
+    color: #FFFFFF;
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 16px;
+    padding: 6px 0 7px 20px;
+    width: 300px;
+}
+.book_score {
+	background: #EEE;
+    color: #CC3300;
+    display: inline;
+    float: left;
+    font-size: 16px;
+    font-weight: bold;
+    overflow: hidden;
+    padding: 0 0 7px 24px;
+    width: 296px;
+}
+.book_score .book_star {
+    margin-top: -9px;
+}
+.book_score .book_star .book_num {
+    font-family: Arial;
+    font-size: 43px;
+    padding-right: 4px;
+}
+.book_score .book_star .star_img {
+    display: inline-block;
+    height: 16px;
+    margin-top: -6px;
+    padding-left: 13px;
+    vertical-align: middle;
+}
+.book_score .book_star .book_txt {
+    color: #878787;
+    font-size: 12px;
+    font-weight: normal;
+    padding-left: 11px;
+}
+.score_wrap .tips {
+    color: #878787;
+    font-size: 12px;
+    font-weight: normal;
+    line-height: 22px;
+    margin-top: 3px;
+}
+.average_center {
+    float: left;
+    margin-top: 5px;
+    width: 255px;
+}
+.average_center ul {
+    float: left;
+    list-style: none outside none;
+}
+.average_center li {
+    clear: left;
+    float: left;
+    padding-bottom: 4px;
+    width: 255px;
+}
+.average_center .energy_line {
+    background: url("../images/average_bg.gif") repeat-x scroll 0 0 #FFF9EA;
+    border: medium none;
+    float: left;
+    height: 12px;
+    margin: 0 5px 0 10px;
+    overflow: hidden;
+}
+.right .comment h5 {
+    background-color: #F3F3F3;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 16px;
+    margin-top: 12px;
+    padding: 5px 0 3px 27px;
+    width: 733px;
+}
+
+.pl_photo{
+		float:left;
+}
+.right .book_comment .text .title2 {
+    color: #878787;
+    padding-bottom: 15px;
+	margin-left:10px;
+	margin-top:10px;
+}
+.right .comment_text {
+	 padding: 15px 15px 18px 20px;
+}

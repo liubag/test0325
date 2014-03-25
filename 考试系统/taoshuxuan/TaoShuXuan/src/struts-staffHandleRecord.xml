@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="struts-staffHandleRecord" extends="struts-default"> 
+		<!-- 分页显示所有员工处理记录信息 -->
+		<action name="showStaffHandleRecord_by_page" class="staffHandleRecordAction" method="showStaffHandleRecord_by_page">
+			<result name="success1">/admin/staffHandleOrder.jsp</result>	
+			<result name="success2">/admin/staffHandleReturn.jsp</result>
+			<result name="input">/admin/fail.jsp</result>		
+		</action>
+		<!--  分页显示单个员工处理记录信息 -->
+		<action name="showStaffHandleRecord_by_id" class="staffHandleRecordAction" method="showStaffHandleRecord_by_id">
+			<result name="success">/staff/show_handle_record.jsp</result>
+			<result name="input"></result>
+		</action>
+	</package> 
+</struts>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="Struts2_teacher"  extends="struts-default"> 						
+		<action name="teacherLogin" class="teacherAction" method="login">
+			<result name="success" type="chain">gainExamByTime</result>
+			<result name="input">login.jsp</result>
+		</action>
+
+		<action name="addTeacher" class="teacherAction" method="addTeacher">
+			<result name="success" type="chain">showTeacher_by_page</result>
+			<result name="input">/public/error.jsp</result>
+		</action>
+		<action name="delTeacher" class="teacherAction" method="delTeacher">
+			<result name="success" type="chain">showTeacher_by_page</result>
+			<result name="input">/public/error.jsp</result>
+		</action>
+		<action name="teacherChangePassword" class="teacherAction" method="changePassword">
+			<result name="success" type="chain">teacherLogout</result>
+			<result name="fail">/public/error.jsp</result>
+		</action>
+		<action name="teacherLogout" class="teacherAction" method="logout">
+			<result name="success">/login.jsp</result>
+			<result name="success1">/public/success.jsp</result>		
+		</action> 
+		
+		<action name="showTeacher_by_page" class="teacherAction" method="showTeacher_by_page">
+			<result name="success">/admin/admin_teacherManager.jsp</result>
+			<result name="input">/public/error.jsp</result>
+		</action>
+		
+		<action name="getAllTeacher" class="teacherAction" method="getAllTeacher"></action>
+		
+		<action name="findTeacherById" class="teacherAction" method="findTeacherById"></action>
+		
+		
+	</package> 
+	
+</struts>

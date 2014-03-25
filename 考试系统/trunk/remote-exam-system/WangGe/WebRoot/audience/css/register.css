@@ -1,0 +1,94 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	margin:0;
+	padding:0;
+}
+.reg-form ul{
+	margin:30px 0 0 0px;
+}
+.reg-form .reg-header{
+	margin-left:400px;
+	height:50px;
+	font-size:36px;
+}
+.reg-form li.field {
+    height: 46px;
+    padding: 10px 2px 2px 300px;
+}
+.reg-form li.field font{
+   font-size: 14px;
+}
+.reg-form li.field label {
+    float: left;
+    font-size: 14px;
+    height: 26px;
+    line-height: 26px;
+    text-align: right;
+    width: 98px;
+}
+
+li{
+	list-style: none outside none;
+}
+.reg-form {
+	border:1px solid;
+    margin: 0 auto;
+    width: 1024px;
+	
+}
+.reg-form .field-text {
+    border: 1px solid #DB9238;
+    font-size: 14px;
+    height: 30px;
+    margin: 0 5px;
+    padding: 2px;
+    width: 196px;
+	background: url("../images/text-background.png") no-repeat scroll 0 0 white;
+}
+.reg-form .high {
+    color: #FF0000;
+   
+}
+.reg-form li.hover {
+    background-color: #FCEFE3;
+}
+
+.reg-form .submit-field {
+	height: 46px;
+    margin: 0 0 0 300px;
+    
+}
+li.submit-field .input {
+    margin-left: 90px;
+}
+.reg-form .submit-field .submit-btn{
+	 background-image: url("../images/reg_button.png");
+    border: 0 none;
+	 width:82px;
+	 height:30px;
+    cursor: pointer;
+    margin-top: 13px;
+    text-indent: -23556px;
+}
+.reg-form .submit-field .reset-btn{
+	 background-image: url("../images/reset_button.png");
+    border: 0 none;
+	 width:82px;
+	 height:30px;
+    cursor: pointer;
+    margin-top: 13px;
+    margin-left:40px;
+    text-indent: -23556px;
+}
+.onError {
+    background: url("../images/reg3.gif") no-repeat scroll 0 center #FFE0E9;
+    font-size: 14px;
+    padding-left: 25px;
+}
+.onSuccess {
+    background: url("../images/reg4.gif") no-repeat scroll 0 center #E9FBEB;
+   font-size: 14px;
+    padding-left: 25px;
+}

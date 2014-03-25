@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+    
+<struts>
+	<package name="struts2_title" extends="struts-default"> 	
+						
+		<action name="findTitle" class="titleAction" method="findTitle"></action>
+		
+		<action name="updateTitle" class="titleAction" method="updateTitle"></action>
+		
+		<action name="deleTitleAndSaveMovedivs" class="titleAction" method="deleTitleAndSaveMovedivs"></action>
+	</package> 
+</struts>
+

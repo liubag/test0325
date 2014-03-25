@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+.mydnew_break {
+    background-color: #FFFFFF;
+    line-height: 18px;
+    padding: 12px 0 11px;
+    width: 960px;
+}
+.title h3 {
+    background: none repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #999;
+    font-weight: bold;
+    margin: 0;
+	padding:10px 0 10px 0; 
+}
+.lable{
+	width:100px;
+	text-align:right;
+}
+ .myTable tr{
+	height: 30px;
+}
+.archives_title h2 {
+   background: none repeat scroll 0 0 transparent;
+    border-bottom: 1px solid #999999;
+    font-weight: bold;
+    margin: 0;
+    padding: 10px 0;
+	font-size: 12px;
+}
+.myForm{
+	margin:0 0 0 200px;	
+}
+.required1{
+	height:20px;
+}

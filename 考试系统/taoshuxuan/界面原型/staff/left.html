@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">  
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+<script src="js/jquery-1.5.2.js" type="text/javascript"></script>
+<script src="js/prototype.lite.js" type="text/javascript"></script>
+<script src="js/moo.fx.js" type="text/javascript"></script>
+<script src="js/moo.fx.pack.js" type="text/javascript"></script>
+
+<script src="js/left.js" type="text/javascript"></script>
+
+<link href="css/left.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="left">
+		       <div id="left_menu"></div>
+			   <div id="left_tree">
+					   <!--   <li class="tree_li"><span class="list_img"><img src="images/list_img.gif" /></span>用户属性 <span class="list_img"><img src="images/list_img.gif" /></span>修改密码</li>
+					   -->
+<table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#EEF2FB" id="tab">
+  <tr>
+    <td width="182" height="auto" valign="top">
+    <div id="container">
+       <h1 class="type"><a href="javascript:void(0)">处理用户订单</a></h1>
+      <div class="content">
+       
+        <ul class="MM">
+          <li><a href="audit_order.html" target="main">审核订单</a></li>
+          <li><a href="shipments.html" target="main">发货</a></li>
+          <li><a href="worked_order.html" target="main">查看处理完成订单</a></li>
+        </ul>
+      </div>
+      <h1 class="type"><a href="javascript:void(0)">处理用户退货请求</a></h1>
+      <div class="content">
+        <ul class="MM">
+		  <li><a href="audit_rejected.html" target="main">审核退货申请</a></li>
+          <li><a href="complete_rejected.html" target="main">确认收货完成交易</a></li>
+       
+        </ul>
+      </div>
+      <h1 class="type"><a href="javascript:void(0)">查看员工处理记录</a></h1>
+      <div class="content">
+        <ul class="MM">
+          <li><a href="show_handle_record.html" target="main">查看员工处理记录</a></li>
+        </ul>
+      </div>
+      <h1 class="type"><a href="javascript:void(0)">个人信息管理</a></h1>
+      <div class="content">
+        <ul class="MM">
+          <li><a href="staff_personalInfo.html" target="main">个人信息管理</a></li>
+          <li><a href="changePassword.html" target="main">修改登录密码</a></li>
+        </ul>
+      </div>
+    </div>
+       <script type="text/javascript">
+		var contents = document.getElementsByClassName('content');
+		var toggles = document.getElementsByClassName('type');
+	
+		var myAccordion = new fx.Accordion(
+			toggles, contents, {opacity: true, duration: 400}
+		);
+		myAccordion.showThisHideOpen(contents[0]);
+	</script>
+        </td>
+  </tr>
+</table>
+
+
+</div>
+</div>
+</body>
+</html>

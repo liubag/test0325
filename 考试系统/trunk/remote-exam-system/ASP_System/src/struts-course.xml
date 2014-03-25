@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="Struts2_course" extends="struts-default"> 						
+		<action name="showCourse_by_page" class="courseAction" method="showCourse_by_page">
+			<result name="success">/admin/admin_courseManager.jsp</result>
+			<result name="input">/public/error.jsp</result>
+		</action>					
+		
+		<action name="addCourse" class="courseAction" method="addCourse">
+			<result name="success" type="chain">showCourse_by_page</result>
+			<result name="input">/public/error.jsp</result>
+		</action>
+
+		<action name="updateCourse" class="courseAction" method="updateCourse">
+			<result name="success" type="chain">showCourse_by_page</result>
+			<result name="input">/public/error.jsp</result>
+		</action>
+
+		<action name="deletCourse" class="courseAction" method="deletCourse">
+			<result name="success" type="chain">showCourse_by_page</result>
+			<result name="input">/public/error.jsp</result>
+		</action>
+
+		<action name="deletCourseBatch" class="courseAction" method="deletCourseBatch">
+			<result name="success" type="chain">showCourse_by_page</result>
+			<result name="input">/public/error.jsp</result>
+		</action>
+		
+		<action name="getAllCourse" class="courseAction" method="getAllCourse">
+			
+		</action>
+		<!--ajax 验证当前科目是否与题目有关联-->
+		<action name="findCourse" class="courseAction" method="findCourse">
+			
+		</action>
+		<action name="findCourseByName" class="courseAction" method="findCourseByName">
+			
+		</action>
+		
+		<!--ajax 验证当前输入的课程名是否可用-->
+		<action name="checkCourseByName" class="courseAction" method="checkCourseByName"></action>
+
+	</package> 
+	
+</struts>
+

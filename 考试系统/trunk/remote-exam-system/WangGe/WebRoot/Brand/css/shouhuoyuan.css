@@ -1,0 +1,84 @@
+/* CSS Document */
+
+*{
+margin:0px auto;
+padding:0px;
+font-family:"ËÎÌו","Times New Roman", Times, serif;
+font-size:14px;
+text-align:center;
+}
+
+body{
+width:995px;
+height:575px;
+background-color:#fff3d2;
+}
+
+table{
+width:100%;
+}
+
+td{
+height:45px;
+padding-top:2px;
+}
+
+
+td a{
+text-decoration:none;
+}
+
+#top{
+height:70px;
+font-size:20px;
+padding-top:15px;
+color:#590808;
+}
+
+.td5{
+width:475px;
+font-size:15px;
+text-align:right;
+padding-top:8px;
+border-top:dashed 2px #d8cfb8;
+}
+
+.td6{
+width:475px;
+padding-top:-2px;
+font-size:16px;
+border-top:dashed 2px #d8cfb8;
+}
+
+.input1{
+height:24px;
+padding-top:6px;
+font-size:15px;
+text-align:left;
+float:left;
+}
+
+#tianjia{
+background-color:#d8be98;
+border:dashed 1px #d8be98;
+}
+
+.select1{
+float:left;
+}
+
+.high{
+float:left;
+color:#FF0000;
+}
+
+.onError{
+float:left;
+background:#FFE0E9 url(../pic/reg3.gif) no-repeat 0 center;
+padding-left:25px;
+}
+.onSuccess{
+float:left;
+background:#E9FBEB url(../pic/reg4.gif) no-repeat 0 center;
+padding-left:25px;
+}

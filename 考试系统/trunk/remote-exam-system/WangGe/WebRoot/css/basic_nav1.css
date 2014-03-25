@@ -1,0 +1,172 @@
+*{
+	padding:0;
+	margin:0;
+	}
+body{
+	margin:10px;
+
+	}
+ul {
+	list-style-type:none;
+}
+#header a {
+	color:#333;
+	text-decoration:none;
+}
+#header a:hover {
+	color:#f60;
+	text-decoration:underline;
+}
+img{
+	border:none;
+	}
+#header{
+	width:1024px;
+	height:242px;
+	border:1px solid black;
+	margin:0 auto;
+	background:url(../images/bg.png) repeat 0 -759px;
+	}
+#nav1{
+	width:100%;
+	height:30px;
+	}
+#header #nav1 #p1{
+	display:inline;
+	width:30px;
+	height:30px;
+	margin:100px 50px 0px 840px;
+	line-height:30px;
+	text-align:center;
+	}
+#logo{
+	width:100%;
+	height:160px;
+	}
+#logo #logo11{
+	width:1024px;
+	height:86px;
+	}
+#logo #logo11 img{
+	width:1024px;
+	height:87px;
+	}
+#logo #logo12{
+	width:1024px;
+	height:69px;
+	background:url(../images/logo4.png) repeat 31px 1px;:
+	}
+#logo #logo12 img{
+	width:295px;
+	height:74px;
+	}
+#nav2{
+	width:100%;
+	height:50px;
+	}
+
+
+#nav2 img.img1{
+	display:block;
+	margin:-5px 0 0 276px;
+	
+	}
+.img2{
+	width:750px;
+	height:3px;
+	margin:-14px 0 0 271px;
+	}	
+	
+.img3{
+	margin-left:10px;
+	padding:0px 0 13px  40px;
+	}
+
+#nav2 dl{
+    position:absolute;
+	margin:-60px 0px 0px 276px;
+	height:25px;
+	width:754px;
+	float:right;
+	}
+#nav dl dd{
+	height:55px;
+	padding:0 4px 0 0;
+	float:left;
+	}
+#nav2 dl dd.search1 {
+	width:105px;
+	height:35px;
+	float:left;
+	margin:0px 0 0 2px;
+	background: url(../images/search.jpg) no-repeat scroll 0 0 transparent;
+	}
+#nav2 dl dd.search1 a{
+	display:block;
+	text-indent:-9999px;
+	height:35px;
+	width:105px;
+	
+	}
+#nav2 dl dd.search2 a{
+	display:block;
+	text-indent:-9999px;
+	height:35px;
+	width:160px;
+	margin:0;
+	}
+#nav2 dl dd.search2{
+	width:160px;
+	height:35px;
+	float:left;
+	margin:0;
+	background: url(../images/search.jpg) no-repeat scroll -104px 0px transparent;
+	}
+#nav2 dl dd.search3 a{
+	display:block;
+	text-indent:-9999px;
+	height:35px;
+	width:160px;
+	margin:0;
+	}
+#nav2 dl dd.search3{
+	width:160px;
+	height:35px;
+	float:left;
+	margin:0;
+	background: url(../images/search.jpg) no-repeat scroll -264px 0px transparent;
+	}
+#nav2 dl dd.search4 a{
+	display:block;
+	text-indent:-9999px;
+	height:35px;
+	width:160px;
+	margin:0 ;
+	}
+#nav2 dl dd.search4{
+	width:160px;
+	height:35px;
+	float:left;
+	margin:0;
+	background: url(../images/search.jpg) no-repeat scroll -424px 0px transparent;
+	}
+#nav2 dl dd.search5 a{
+	display:block;
+	text-indent:-9999px;
+	height:35px;
+	width:164px;
+	margin:0;
+	}
+#nav2 dl dd.search5{
+	width:164px;
+	height:35px;
+	float:left;
+	background: url(../images/search.jpg) no-repeat scroll -584px 0px transparent;
+	}
+#footer{
+	width:1024px;
+	height:140px;
+	margin:0 auto;
+	background:url(../images/footerwangge.jpg) repeat 0 -1790px;
+	clear:both;
+	}

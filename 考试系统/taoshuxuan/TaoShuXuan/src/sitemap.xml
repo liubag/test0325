@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 配置文件说明， sitemap根节点,title是页面上显示的内容，
+	href是超链接，path是该请求页面的物理路径
+-->
+<sitemaps isroot="true">
+	<sitemap title="管理员后台首页" href="right.jsp" path="/admin/right.jsp">
+		<node  title="增加新员工" path="/admin/addStaff.jsp" href="addStaff.jsp"/>	
+		<node  title="增加图书分类" path="/admin/addCatagory.jsp" href="addCatagory.jsp"/>	
+		<node  title="增加图书" path="/admin/addBook.jsp" href="addBook.jsp"/>	
+		<node  title="查看员工" path="/admin/showStaff.jsp" href="showStaff.jsp"/>	
+		<node  title="查看会员" path="/admin/showCustomer.jsp" href="showCustomer.jsp"/>	
+		<node  title="员工信息查看/修改" path="/admin/showOrModifyStaff.jsp" href="showOrModifyStaff.jsp"/>
+		<node  title="图书信息查看/修改" path="/admin/showOrModifyBook.jsp" href="showOrModifyBook.jsp"/>
+		<node  title="修改密码" path="/admin/changePassword.jsp" href="changePassword.jsp"/>	
+		<node  title="员工处理订单记录" path="/admin/staffHandleOrder.jsp" href="staffHandleOrder.jsp"/>	
+		<node  title="员工处理退货记录" path="/admin/staffHandleReturn.jsp" href="staffHandleReturn.jsp"/>	
+		<node  title="会员购书记录" path="/admin/customerShoppingRecord.jsp" href="customerShoppingRecord.jsp"/>
+		<node  title="会员评论记录" path="/admin/customerCommentRecord.jsp" href="customerCommentRecord.jsp"/>
+		<node  title="图书分类管理" path="/admin/bookClassify.jsp" href="bookClassify.jsp"/>
+		<node  title="图书管理" path="/admin/showBook.jsp" href="showBook.jsp"/>
+		<node  title="新增支付方式" path="/admin/addPaymentMethod.jsp" href="addPaymentMethod.jsp"/>
+		<node  title="支付方式管理" path="/admin/showPaymentMethod.jsp" href="showPaymentMethod.jsp"/>
+		<node  title="新增优惠信息" path="/admin/addPromotion.jsp" href="addPromotion.jsp"/>
+		<node  title="过期优惠信息" path="/admin/showExpirePromotion.jsp" href="showExpirePromotion.jsp"/>
+		<node  title="没期优惠信息" path="/admin/showNotExpirePromotion.jsp" href="showNotExpirePromotion.jsp"/>
+	</sitemap>	
+	<sitemap title="员工后台首页" href="right.jsp">
+		<node  title="审核订单" path="/staff/audit_order.jsp" href="audit_order.jsp"/>
+		<node  title="发货" path="/staff/shipments.jsp" href="shipments.jsp"/>
+		<node  title="查看审核失败的订单" path="/staff/show_audit_fail_order.jsp" href="show_audit_fail_order.jsp"/>
+		<node  title="查看已发货的订单" path="/staff/show_delivered_order.jsp" href="show_delivered_order.jsp"/>
+		<node  title="查看交易完成的订单" path="/staff/worked_order.jsp" href="worked_order.jsp"/>
+		
+		<node  title="审核退货申请" path="/staff/audit_rejected.jsp" href="audit_rejected.jsp"/>
+		<node  title="确认收货完成交易" path="/staff/complete_rejected.jsp" href="complete_rejected.jsp"/>
+		<node  title="查看不批准的退货申请" path="/staff/show_audit_fail_rejected.jsp" href="show_audit_fail_rejected.jsp"/>
+		<node  title="查看已完成的退货申请" path="/staff/worked_rejected.jsp" href="worked_rejected.jsp"/>
+		
+		<node  title="查看员工处理记录" path="/staff/show_handle_record.jsp" href="show_handle_record.jsp"/>
+		<node  title="个人信息管理" path="/staff/staff_personalInfo.jsp" href="staff_personalInfo.jsp"/>
+		<node  title="修改登录密码" path="/staff/changePassword.jsp" href="changePassword.jsp"/>
+		
+		<node  title="查看订单包含图书信息" path="/staff/show_book_in_order.jsp" href="show_book_in_order.jsp"/>		
+	</sitemap>
+	
+	<sitemap title="个人中心" href="main.jsp?trigger=myOrder" target="iframe">
+		<node  title="我的订单" path="/customer/personalCenter/myOrder.jsp" href="myOrder.jsp"/>
+		<node  title="我的收藏" path="/customer/personalCenter/myCollection.jsp" href="myCollection.jsp"/>
+		<node  title="我的商品" path="/customer/personalCenter/boughtGoods.jsp" href="boughtGoods.jsp"/>
+		<node  title="我的评论" path="/customer/personalCenter/myComment.jsp" href="myComment.jsp"/>
+		<node  title="个人信息管理" path="/customer/personalCenter/personalInfor.jsp" href="personalInfor.jsp"/>
+		<node  title="修改密码" path="/customer/personalCenter/changePassword.jsp" href="changePassword.jsp"/>
+		<node  title="地址管理" path="/customer/personalCenter/addressManageMent.jsp" href="addressManageMent.jsp"/>
+	</sitemap>
+		
+</sitemaps>
+	

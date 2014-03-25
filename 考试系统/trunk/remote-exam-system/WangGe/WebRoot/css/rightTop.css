@@ -1,0 +1,99 @@
+.nav_top_2011 {
+    font-family: simsun;
+    font-size: 12px;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 4px;
+    width: auto;
+}
+.nav_top_2011 p {
+    margin: 0 auto;
+}
+.nav_top_2011 ul, .nav_top_2011 ul li {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+.nav_top_2011 a:link, .nav_top_2011 a:visited, .nav_top_2011 a:active {
+    color: #666666;
+    text-decoration: underline;
+}
+.nav_top_2011 a:hover {
+    color: #FF0000;
+    text-decoration: underline;
+}
+.nav_top_2011 p {
+    float: right;
+    padding-right: 4px;
+    text-align: right;
+}
+.nav_top_2011 p a, .nav_top_2011 p a:link, .nav_top_2011 p a:visited, .nav_top_2011 p a:active {
+    color: #444444;
+    font-family: arial,sans-serif;
+    padding: 0 6px;
+    text-decoration: none;
+}
+.nav_top_2011 p a:hover {
+    text-decoration: underline;
+}
+.nav_top_2011 p em {
+    color: #FF0000;
+    font-family: arial,sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    padding: 0 6px;
+}
+.nav_top_2011 p a.notice_num {
+    background: none repeat scroll 0 0 #DDDDDD;
+    border-radius: 3px 3px 3px 3px;
+    color: #666666 !important;
+    display: inline-block;
+    height: 11px;
+    line-height: 11px;
+    margin: 0 20px 0 0;
+    padding: 2px 5px;
+    text-decoration: none;
+    width: auto;
+}
+.nav_top_2011 p a {
+    font-family: arial,sans-serif;
+    padding-left: 10px;
+}
+.nav_top_2011 p a.user {
+    color: #FF0000;
+}
+.nav_top_2011 p a.user:link, .nav_top_2011 p a.user:visited, .nav_top_2011 p a.user:active {
+    color: #FF0000;
+    font-weight: bold;
+    text-decoration: none;
+}
+.nav_top_2011 p a.user:hover {
+    color: #FF0000;
+    text-decoration: underline;
+}
+.nav_top_2011 p a.red {
+    color: #FF0000;
+}
+.nav_top_2011 p a.red:link, .nav_top_2011 p a.red:visited, .nav_top_2011 p a.red:active {
+    color: #FF0000;
+    font-weight: normal;
+    text-decoration: none;
+}
+.nav_top_2011 p a.red:hover {
+    color: #FF0000;
+    text-decoration: underline;
+}
+.nav_top_2011 ul {
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    padding-left: 10px;
+    text-align: left;
+}
+.nav_top_2011 ul li {
+    float: left;
+    padding-right: 10px;
+    font-family: arial,sans-serif;
+    color: #444444;
+}
+

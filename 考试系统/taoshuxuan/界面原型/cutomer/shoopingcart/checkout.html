@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link type="text/css" rel="stylesheet" href="css/order_form.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/checkout.js"></script>
+
+</head>
+
+<body>
+<link type="text/css" rel="stylesheet" href="css/unite_header.css">
+	<div id="div_ajax_canvas" style="display:block;">
+		<div class="shoppingcart_wrapper">
+        <div class="shoppingcart_nav shoppingcart_nav2">
+        	<h1><a href="#">我的购物车</a></h1>
+        </div>
+        <div id="div_checkout_tips" class="objhide"></div>
+        <div class="shoppingcart_footer_experience">请确认以下信息，然后提交订单</div>
+		<div class="clearing_border">
+        	<div id="div_consignee">
+            	
+            	<div id="consignee_tips" class="consignee">
+                	<h3>
+                        收货人信息
+                        <span class="look">
+                     	   <a id="btn_consignee_close" class="btn_close" href="#" 
+                           onclick="return msgToggle(this)">[关闭]</a>
+   						</span>
+					</h3>
+                    <div id="consignee_edit_info" class="info open">
+                    	<div id="div_consignee_edit_info_display">
+                        	<div class="m_list">
+                            	<span class="text">收&nbsp;货&nbsp;人：</span>
+ 									<input id="txt_ship_name" class="textbox_4" type="text" value="陈佳佳" 				 										maxlength="40">
+                            </div>
+                            <div id="div_consignee_addr" class="m_list">
+                            	<span class="text">地&nbsp;&nbsp;&nbsp;&nbsp;区：</span>
+                                <select id="sel_country" class="select_w">
+                                	<option value="9000">中国</option>
+                                </select>
+                                <span id="spn_province_city" style="display: block;">
+                                	<select id="s_province" name="s_province" class="select_w"></select>
+                                     <select id="s_city" name="s_city" class="select_w"></select>
+                                    <span id="span_town" style="display: block;">
+                                        <select id="s_county" name="s_county" class="select_w"></select>
+                                	</span>
+                                    <script type="text/javascript" src="js/area.js"></script>
+    								<script type="text/javascript">_init_area();</script>
+                                </span>
+                                <span class="hint">
+                                	<a target="_blank" href="#">查看可货到付款地区&gt;&gt;</a>
+                                </span>
+                             </div>
+                             <div class="m_list">
+                             	<span class="text">
+                                    街道地址：
+                                    <span id="div_country_province_city" class="">
+                                    	中国，广东，珠海市，香洲区，
+                                    </span>
+                                </span>
+                                <input id="txt_ship_address" class="textbox_x" type="text" onblur="" 
+                                	onfocus="" value="金凤路6号" maxlength="100">
+                                <span id="ship_address_valid_msg" class="news_red2" 
+                                	style="visibility:hidden"></span>
+                             </div>	
+                             <div class="m_list">
+                                <span class="text">邮&nbsp;&nbsp;&nbsp;&nbsp;编：</span>
+                                <input id="txt_ship_zip" class="textbox_4" type="text" 
+                                	value="519000" maxlength="20">
+                                <span id="ship_zip_valid_msg" class="news_red2" style="visibility:hidden">
+                                </span>
+                             </div>
+                             <div class="m_list">
+                             	<span class="text">手&nbsp;&nbsp;&nbsp;&nbsp;机：</span>
+								<input id="txt_ship_mb" class="textbox_4" type="text" maxlength="20"
+                                 value="13750039997">
+                                 <span class="text">
+                                    <span class="hint">或者</span>
+                                    固定电话：
+                                 </span>
+                                 <input id="txt_ship_tel" class="textbox_4" type="text" 
+                                  maxlength="20" value="">
+                                 <span id="ship_mb_valid_msg" class="news_red2" style="visibility:hidden">				 								 </span>
+                             </div>
+                        </div>
+                        <div class="button_ts">
+                             <input id="btn_consignee_save" class="save_button" type="button" 
+                             value="确认收货人信息" onclick="return msgToggle(this)">
+                            <span id="span_consignee_save_tips" class="objhide"></span>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div id="refer_m" class="refer_m" style="display:none">
+                            <ul>
+                                <li>
+                                    陈佳佳，
+                                    <span id="country_name_display" class="">中国，</span>
+                                    <span id="province_name_display" class="">广东，</span>
+                                    <span id="city_name_display" class="">珠海市，</span>
+                                    <span id="town_name_display">香洲区，</span>
+                                    金凤路6号，519000，13750039997，
+                                </li>
+                            </ul>
+                     </div>
+                </div>
+            </div>
+            <div id="div_shipment">
+            	<div id="shipment_tips" class="consignee">
+                	<h3 class="change_h3_h">
+  						<span id="ship_type_tips">送货方式</span>
+                    </h3>
+                    <div id="rd_shipinfo">
+                    	<div class="delivery_title">
+                        	<ul>
+                                <li class="height2">
+                                    <span class="delivery_text_l1">送货方式</span>
+                                    <span class="delivery_text_l2">运费</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="delivery_text">
+                        	<ul>
+                            	<li>
+                                    
+                                    <span class="delivery_text_l2">普通快递送货上门 （支持货到付款）</span>
+                                    <span class="delivery_text_c3"> 5元（购物满29元免运费）</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="clear"></div> 
+                </div>
+            </div>
+            <div id="div_payment">
+            	<div id="payment_tips" class="consignee">
+                	<h3>
+                        付款方式&#12288;
+                        <span class="add_gray2">
+                            <a id="btn_payment_close" class="btn_close" href="#" 
+                            onclick="return msgToggle(this)">[关闭]</a>
+                        </span>
+                        <span id="payment_valid_msg" class="news_red"></span>
+                    </h3>
+                    <div id="rd_pay_id" class='info open'>
+                    	<div class="clearing_payment">
+                        	<form>
+                            	<p class="clearing_payment_nav">
+                                    <input type="radio" value="1" name="rd_pay_id">
+                                    <b>网上支付</b>
+                                    <span class="hint">
+                                    <span class="hint">
+                                    您需要先拥有一张已开通网上支付功能的银行卡。
+                                    <span class="hot">使用网上支付，您将获得积分奖励：10分</span>
+                                    </span>
+                                    </span>
+                                </p>
+                                <p class="clearing_payment_nav">
+                                    <input type="radio" value="0" name="rd_pay_id">
+                                    <b>货到付款</b>
+                                    <span class="hint">您需要在收货时向送货员支付订单款项。</span>
+                                </p>
+                            </form>
+                        </div>
+                        <div class="button_ts">
+                            <input id="btn_payment_save" class="put_in" type="button" 
+                            value="确认付款方式" name="">
+                            <span id="span_payment_save_tips" class="news_red2"></span>
+                            
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    
+                    <div id="refer_m3" class="refer_m" style="display:none">
+                          <ul>
+                          	<li>
+                         		<span>货到付款</span>
+                            </li>
+                          </ul>
+                     </div>
+                </div>
+            </div>
+            <div id="div_cartItems">
+            	<div class="refer_m refer_m2">
+                	<h4>商品清单</h4>
+                    <div class="merch_detail">
+                    	<span class="experience">
+                            [<a name="gobackshoppingcart" href="">返回修改购物车</a>]
+                        </span>
+                        <div id="div_order_all" class="">
+                        	<div class="business_box">
+                            	<div class="business_box_border"><div>
+                                <div id="rpt_cart_items">
+                                	<ul class="shoppingcart_subject">
+                                    	<li class="row1">商品名称</li>
+                                        <li class="row2">所在仓库</li>
+                                        <li class="row3">当当价</li>
+                                        <li class="row4"><span title="在当当价基础上再优惠">优惠</span></li>
+                                        <li class="row5">数量</li><li class="row6">小计</li>
+                                     </ul>
+                                     <div class="shoppingcart_general">
+                                     	<ul id="ul_22731771" name="ul_22731771" class="shoppingcart_list">
+                                            
+                                            <li title="怪屋" class="row1">怪屋女孩，</li>
+                                            <li class="row7"><span></span></li>
+                                            <li class="row2">北京</li>
+                                            <li class="row3">￥20.60(69折)</li>
+                                            <li class="row4"></li>
+                                            <li class="row5">1</li>
+                                            <li class="row6">￥20.60</li>
+                                        </ul> <br class="clear">
+                                        <span class="price_charge_border"></span>
+                                     </div>
+                                </div>
+                                    <div class="price_charge">
+                                    <p class="p_charge1">
+                                        商品金额总计：<span>￥<span id="sp_bargin_total">20.60</span>
+                                        </span>
+                                    </p>
+                                    <p class="p_charge1">
+                                        运费：<span id="sp_shipping_fee">￥5.00</span>
+                                    </p>
+                                    <div id="rpt_collection_privilege_deduct"></div>
+                                    <p class="change_total">
+                                            您需支付：<span class="c_red">
+                                                ￥<span id="sp_payable">25.60</span>
+                                                </span>
+                                    </p>
+                                    </div>
+                           		</div>
+                        	</div>
+                    	</div>
+                    </div>
+                    <div class="order_tijiao">
+                    	<a id="submit" name="submit" href="">提交订单</a>
+                    </div>
+                    <div class="clear"></div>
+                    </div>
+                    <div id="order_submit_error_tips" class="order_tijiao_hint"></div>
+                </div>
+            </div>
+        </div>
+     </div>
+    </div> 
+</body>
+</html>

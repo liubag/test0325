@@ -1,0 +1,91 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+*{
+	font-family:"宋体","Times New Roman", Times, serif;
+    font-size:16px;
+	background-repeat:no-repeat;
+	padding:0px;
+	margin:0px;
+	}
+.sumbit{
+	background-color:#d8be98;
+	border:dashed 1px #d8be98;
+	}	
+body{
+	width:995px;
+    height:575px;
+	background-color:#fff3d2;
+	}
+	
+table{
+	vertical-align:middle;
+	margin:0 auto;
+	}
+	
+td{
+	height:30px;
+	}
+	
+img{
+	border-radius:15px;
+	width:136px;
+	height:113px;
+	}
+	
+.td1{
+	text-align:right;
+	}
+#shishou,#shi{
+	float:left;
+}
+#text1{
+	float:left;
+	width:50px;
+	}
+	
+#text2{
+	float:left;
+	width:85px;
+	}
+	
+#text3,#text4{
+	float:left;
+	width:85px;
+	}
+#text5{
+width:85px;
+}
+#tb{
+	width:70%;
+	}
+	
+.td2,.td3{
+	border-top:dashed 2px #d8cfb8;
+	}
+
+.td2{
+	text-align:center;
+	}
+
+.td3{
+	text-align:right;
+	}
+
+#yes1,#yes3,#yes4,#yes5,.yes1{
+	float:left;
+	}
+	
+.yes{
+	float:left;
+	width:23px;
+    height:23px;
+    background-image:url(../pic/reg4.gif);
+}
+
+.no{
+	float:left;
+	width:23px;
+    height:23px;
+    background-image:url(../pic/reg3.gif);
+}

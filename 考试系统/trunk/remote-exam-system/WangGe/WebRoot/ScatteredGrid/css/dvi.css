@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+
+#box{
+	width:800px;
+	}
+#top{
+	width:780px;
+	height:70px;
+	margin:10px;
+	}
+#logo{
+	width:60px;
+	height:60px;
+	margin:5px;
+	text-align:center;
+	float:left;
+	}
+#logo2{
+	width:700px;
+	height:60px;
+	font-size:24px;
+	margin:5px;
+	text-align:center;
+	float:left;
+	}
+#welcome{
+	width:150px;
+	height:780px;
+	margin:10px;
+	float:left;
+	}
+#welcome1{
+	width:140px;
+	height:30px;
+	text-align:center;
+	margin:5px;
+	float:left;
+	}
+.wel{
+	width:140px;
+	height:20px;
+	text-align:center;
+	margin:5px;
+	float:left;
+	}
+#zhuanghu{
+	width:610px;
+	height:300px;
+	margin:10px;
+	float:left;
+	}
+#zhuanghuming{
+	width:600px;
+	height:30px;
+	text-align:center;
+	margin:5px;
+	float:left;
+	}
+#zhuanghuxinxi{
+	width:600px;
+	height:250px;
+	margin:5px;
+	float:left;
+	}
+#shangpin{
+	width:610px;
+	height:860px;
+	margin:10px;
+	float:left;
+	}
+
+#bottom{
+	width:780px;
+	height:90px;
+	text-align:center;
+	margin:8px;
+	float:left;
+	}

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="struts-staff" extends="struts-default"> 
+		
+		
+		<!-- 添加员工 -->
+		<action name="addStaff" class="staffAction" method="addStaff">
+			<result name="success" type="chain">showStaff_by_page</result>	
+			<result name="input">staffLogin.jsp</result>	
+		</action>
+		
+		<!-- 查找是否存在staff_id的员工 -->
+		<action name="findStaff" class="staffAction" method="findStaff">						
+
+		</action>
+		
+		<!-- 切换员工状态 -->
+		<action name="changeStaffState" class="staffAction" method="changeStaffState">						
+		</action>
+		
+		<!-- 分页显示staff信息 -->
+		<action name="showStaff_by_page" class="staffAction" method="showStaff_by_page">
+			<result name="success">/admin/showStaff.jsp</result>	
+			<result name="input">/admin/fail.jsp</result>		
+		</action>
+		
+		<!-- 获取员工信息 -->
+		<action name="gainStaff" class="staffAction" method="gainStaff">
+			<result name="success">/admin/showOrModifyStaff.jsp</result>	
+			<result name="input">/admin/fail.jsp</result>		
+		</action>
+			<!-- 员工获取个人信息 -->
+		<action name="getStaffPersonalInfo" class="staffAction" method="gainStaff">
+			<result name="success">/staff/staff_personalInfo.jsp</result>	
+			<result name="input">/admin/fail.jsp</result>		
+		</action>
+		
+		<!-- 修改员工个人密码 -->
+		<action name="changeStaffPassword" class="staffAction" method="changeStaffPassword">
+		</action>
+		
+		<!-- 修改员工信息 -->
+		<action name="ModifyStaff" class="staffAction" method="ModifyStaff">
+			<result name="success" type="chain">showStaff_by_page</result>		
+			<result name="input">/admin/fail.jsp</result>		
+		</action>
+		<!-- 员工登录 -->
+		<action name="staffLogin" class="staffAction" method="login">
+			<result name="success">/staff/main.jsp</result>
+			<result name="input">/admin/fail.jsp</result>	
+		</action>
+	</package> 
+</struts>

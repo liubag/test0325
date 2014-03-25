@@ -1,0 +1,24 @@
+body { font:12px/19px Arial, Helvetica, sans-serif; color:#666;}
+form div { margin:15px 0;}
+.int label { float:left; width:120px; text-align:right;}
+.int input { padding:1px 1px; border:1px solid #ccc;height:18px;}
+.divs{ padding:1px 1px; border:1px solid #ccc;height:18px;}
+.sub { padding-left:100px;}
+.sub input { margin-right:10px; }
+.formtips{width: 200px;margin:2px;padding:2px;}
+.formtips2{width: 200px;margin:2px;padding:2px;}
+.onError{
+    background:#FFE0E9 url(/WangGe/ScatteredGrid/pic/reg3.gif) no-repeat 0 center;
+	padding-left:25px;
+}
+.onError2{
+    background:#FFE0E9 url(/WangGe/ScatteredGrid/pic/reg3.gif) no-repeat 0 center;
+	padding-left:25px;
+}
+.onSuccess{
+    background:#E9FBEB url(/WangGe/ScatteredGrid/pic/reg4.gif) no-repeat 0 center;
+	padding-left:25px;
+}
+.high{
+    color:red;
+}

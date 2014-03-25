@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 会员 action -->
+	<package name="audience" extends="struts-default">
+		
+		<action name="checkNickname" class="audienceAction" method="checkNickname" >	
+		</action>
+		<action name="checkAudienceIdcard" class="audienceAction" method="checkAudienceIdcard" >	
+		</action>
+		<action name="checkAudienceIdcardTwo" class="audienceAction" method="checkAudienceIdcardTwo" >	
+		</action>
+		<action name="audienceCancel" class="audienceAction" method="audienceCancel" >	
+		</action>
+		
+		<action name="audienceActive" class="audienceAction" method="audienceActive" >	
+		</action>
+		
+		<action name="checkPw_audience" class="audienceAction" method="checkPw">
+		</action>
+		<action name="audience_login" class="audienceAction" method="login" >
+			<result name="login_success">/index.jsp</result>
+			<result name="pw_error">/audienceLogin.jsp</result>	
+			<result name="user_null">/audienceLogin.jsp</result>	
+			<result name="user_cancel">/audienceLogin.jsp</result>	
+		</action>
+			<action name="audience_logout" class="audienceAction" method="logout" >
+			<result name="success">/audienceLogin.jsp</result>
+		</action>
+		<action name="showAudienceInfo" class="audienceAction" method="showAudienceInfo" >
+			<result name="success">/audience/audiencemanage/audience_info.jsp</result>
+			<result name="fail">/fail.jsp</result>	
+		</action>
+		<action name="showAudienceInfoById" class="audienceAction" method="showAudienceInfoById" >
+			<result name="success">/admin/audience/updateAudienceIdcard.jsp</result>
+			<result name="fail">/fail.jsp</result>	
+		</action>
+		
+		<action name="addAudience" class="audienceAction" method="addAudience" >
+			<result name="success">/audience/audiencemanage/register_success.jsp</result>
+			<result name="fail">/fail.jsp</result>	
+		</action>
+		<action name="updateAudienceIdcard" class="audienceAction" method="updateIdcard" >
+			<result name="success" type="redirectAction">showAllAudience?page=${page}</result>
+			<result name="fail">/fail.jsp</result>	
+		</action>
+		
+		<action name="updatePw_audience" class="audienceAction" method="updatePw">
+			<result name="success">/audience/success.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		<action name="update_exceptPw" class="audienceAction" method="update_exceptPw">
+			<result name="success">/audience/success.jsp</result>
+			<result name="fail">/fail.jsp</result>
+		</action>
+		
+		<action name="showAllAudience" class="audienceAction" method="showAudience_by_page" >
+			<result name="success">/admin/audience/showAllAudience.jsp</result>
+			<result name="fail">/fail.jsp</result>	
+		</action>
+		
+		
+	</package>
+</struts>

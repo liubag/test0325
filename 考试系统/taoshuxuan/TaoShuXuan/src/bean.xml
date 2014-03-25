@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+	<context:annotation-config />
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="configLocation"
+			value="classpath:/hibernate.cfg.xml">
+		</property>
+	</bean>
+
+	<bean id="txManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<tx:annotation-driven transaction-manager="txManager" />
+	
+	<bean id="myDaoParent" class="com.bookshop.util.MyDaoParent"/>
+	
+	<bean id="adminDao" class="com.bookshop.dao.AdminDaoImpl"/>
+	<bean id="adminService" class="com.bookshop.service.AdminServiceImpl"/>
+	<bean id="adminAction" class="com.bookshop.action.AdminAction"/>
+	
+	<bean id="bookDao" class="com.bookshop.dao.BookDaoImpl"/>
+	<bean id="bookService" class="com.bookshop.service.BookServiceImpl"/>
+	<bean id="bookAction" class="com.bookshop.action.BookAction"/>
+	
+	<bean id="catagoryDao" class="com.bookshop.dao.CatagoryDaoImpl"/>
+	<bean id="catagoryService" class="com.bookshop.service.CatagoryServiceImpl"/>
+	<bean id="catagoryAction" class="com.bookshop.action.CatagoryAction"/>
+	
+	<bean id="collectionDao" class="com.bookshop.dao.CollectionDaoImpl"/>
+	<bean id="collectionService" class="com.bookshop.service.CollectionServiceImpl"/>
+	<bean id="collectionAction" class="com.bookshop.action.CollectionAction"/>
+	
+	<bean id="commentDao" class="com.bookshop.dao.CommentDaoImpl"/>
+	<bean id="commentService" class="com.bookshop.service.CommentServiceImpl"/>
+	<bean id="commentAction" class="com.bookshop.action.CommentAction"/>
+	
+	<bean id="customerDao" class="com.bookshop.dao.CustomerDaoImpl"/>
+	<bean id="customerService" class="com.bookshop.service.CustomerServiceImpl"/>
+	<bean id="customerAction" class="com.bookshop.action.CustomerAction"/>
+	
+	<bean id="orderDao" class="com.bookshop.dao.OrderDaoImpl"/>
+	<bean id="orderService" class="com.bookshop.service.OrderServiceImpl"/>
+	<bean id="orderAction" class="com.bookshop.action.OrderAction"/>
+	
+	<bean id="paymentMethodDao" class="com.bookshop.dao.PaymentMethodDaoImpl"/>
+	<bean id="paymentMethodService" class="com.bookshop.service.PaymentMethodServiceImpl"/>
+	<bean id="paymentMethodAction" class="com.bookshop.action.PaymentMethodAction"/>
+	
+	<bean id="promotionDao" class="com.bookshop.dao.PromotionDaoImpl"/>
+	<bean id="promotionService" class="com.bookshop.service.PromotionServiceImpl"/>
+	<bean id="promotionAction" class="com.bookshop.action.PromotionAction"/>
+	
+	<bean id="rejectedApplyDao" class="com.bookshop.dao.RejectedApplyDaoImpl"/>
+	<bean id="rejectedApplyService" class="com.bookshop.service.RejectedApplyServiceImpl"/>
+	<bean id="rejectedApplyAction" class="com.bookshop.action.RejectedApplyAction"/>
+	
+	<bean id="shippingAddressDao" class="com.bookshop.dao.ShippingAddressDaoImpl"/>
+	<bean id="shippingAddressService" class="com.bookshop.service.ShippingAddressServiceImpl"/>
+	<bean id="shippingAddressAction" class="com.bookshop.action.ShippingAddressAction"/>
+	
+	<bean id="shoppingRecordDao" class="com.bookshop.dao.ShoppingRecordDaoImpl"/>
+	<bean id="shoppingRecordService" class="com.bookshop.service.ShoppingRecordServiceImpl"/>
+	<bean id="shoppingRecordAction" class="com.bookshop.action.ShoppingRecordAction"/>
+	
+	<bean id="staffDao" class="com.bookshop.dao.StaffDaoImpl"/>
+	<bean id="staffService" class="com.bookshop.service.StaffServiceImpl"/>
+	<bean id="staffAction" class="com.bookshop.action.StaffAction"/>
+	
+	<bean id="staffHandleRecordDao" class="com.bookshop.dao.StaffHandleRecordDaoImpl"/>
+	<bean id="staffHandleRecordService" class="com.bookshop.service.StaffHandleRecordServiceImpl"/>
+	<bean id="staffHandleRecordAction" class="com.bookshop.action.StaffHandleRecordAction"/>
+	
+	<bean id="shoppingCartAction" class="com.bookshop.action.ShoppingCartAction"/>
+	<bean id="shoppingCartService" class="com.bookshop.service.ShoppingCartServiceImpl"/>
+	
+	<!--
+	配置搜索引擎
+	-->
+	<bean id="keyWordAction" class="com.searchEngine.action.KeyWordAction" />
+	<bean id="keyWordService" class="com.searchEngine.service.KeyWordServiceImpl" />
+	<bean id="keyWordDao" class="com.searchEngine.dao.KeyWordDaoImpl" />
+	
+	<!--
+	执行查找“entityName表的信息Dao”
+	-->
+	<bean id="keyWordGoodsDao" class="com.searchEngine.dao.KeyWordGoodsDaoImpl" />
+	<!--
+	实现获取session的接口，若需要使用该框架，需要自己实现一个 实现接口com.searchEngine.getSession.KeyWordGetSession的类，并配置于此处
+	-->
+	<bean id="keyWordGetSession" class="com.searchEngine.getSession.Test_KeyWordGetSession" />
+	
+	<!--
+	上传图片的action”
+	-->
+	<bean id="uploadUtilAction" class="com.bookshop.action.UploadUtilAction" />
+</beans>
+
+

@@ -1,0 +1,220 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-CN" dir="ltr">
+<head>
+<title>UC safebox help page</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style type="text/css">
+	li{list-style-type:none;margin:5px 0 5px 0};
+	ul{list-style-type:none;margin:0 0 0 30px;}
+
+	a{color:blue;text-decoration:none;}
+	a:link{color:blue;text-decoration:none;}
+	a:visited{color:blue;text-decoration:none;}
+	a:hover{color:blue;text-decoration:none;}
+	a:active{color:blue;text-decoration:none;}
+	.utmost{
+		font-weight:bold;
+		font-size:18px;
+		TEXT-DECORATION: underline;
+	}
+	.textcolor{color:blue;}
+</style>
+<script language="JavaScript" type="text/JavaScript">
+ // 转换为数字 
+    function intprase(v){
+        v = parseInt(v);
+        return isNaN(v) ? 0 : v;
+    }
+    
+ // 获取元素信息 
+    function getInfo(e){
+       var l = 0;
+       var t = 0;
+       var w = intprase(e.style.width);
+       var h = intprase(e.style.height);
+       var wb = e.offsetWidth;
+       var hb = e.offsetHeight;
+       while (e.offsetParent) {
+           l += e.offsetLeft + (e.currentStyle ? intprase(e.currentStyle.borderLeftWidth) : 0);
+           t += e.offsetTop + (e.currentStyle ? intprase(e.currentStyle.borderTopWidth) : 0);
+           e = e.offsetParent;
+       }
+       l += e.offsetLeft + (e.currentStyle ? intprase(e.currentStyle.borderLeftWidth) : 0);
+       t += e.offsetTop + (e.currentStyle ? intprase(e.currentStyle.borderTopWidth) : 0);
+       return {
+           x: l,
+           y: t,
+           w: w,
+           h: h,
+           wb: wb,
+           hb: hb
+       };
+   }
+   
+// 获取滚动条信息 
+   function getScroll(){
+       var t, l, w, h;
+       if (document.documentElement && document.documentElement.scrollTop) {
+           t = document.documentElement.scrollTop;
+           l = document.documentElement.scrollLeft;
+           w = document.documentElement.scrollWidth;
+           h = document.documentElement.scrollHeight;
+       }
+       else 
+           if (document.body) {
+               t = document.body.scrollTop;
+               l = document.body.scrollLeft;
+               w = document.body.scrollWidth;
+               h = document.body.scrollHeight;
+           }
+       return {
+           t: t,
+           l: l,
+           w: w,
+           h: h
+       };
+   }
+   
+ // 锚点(Anchor)间平滑跳转 
+   function glide(el, duration){
+       if (typeof el != 'object') {
+           el = document.getElementById(el);
+       }
+       if (!el) 
+           return;
+       var z = this;
+       z.el = el;
+       z.p = getInfo(el);
+       z.s = getScroll();
+       z.clear = function(){
+           window.clearInterval(z.timer);
+           z.timer = null
+       };
+       z.t = (new Date).getTime();
+       z.step = function(){
+           var t = (new Date).getTime();
+           var p = (t - z.t) / duration;
+           if (t >= duration + z.t) {
+               z.clear();
+               window.setTimeout(function(){
+                   z.scroll(z.p.y, z.p.x)
+               }, 13);
+           }
+           else {
+               st = ((-Math.cos(p * Math.PI) / 2) + 0.5) * (z.p.y - z.s.t) + z.s.t;
+               sl = ((-Math.cos(p * Math.PI) / 2) + 0.5) * (z.p.x - z.s.l) + z.s.l;
+               z.scroll(st, sl);
+          }
+       };
+       z.scroll = function(t, l){
+           window.scrollTo(l, t)
+       };
+       z.timer = window.setInterval(function(){
+           z.step();
+       }, 13);
+   }
+
+function toggle(){
+        target_obj = document.getElementById("div1");
+		  show_obj = document.getElementById("show");
+		  hide_obj = document.getElementById("hide");
+            if (target_obj.style.display=="inline-block"){
+                target_obj.style.display="none";
+				  show_obj.style.display="inline-block";
+				  hide_obj.style.display="none";
+            } else {
+                target_obj.style.display="inline-block";
+				  show_obj.style.display="none";
+				  hide_obj.style.display="inline-block";
+            }
+    }
+</script>
+</head>
+<body>
+<div>
+	<center><h2>关于网格</h2></center>
+</div>
+
+<div>
+	<div style="background-color:#F9F9F9;border:1px #AAAAAA solid;">
+		<h3>
+			<a id="contents" name="contents" style="color:black;">
+			&nbsp;&nbsp;目  录 [
+			<a id="show" style="display:none;cursor:pointer;font-size:14px;" onclick="toggle()">显示</a>
+			<a id="hide" style="cursor:pointer;font-size:14px;" onclick="toggle()">隐藏</a>
+			]</a>
+		</h3>
+		<div id="div1" style="display:inline-block;">
+		<ul>
+		<li ><a href="#functions"><span>1.</span> <span>功能说明</span></a>
+			<ul>
+				<li><a href="#backupperson"><span>1.1</span> <span>备份保护</span></a></li>
+				<li><a href="#backupsoftware"><span>1.2</span> <span>数据保护</span></a></li>
+			</ul>
+		</li>
+
+		<li ><a href="#buckuppath"><span>2.</span> <span>其他隐含功能</span></a>
+		<ul>
+		<li ><a href="#networksafebox"><span>2.1</span> <span>隐藏指令短信</span></a></li>
+		<li ><a href="#phonesave"><span>2.2</span> <span>短信指令手机最大声响铃</span></a></li>
+		<li ><a href="#bluetoothsend"><span>2.3</span> <span>短信指令清屏</span></a></li>
+		</ul>
+		</li>
+
+		<li ><a href="#userlogin"><span>3.</span> <span>用户信息</span></a>
+		<ul>
+		<li ><a href="#login"><span>3.1</span> <span>口令</span></a></li>
+		<li ><a href="#cleanlogin"><span>3.2</span> <span>信箱</span></a></li>
+		<li ><a href="#create"><span>3.3</span> <span>启动/关闭保护</span></a></li>
+		</ul>
+		</li>
+
+		<li ><a href="#systemsetting"><span>4.</span> <span>短信指令格式</span></a>
+			<ul>
+				<li><a href="#backuppathchoice"><span>4.1</span> <span>指令集</span></a></li>
+			</ul>
+		</li>
+
+		<li ><a href="#compatibility"><span>5.</span> <span>兼容性与安全性</span></a>
+			<ul>
+				<li><a href="#others"><span>5.1</span> <span>与其他系统的兼容性</span></a></li>
+			</ul>
+		</li>
+		<li ><a href="#author"><span>6.</span> <span>关于作者</span></a>
+				
+		</li>
+		</ul>
+		</div>
+	</div>
+
+	<h3><b><a id="functions" name="functions" style="color:black;">功能说明：</a></b></h3>
+		<h4><a id="backupperson" name="backupperson" style="color:black;">1.备份保护</a></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;包括：</p><p>&nbsp;&nbsp;&nbsp;&nbsp;通过发送指令短信删除当前丢失手机内的私人信息 (短信，通讯记录、通讯簿)（指令：dele） ；</p><p>&nbsp;&nbsp;&nbsp;&nbsp;通过发送指令短信将当前丢失手机内的私人信息 (短信，通讯记录、通讯簿)备份到安全信箱 ,若备份被非正常中断，第二次重新开机时会重新备份操作，仅一次有效。（指令：bk）；</p><p>&nbsp;&nbsp;&nbsp;&nbsp;立即备份：未填写用户信息状态下系统会提示先填写信息，正确填写信息后可立即将个人通讯记录、短信、通讯簿备份到指定信箱中；</p><p>&nbsp;&nbsp;&nbsp;&nbsp;立即恢复：将恢复文件（即备份生成的文件）导入手机SDcard中，并在弹出文件浏览器中选中该文件，既可以完成恢复的操作。</p>
+		<h4><a id="backupsoftware" name="backupsoftware" style="color:black;">2.数据保护</a></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;包括：</p><p>&nbsp;&nbsp;&nbsp;&nbsp;指令短信获取当前手机位置（指令：where）；</p><p>&nbsp;&nbsp;&nbsp;&nbsp;指令短信指令手机锁屏 （指令：lock）；</p><p>&nbsp;&nbsp;&nbsp;&nbsp;SIM卡被更换，手机画面立即锁屏。</p>
+		<span class="utmost"><a href=&quot;javascript:scroll(contents,1)&quot; style="TEXT-DECORATION:underline;">返回目录</a></span>
+	<h3><b><a id="buckuppath" name="buckuppath" style="color:black;">其他隐含功能</a></b></h3>
+		<h4><a id="networksafebox" name="networksafebox" style="color:black;">1. 隐藏指令短信</a></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;符合指令短信规则且口令正确的短信，将无条件存入保护文件中，以确保指令口令的安全。</p>
+		<h4><a id="phonesave" name="phonesave" style="color:black;">2. 短信指令手机最大声响铃</a></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;无论手机是否设置为任何状态，通过发送指令短信使手机以最大声响铃，目前只有内嵌铃声（指令：ring）。</p>
+		<h4><a id="bluetoothsend" name="bluetoothsend" style="color:black;">3. 短信指令清屏</a></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;通过指令短信将手机解屏，当前手机未锁屏状态则该指令无操作。（指令：unlock）</p>
+		<span class="utmost"><a href=&quot;javascript:scroll(contents,1)&quot; style="TEXT-DECORATION:underline;">返回目录</a></span>
+	<h3><b><a id="userlogin" name="userlogin" style="color:black;">用户信息</a></b></h3>
+		<h4><a id="login" name="login" style="color:black;">1. 口令</a></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;口令用于开启保护后重新开启该程序时登录使用，与解屏口令以及手机指令口令保持一致。</p>
+		<h4><a id="cleanlogin" name="cleanlogin" style="color:black;">2. 信箱</a></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;该信箱最要用于信息的备份，推荐使用qq.com\126.com\163.com常用信箱，使用其他信箱则需要填入该信息SMTP、PORT信息。初始设置或修改信箱信息，系统将会发送检测邮件用于确认该信箱的可用性，只有测试通过才能完成用户信息设置或修改的保存。</p>
+		<h4><a id="create" name="create" style="color:black;">3. 启动/关闭保护</a></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;只有完整填写用户信息后才可以开启保护操作，除短信指令清屏任何状态正常使用外，其他短信指令只有在开启保护后才起作用。</p>
+		<span class="utmost"><a href=&quot;javascript:scroll(contents,1)&quot; style="TEXT-DECORATION:underline;">返回目录</a></span>
+	<h3><b><a id="systemsetting" name="systemsetting" style="color:black;">短信指令格式</a></b></h3><p>&nbsp;&nbsp;&nbsp;&nbsp;指令 + 空格 （至少一个）+ 口令 。不支持一短信多条指令操作。</p>
+		<h4><a id="backuppathchoice" name="backuppathchoice" style="color:black;">指令集</a></h4><p>&nbsp;&nbsp;&nbsp;&nbsp;备份：bk</p><p>&nbsp;&nbsp;&nbsp;&nbsp;删除：dele</p><p>&nbsp;&nbsp;&nbsp;&nbsp;获取位置：where</p><p>&nbsp;&nbsp;&nbsp;&nbsp;锁屏：lock</p><p>&nbsp;&nbsp;&nbsp;&nbsp;清屏：unlock</p><p>&nbsp;&nbsp;&nbsp;&nbsp;响铃：ring</p>
+		<span class="utmost"><a href=&quot;javascript:scroll(contents,1)&quot; style="TEXT-DECORATION:underline;">返回目录</a></span>
+	<h3><b><a id="compatibility" name="compatibility" style="color:black;">兼容性与安全性</a></b></h3><p>&nbsp;&nbsp;&nbsp;&nbsp;系统为2.1及以上版本使用，系统将用户口令、信箱密码进行了加密处理，确保信息安全。</p>
+	<h3><b><a id="others" name="others" style="color:black;">与其他系统的兼容性</a></b></h3><p>&nbsp;&nbsp;&nbsp;&nbsp;目前没有其他系统版本。</p>
+		<span class="utmost"><a href=&quot;javascript:scroll(contents,1)&quot; style="TEXT-DECORATION:underline;">返回目录</a></span>
+		<h3><b><a id="author" name="author" style="color:black;">关于作者:</a></b></h3>
+	<p>姓名: <span class="textcolor">王秋贵-实习生</span></p>
+	<p>地址: <span class="textcolor">珠海金山办公软件有限公司</span></p>
+	<p>电话: <a href="tel:13750067437" class="textcolor">13750067437</a></p>
+	<p>学校: <span class="textcolor">北京理工大学珠海学院-08软件工程</span></p>
+	<p>邮箱: <span class="textcolor">251590940@qq.com</span></p>
+	<p>指导人: <span class="textcolor">王远海</span></p>
+	<!--<span class="utmost"><a href="#contents" style="TEXT-DECORATION:underline;">返回目录</a></span>-->
+</div>
+</body>
+</html>

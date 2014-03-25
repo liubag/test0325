@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="searchEngine2" extends="struts-default"> 
+		<action name="findFridKeyWord" class="keyWordAction" method="findFridKeyWord">			
+		</action>						
+		<action name="findKeyWord_By_Rate" class="keyWordAction" method="findKeyWord_By_Rate">			
+		</action>
+		
+		<action name="gainGoods_by_keyWord" class="keyWordAction" method="gainGoods_by_keyWord">	
+			<result name="success" type="chain">showAll</result>
+			<result name="input">/searchEngine/error.html</result>		
+		</action>
+		<!--
+		分页action
+		-->
+		<action name="showAll" class="keyWordAction" method="showAll">	
+			<result name="success">/searchEngine/showSuggestionResult.jsp</result>
+			<result name="input">/searchEngine/error.html</result>		
+		</action>
+		
+		<!--
+		分页showKeyWord action
+		-->
+		<action name="showKeyWord_by_page" class="keyWordAction" method="showKeyWord_by_page">	
+			<result name="success">/admin/aahome/showAllKeyWord.jsp</result>
+			<result name="input">/searchEngine/error.html</result>		
+		</action>
+		<!--
+		dele
+		-->
+		<action name="deleKeyWord" class="keyWordAction" method="deleKeyWord">	
+			<result name="success" type="chain">showKeyWord_by_page</result>
+			<result name="input">/searchEngine/error.html</result>		
+		</action>
+	</package> 
+</struts>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans>  
+    <bean>  
+        <property name="entityName" value="Book"></property>  
+        <property name="rowName" value="name"></property>  
+         <property name="rowName2" value="author"></property>
+		 <property name="rowName3" value="catagory.catagory_name"></property>
+        <property name="orderBy" value="sell_date desc"></property>
+        <property name="otherWhere" value="status=1"></property>
+       
+        <property name="otherWhere2" value="Status='1'"></property>
+        <property name="perFolioAmount" value="6"></property>  
+        <property name="keyWords_max" value="1000"></property>  
+        <property name="startTime" value="'00:00:01'"></property> 
+        <property name="updataKeyWordDays" value="20"></property> 
+        <property name="showperFolioAmount" value="50"></property> 
+    </bean>  
+</beans>  

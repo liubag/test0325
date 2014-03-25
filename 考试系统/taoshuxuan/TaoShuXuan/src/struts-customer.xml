@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="struts-customer" extends="struts-default"> 
+		<!-- 分页显示所有会员信息 -->
+		<action name="showCustomer_by_page" class="customerAction" method="showCustomer_by_page">
+			<result name="success1">/admin/showCustomer.jsp</result>	
+			<result name="success2">/admin/customerShoppingRecord.jsp</result>
+			<result name="success3">/admin/customerCommentRecord.jsp</result>
+			<result name="input">/admin/fail.jsp</result>		
+		</action>
+
+		<!-- 改变某会员的状态 -->
+		<action name="changeCustomerState" class="customerAction" method="changeCustomerState">	
+		</action>
+		
+		<!-- 获取会员信息 -->
+		<action name="gainCustomer" class="customerAction" method="gainCustomer">
+			<result name="success">/admin/showCustomerInfo.jsp</result>	
+			<result name="input">/admin/fail.jsp</result>		
+		</action>
+		
+		<!-- 会员登录 -->
+		<action name="customerLogin" class="customerAction" method="login">
+			<result name="success">/index.jsp</result>	
+			<result name="login">/customerLogin.jsp</result>		
+		</action>
+		
+		<!-- 会员安全退出 -->
+		<action name="customerLogout" class="customerAction" method="logout">
+			<result name="success">/customerLogin.jsp</result>		
+		</action>
+		
+		<!-- 会员注册 -->
+		<action name="addCustomer" class="customerAction" method="addCustomer">
+			<result name="success">/customerLogin.jsp</result>	
+			<result name="input">/admin/fail.jsp</result>			
+		</action>
+		
+		<!-- 验证邮箱有效性 -->
+		<action name="email_check" class="customerAction" method="email_check">
+			
+		</action>
+		<!-- 发激活码到会员注册邮箱 -->
+		<action name="sendCodeToCustomer" class="customerAction" method="sendCodeToCustomer">
+			<result name="success">/registerVerify.jsp</result>	
+			<result name="input">/admin/fail.jsp</result>			
+		</action>
+		<!-- 激活用户 -->
+		<action name="activityCustomer" class="customerAction" method="activityCustomer">
+			<result name="success">/regok.jsp</result>	
+			<result name="input">/admin/fail.jsp</result>			
+		</action>
+	</package> 
+</struts>

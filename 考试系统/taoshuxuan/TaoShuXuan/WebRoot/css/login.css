@@ -1,0 +1,67 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	color:white;
+	font-size:14px;
+	background-image: url("../images/bg_login_body.png");
+	background-repeat:repeat-x;
+	background-color:#A2D5F0;	
+}
+#login{
+	position:absolute;
+	top:40%;
+	left:50%;
+	background-image:url("../images/bg_login.png");
+	background-repeat:no-repeat;
+	padding-top:8px;
+	height:198px;
+}
+table{
+	height:100%;
+	cellSpacing:0;
+	cellPadding:0;
+	text-align:center;
+	margin-left:20px;
+}
+td.first{
+	width:80px;
+}
+td#title{
+	font-size:22px;
+	font-family:"楷体"
+}
+	
+td{
+	height:30px;
+	width:250px;	
+}
+input{
+	width:180px;
+}
+.check > input{
+	width:60px;
+}
+a{
+	color:#FFF;
+	font-size:12px;
+}
+.button{
+	background-image:url("../images/bg_button.gif");
+	width:auto;
+	margin-left:20px;
+	border:1px solid #063;
+	color:white;
+	cursor:pointer;
+}
+#bottom{
+    background:url("../images/bottom_bg.jpg") repeat scroll 0 0 transparent;
+    font-size: 12px;
+    height: 50px;
+    text-align: center;
+    width: 100%;
+	position:absolute;
+	bottom:0;
+}
+#bottom_font{
+	line-height: 35px;
+}

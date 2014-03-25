@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* CSS Document */
+
+#box1{
+	width:190px;
+	height:250px;
+	margin:0 auto;
+	background-color: #1efae8;
+	}
+#img{
+	width:180px;
+	height:140px;
+	margin:5px;
+	background-image:url(#);
+	}
+#text02{
+	height:40px;
+	word-break:break-all;
+	font-size:16px;
+	margin-bottom:5px;
+	word-wrap:break-word; 
+	white-space:
+	text-overflow:ellipsis;
+	}
+#text03{
+	font-size:16px;
+	margin-bottom:5px;
+	}
+#texr04{
+	margin-bottom:5px;
+	font-size:16px;
+	}

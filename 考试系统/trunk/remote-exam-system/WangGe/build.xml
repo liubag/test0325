@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="CSG HR MS" default="compile" basedir="." >
+
+    <property name="lib" value="lib" />
+    <property name="src" value="src" />
+    <property name="WebRoot" value="WebRoot" />
+
+    <path id="compile-classpath">
+        <fileset dir="${WebRoot}/WEB-INF/${lib}">
+            <include name="**/*.jar" />
+            <include name="**/*.zip" />
+        </fileset>
+    </path>
+
+    <target name="init" >
+        <mkdir dir="${WebRoot}/WEB-INF/classes" />
+    </target>
+
+    <target name="clean" >
+        <delete dir="${WebRoot}/WEB-INF/classes" />
+    </target>
+
+    <target name="compile" depends="init">
+        <javac
+            srcdir="${src}"
+            destdir="${WebRoot}/WEB-INF/classes"
+            source="1.6"
+            target="1.6"
+            encoding="utf-8"
+            debug="true"
+            deprecation="false"
+            nowarn="true"
+            verbose="false"
+            listfiles="true"
+            includeantruntime="true"
+            >
+            <classpath refid="compile-classpath" />
+        </javac>
+        
+        <copy todir="${WebRoot}/WEB-INF/classes">
+            <fileset dir="${src}" casesensitive="true">
+                <include name="**/*.xml"/>
+                <include name="**/*.properties"/>
+            </fileset> 
+        </copy>
+    </target>
+</project>

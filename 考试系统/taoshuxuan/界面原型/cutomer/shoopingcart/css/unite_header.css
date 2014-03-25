@@ -1,0 +1,15 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+* ul, * ol, * li {
+    list-style: none outside none;
+}
+img {
+    border: 0 none;
+}
+body {
+    color: #404040;
+    font-family: "宋体",Arial,Helvetica,sans-serif;
+    font-size: 12px;
+}

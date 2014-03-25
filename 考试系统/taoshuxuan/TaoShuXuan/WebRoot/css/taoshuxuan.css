@@ -1,0 +1,55 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: #404040;
+    font-family: 宋体,Arial,Helvetica,sans-serif;
+    font-size: 12px;
+}
+a {
+    color: #1A66B3;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+img {
+    border: 0 none;
+}
+* ul, * ol, * li {
+    list-style: none outside none;
+}
+h1, h3, h4, h5, h6 {
+    font-size: 12px;
+    font-weight: normal;
+}
+.dashed {
+    background: url("../images/dashed.gif") repeat-x scroll 0 0 transparent;
+    font-size: 0;
+    height: 1px;
+    line-height: 1px;
+}
+.dot {
+    letter-spacing: -3px;
+}
+.clear {
+    clear: both;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+}
+.liclear {
+    clear: both;
+    float: none;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+}
+.pageImage{
+	height:20px;
+	width: 50px;
+}

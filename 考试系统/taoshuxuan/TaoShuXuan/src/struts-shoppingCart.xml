@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="struts-shoppingCart" extends="struts-default"> 
+		<action name="addBookToCart" class="shoppingCartAction" method="addBookToCart"></action>
+		<action name="getBookFromCart" class="shoppingCartAction" method="getBookFromCart">
+			<result name="success">/customer/shoppingcart/shoppingcart.jsp</result>
+			<result name="input"></result>
+		</action>
+		<action name="updateAmount" class="shoppingCartAction" method="updateAmount"></action>
+		<action name="cutBookToCart" class="shoppingCartAction" method="cutBookToCart"></action>
+		<action name="addBooksToCart" class="shoppingCartAction" method="addBooksToCart"></action>
+	</package> 
+</struts>

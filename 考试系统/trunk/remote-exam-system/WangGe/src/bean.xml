@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
+	<context:annotation-config />
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
+		<property name="configLocation"
+			value="classpath:/hibernate.cfg.xml">
+			
+		</property>
+	</bean>
+
+	<bean id="txManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<tx:annotation-driven transaction-manager="txManager" />
+	
+	<!-- 用户Audience -->
+	<bean id="audienceDao" class="com.OnlineGridShop.audience.Dao.AudienceDaoImpl" />	
+	<bean id="audienceSerivce" class="com.OnlineGridShop.audience.Service.AudienceSerivceImpl" />
+	<bean id="audienceAction" class="com.OnlineGridShop.audience.action.AudienceAction"/>
+	
+	<bean id="attentionDao" class="com.OnlineGridShop.audience.Dao.AttentionDaoImpl" />	
+	<bean id="attentionSerivce" class="com.OnlineGridShop.audience.Service.AttentionServiceImpl" />
+	<bean id="attentionAction" class="com.OnlineGridShop.audience.action.AttentionAction"/>
+	
+	<bean id="myDaoParent" class="com.OnlineGridShop.util.MyDaoParent2" />	
+
+	<!-- 终极admin -->
+	<bean id="ultimateAdminDao" class="com.OnlineGridShop.admin.Dao.UltimateAdminDaoImpl"/>
+	<bean id="ultimateAdminSerivce" class="com.OnlineGridShop.admin.Service.UltimateAdminSerivceImpl"/>
+	<bean id="ultimateAdminAction" class="com.OnlineGridShop.admin.action.UltimateAdminAction"/>
+	
+	
+	<bean id="gridTypeDao" class="com.OnlineGridShop.scattered.Dao.GridTypeDaoImpl" />
+	<bean id="gridTypeSerivce" class="com.OnlineGridShop.scattered.Service.GridTypeSerivceImpl" />
+	<bean id="gridTypeAction" class="com.OnlineGridShop.scattered.action.GridTypeAction"/>
+	
+	<bean id="goodsTypeDao" class="com.OnlineGridShop.scattered.Dao.GoodsTypeDaoImpl" />
+	<bean id="goodsTypeSerivce" class="com.OnlineGridShop.scattered.Service.GoodsTypeSerivceImpl" />
+	<bean id="goodsTypeAction" class="com.OnlineGridShop.scattered.action.GoodsTypeAction"/>
+	
+	<!-- 学生网格 -->
+	<bean id="scatteredGridUserDao" class="com.OnlineGridShop.scattered.Dao.ScatteredGridUserDaoImpl" />
+	<bean id="scatteredGridUserSerivce" class="com.OnlineGridShop.scattered.Service.ScatteredGridUserSerivceImpl" />
+	<bean id="scatteredGridUserAction" class="com.OnlineGridShop.scattered.action.ScatteredGridUserAction"/>
+	
+	<bean id="scatteredGridDao" class="com.OnlineGridShop.scattered.Dao.ScatteredGridDaoImpl" />
+	<bean id="scatteredGridSerivce" class="com.OnlineGridShop.scattered.Service.ScatteredGridSerivceImpl" />
+	<bean id="scatteredGridAction" class="com.OnlineGridShop.scattered.action.ScatteredGridAction"/>
+	
+	<bean id="scatteredGridPreferentialDao" class="com.OnlineGridShop.scattered.Dao.ScatteredGridPreferentialDaoImpl" />
+	<bean id="scatteredGridPreferentialSerivce" class="com.OnlineGridShop.scattered.Service.ScatteredGridPreferentialSerivceImpl" />
+	<bean id="scatteredGridPreferentialAction" class="com.OnlineGridShop.scattered.action.ScatteredGridPreferentialAction"/>
+	
+	<bean id="scatteredGridRendtypeMakeDao" class="com.OnlineGridShop.scattered.Dao.ScatteredGridRendtypeMakeDaoImpl" />
+	<bean id="scatteredGridRendtypeMakeSerivce" class="com.OnlineGridShop.scattered.Service.ScatteredGridRendtypeMakeSerivceImpl" />
+	<bean id="scatteredGridRendTypeMakeAction" class="com.OnlineGridShop.scattered.action.ScatteredGridRendTypeMakeAction"/>
+	
+	<bean id="scatteredGridAccountsDao" class="com.OnlineGridShop.scattered.Dao.ScatteredGridAccountsDaoImpl" />
+	<bean id="scatteredGridAccountsSerivce" class="com.OnlineGridShop.scattered.Service.ScatteredGridAccountsSerivceImpl" />
+	<bean id="scatteredGridAccountsAction" class="com.OnlineGridShop.scattered.action.ScatteredGridAccountsAction"/>
+	
+		<bean id="scatteredGridAgreementDao" class="com.OnlineGridShop.scattered.Dao.ScatteredGridAgreementDaoImpl" />
+	<bean id="scatteredGridAgreementSerivce" class="com.OnlineGridShop.scattered.Service.ScatteredGridAgreementSerivceImpl" />
+	<bean id="scatteredGridAgreementAction" class="com.OnlineGridShop.scattered.action.ScatteredGridAgreementAction"/>
+	
+	<bean id="scatteredGridDoGoodsNoteDao" class="com.OnlineGridShop.scattered.Dao.ScatteredGridDoGoodsNoteDaoImpl" />
+	<bean id="scatteredGridDoGoodsNoteSerivce" class="com.OnlineGridShop.scattered.Service.ScatteredGridDoGoodsNoteSerivceImpl" />
+	<bean id="scatteredGridDoGoodsNoteAction" class="com.OnlineGridShop.scattered.action.ScatteredGridDoGoodsNoteAction"/>
+	
+	<bean id="scatteredGridGoodsDao" class="com.OnlineGridShop.scattered.Dao.ScatteredGridGoodsDaoImpl" />
+	<bean id="scatteredGriGoodsSerivce" class="com.OnlineGridShop.scattered.Service.ScatteredGridGoodsSerivceImpl" />
+	<bean id="scatteredGridGoodsAction" class="com.OnlineGridShop.scattered.action.ScatteredGridGoodsAction"/>
+
+	<!-- 品牌网格 -->
+	<bean id="brandgridDao" class="com.OnlineGridShop.brand.Dao.BrandgridDaoImpl" />
+	<bean id="brandgridSerivce" class="com.OnlineGridShop.brand.Service.BrandgridSerivceImpl" />
+	<bean id="brandgridAction" class="com.OnlineGridShop.brand.action.BrandgridAction"/>
+	
+	<bean id="brandgridGoodsDao" class="com.OnlineGridShop.brand.Dao.BrandgridGoodsDaoImpl" />
+	<bean id="brandgridGoodsSerivce" class="com.OnlineGridShop.brand.Service.BrandgridGoodsSerivceImpl" />
+	<bean id="brandgridGoodsAction" class="com.OnlineGridShop.brand.action.BrandgridGoodsAction"/>
+	
+	<bean id="brandgridGridDao" class="com.OnlineGridShop.brand.Dao.BrandgridGridDaoImpl" />
+	<bean id="brandgridGridSerivce" class="com.OnlineGridShop.brand.Service.BrandgridGridSerivceImpl" />
+	<bean id="brandgridGridAction" class="com.OnlineGridShop.brand.action.BrandgridGridAction"/>
+	
+	<bean id="brandgridGridtypeDao" class="com.OnlineGridShop.brand.Dao.BrandgridGridtypeDaoImpl" />
+	<bean id="brandgridGridtypeSerivce" class="com.OnlineGridShop.brand.Service.BrandgridGridtypeSerivceImpl" />
+	<bean id="brandgridGridtypeAction" class="com.OnlineGridShop.brand.action.BrandgridGridtypeAction"/>
+	
+	<bean id="brandgridGridOwnerDao" class="com.OnlineGridShop.brand.Dao.BrandgridGridOwnerDaoImpl" />
+	<bean id="brandgridGridOwnerSerivce" class="com.OnlineGridShop.brand.Service.BrandgridGridOwnerSerivceImpl" />
+	<bean id="brandgridGridOwnerAction" class="com.OnlineGridShop.brand.action.BrandgridGridOwnerAction"/>
+	
+	<bean id="brandgridOwnerDao" class="com.OnlineGridShop.brand.Dao.BrandgridOwnerDaoImpl" />
+	<bean id="brandgridOwnerSerivce" class="com.OnlineGridShop.brand.Service.BrandgridOwnerSerivceImpl" />
+	<bean id="brandgridOwnerAction" class="com.OnlineGridShop.brand.action.BrandgridOwnerAction"/>
+	
+	<bean id="brandgridPreferentialDao" class="com.OnlineGridShop.brand.Dao.BrandgridPreferentialDaoImpl" />
+	<bean id="brandgridPreferentialSerivce" class="com.OnlineGridShop.brand.Service.BrandgridPreferentialSerivceImpl" />
+	<bean id="brandgridPreferentialAction" class="com.OnlineGridShop.brand.action.BrandgridPreferentialAction"/>
+	
+	<bean id="brandgridSalesmanDao" class="com.OnlineGridShop.brand.Dao.BrandgridSalesmanDaoImpl" />
+	<bean id="brandgridSalesmanSerivce" class="com.OnlineGridShop.brand.Service.BrandgridSalesmanSerivceImpl" />
+	<bean id="brandgridSalesmanAction" class="com.OnlineGridShop.brand.action.BrandgridSalesmanAction"/>
+	
+	<bean id="brandgridSellnoteDao" class="com.OnlineGridShop.brand.Dao.BrandgridSellnoteDaoImpl" />
+	<bean id="brandgridSellnoteSerivce" class="com.OnlineGridShop.brand.Service.BrandgridSellnoteSerivceImpl" />
+	<bean id="brandgridSellnoteAction" class="com.OnlineGridShop.brand.action.BrandgridSellnoteAction"/>
+	
+	<bean id="brandgridInfocoteDao" class="com.OnlineGridShop.brand.Dao.BrandgridInfocoteDaoImpl" />
+	<bean id="brandgridInfocoteSerivce" class="com.OnlineGridShop.brand.Service.BrandgridInfocoteSerivceImpl" />
+	<bean id="brandgridInfocoteAction" class="com.OnlineGridShop.brand.action.BrandgridInfocoteAction"/>
+	
+	<bean id="brandgridGradenoteDao" class="com.OnlineGridShop.brand.Dao.BrandgridGradenoteDaoImpl" />
+	<bean id="brandgridGradenoteSerivce" class="com.OnlineGridShop.brand.Service.BrandgridGradenoteSerivceImpl" />
+	<bean id="brandgridGradenoteAction" class="com.OnlineGridShop.brand.action.BrandgridGradenoteAction"/>
+	
+	<!--
+	配置搜索引擎
+	-->
+	<bean id="keyWordAction" class="com.searchEngine.action.KeyWordAction" />
+	<bean id="keyWordService" class="com.searchEngine.service.KeyWordServiceImpl" />
+	<bean id="keyWordDao" class="com.searchEngine.dao.KeyWordDaoImpl" />
+	
+	<!--
+	执行查找“entityName表的信息Dao”
+	-->
+	<bean id="keyWordGoodsDao" class="com.searchEngine.dao.KeyWordGoodsDaoImpl" />
+	<!--
+	实现获取session的接口，若需要使用该框架，需要自己实现一个 实现接口com.searchEngine.getSession.KeyWordGetSession的类，并配置于此处
+	-->
+	<bean id="keyWordGetSession" class="com.searchEngine.getSession.Test_KeyWordGetSession" />
+	
+	<!--
+	配置前台
+	-->
+	<bean id="aahomeService" class="com.OnlineGridShop.aahome.serivce.AahomeSerivceImpl" />
+	<bean id="aahomeDao" class="com.OnlineGridShop.aahome.Dao.AahomeDaoImpl" />
+	
+	
+	
+	<bean id="goodsAction" class="com.OnlineGridShop.aahome.atcion.GoodsAction" />
+	<bean id="homeAction" class="com.OnlineGridShop.aahome.atcion.HomeAction" />
+	<bean id="gridAction" class="com.OnlineGridShop.aahome.atcion.GridAction" />
+	<bean id="guangGaoAction" class="com.OnlineGridShop.aahome.atcion.GuangGaoAction" />
+</beans>
+
+

@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 学生网格 action -->
+	<package name="scatteredGrid" extends="struts-default">
+		
+		
+		<!--            user管理                                   -->
+		<!-- showAlluser_bypage -->
+		<action name="showAudience_by_page" class="scatteredGridUserAction" method="showAudience_by_page" >
+			<result name="success">/admin/ScatteredGrid/showAllScatteredGridUser.jsp</result>
+			<result name="input">fail.jsp</result>
+		</action>
+		
+		<!-- login -->
+		<action name="scattereGridUser_login" class="scatteredGridUserAction" method="login" >
+		<!-- 	<result name="success" type="chain">showGridAccountAllInfo</result> -->
+			<result name="success">/ScatteredGrid/manage/manage.jsp</result>
+			<result name="fail">/ScatteredGrid/login.jsp</result>
+			<result name="input">/ScatteredGrid/login.jsp</result>
+		</action>
+		
+		<!-- find_id -->
+		<action name="find_id" class="scatteredGridUserAction" method="find_id" >
+			<result name="success">/admin/ScatteredGrid/updateScatteredGridUser.jsp</result>
+			<result name="input">fail.jsp</result>
+		</action>
+		
+		<!-- 更新gridname\phone\address\tipinfo -->
+		<action name="updateGridInfo_user" class="scatteredGridUserAction" method="updateGridInfo_user" >
+			<result name="success">/ScatteredGrid/manage/manageShowAccountInfo.jsp</result>
+			<result name="fail">/ScatteredGrid/manage/manageShowAccountInfo.jsp</result>
+			<result name="input">/ScatteredGrid/login.jsp</result>
+		</action>
+		
+		
+		<!-- user使用显示  账户信息 -->
+		<action name="showGridAccountAllInfo" class="scatteredGridUserAction" method="showGridAccountAllInfo" >
+			<result name="success">/ScatteredGrid/manage/manageShowAccountInfo.jsp</result>
+			<result name="input">/ScatteredGrid/login.jsp</result>
+		</action>
+		
+		<!-- 更新username -->
+		<action name="updateUserName" class="scatteredGridUserAction" method="updateUserName" >
+			<result name="success">/ScatteredGrid/login.jsp</result>
+			<result name="fail">/ScatteredGrid/manage/manageUpdateLoginInfo.jsp</result>
+			<result name="input">/ScatteredGrid/login.jsp</result>
+		</action>
+		
+		<!-- 更新user PW -->
+		<action name="updataUserPw" class="scatteredGridUserAction" method="updataUserPw" >
+			<result name="success">/ScatteredGrid/login.jsp</result>
+			<result name="fail">/ScatteredGrid/manage/manageUpdateLoginInfo.jsp</result>
+			<result name="input">/ScatteredGrid/login.jsp</result>
+		</action>
+		
+		<!-- justUsername -->
+		<action name="justUsername" class="scatteredGridUserAction" method="justUsername" >
+			<result name="input">#</result>
+		</action>
+		<!-- find_truename -->
+		<action name="find_truename" class="scatteredGridUserAction" method="find_truename" >
+			<result name="success">#</result>
+			<result name="fail">#</result>
+			<result name="input">#</result>
+		</action>
+		
+		<!-- find_idcard -->
+		<action name="find_idcard" class="scatteredGridUserAction" method="find_idcard" >
+			<result name="success">#</result>
+			<result name="fail">#</result>
+			<result name="input">#</result>
+		</action>
+		
+		<!-- find_username -->
+		<action name="find_username" class="scatteredGridUserAction" method="find_username" >
+			<result name="success">#</result>
+			<result name="fail">#</result>
+			<result name="input">#</result>
+		</action>
+		
+		<!-- exit -->
+		<action name="exit" class="scatteredGridUserAction" method="exit" >
+			<result name="success">/ScatteredGrid/login.jsp</result>
+			<result name="input">/ScatteredGrid/login.jsp</result>
+		</action>
+		
+		
+		
+		<!--             account管理                          -->
+		<!-- 注册account -->
+		<action name="enroll_scatteredGridAccount" class="scatteredGridAccountAction" method="enrollAccount" >
+		  	<result name="success">/admin/ScatteredGrid/showScatteredAccount.jsp</result>
+		  	<result name="fail">/admin/ScatteredGrid/enrollScatteredGridAccount.jsp</result>
+			<result name="input">fail.jsp</result>
+		</action>
+		
+		<!-- 注册后立即注销账号 -->
+		<action name="logoutAfterEnroll_scatteredGridAccount" class="scatteredGridAccountAction" method="logoutAfterEnroll" >
+		  	<result name="success">/admin/ScatteredGrid/showAllScatteredGridUser.jsp</result>
+			<result name="input">fail.jsp</result>
+		</action>
+		
+		<!-- 注销账号 -->
+		<action name="logout_scatteredGridAccount" class="scatteredGridAccountAction" method="logout" >
+		  	<result name="success">/admin/ScatteredGrid/showAllScatteredGridUser.jsp</result>
+			<result name="input">fail.jsp</result>
+		</action>
+		
+		<!-- 更新账号_admin使用 -->
+		<action name="update_scatteredGridAccount" class="scatteredGridAccountAction" method="update" >
+		  	<result name="success">/admin/ScatteredGrid/showScatteredAccount.jsp</result>
+		  	<result name="fail">/admin/ScatteredGrid/updateScatteredGridAccount.jsp</result>
+			<result name="input">fail.jsp</result>
+		</action>
+		
+		
+		
+		
+		<!-- 显示要更新的信息 （注册后使用）-->
+		<action name="showUpdateInfo_afterEnroll" class="scatteredGridAccountAction" method="showUpdateInfo_afterEnroll" >
+		  	<result name="success">/admin/ScatteredGrid/updateScatteredGridAccount.jsp</result>
+			<result name="input">fail.jsp</result>
+		</action>
+		
+		<!-- 显示账号信息 -->
+		<action name="showAccountInfo" class="scatteredGridAccountAction" method="showGridAccountAllInfo" >
+		  	<result name="success">/admin/ScatteredGrid/showScatteredAccount.jsp</result>
+			<result name="input">fail.jsp</result>
+		</action>
+		
+		
+		
+		<!--             accounts管理                          -->
+		<!-- 注册account -->
+		<action name="enroll_Account" class="scatteredGridAccountsAction" method="enrollAccounts" >
+		  	<result name="success">/admin/ScatteredGrid/showScatteredAccount.jsp</result>
+		  	<result name="fail">/admin/ScatteredGrid/fail.jsp</result>
+			<result name="input">/admin/ScatteredGrid/fail.jsp</result>
+		</action>
+		
+		
+		<!-- 注册find accounts -->
+		<action name="find_accounts" class="scatteredGridAccountsAction" method="find_accounts" >
+		  	<result name="success">/admin/ScatteredGrid/showScatteredAccount.jsp</result>
+		  	<result name="fail">/admin/ScatteredGrid/fail.jsp</result>
+			<result name="input">/admin/ScatteredGrid/fail.jsp</result>
+		</action>
+		
+		<!-- 更新userInfo -->
+		<action name="update_userInfo_admin" class="scatteredGridAccountsAction" method="update_userInfo_admin" >
+		  	<result name="success">/admin/ScatteredGrid/showScatteredAccount.jsp</result>
+		  	<result name="fail">/admin/ScatteredGrid/fail.jsp</result>
+			<result name="input">/admin/ScatteredGrid/fail.jsp</result>
+		</action>
+		
+		<!-- 更新agreement -->
+		<action name="update_agreement_admin" class="scatteredGridAccountsAction" method="update_agreement_admin" >
+		  	<result name="success">/admin/ScatteredGrid/showScatteredAccount.jsp</result>
+		  	<result name="fail">/admin/ScatteredGrid/fail.jsp</result>
+			<result name="input">/admin/ScatteredGrid/fail.jsp</result>
+		</action>
+		
+		<!-- 注销  agreement -->
+		<action name="zhuxiaoAgreement" class="scatteredGridAccountsAction" method="zhuxiaoAgreement" >
+		  	<result name="success">/admin/ScatteredGrid/showScatteredAccount.jsp</result>
+		  	<result name="fail">/admin/ScatteredGrid/fail.jsp</result>
+			<result name="input">/admin/ScatteredGrid/fail.jsp</result>
+		</action>
+		
+		<!-- find account from truename -->
+		<action name="find_accounts_truename" class="scatteredGridAccountsAction" method="find_accounts_truename" >
+		  	<result name="success">/admin/ScatteredGrid/showScatteredAccount.jsp</result>
+		  	<result name="fail">/admin/ScatteredGrid/find.jsp</result>
+			<result name="input">/admin/ScatteredGrid/find.jsp</result>
+		</action>
+		
+		
+		
+		<!--             gridtype管理                       -->
+		<!-- showAll GridType -->
+		<action name="showAllGridType" class="gridTypeAction" method="showAll" >
+		  	<result name="success">#</result>
+			<result name="input">fail.jsp</result>
+		</action>
+		
+		<!-- 注册 gridtype -->
+		<action name="saveGridType" class="gridTypeAction" method="save" >
+		  	<result name="success">/admin/ScatteredGrid/addScatteredGridType.jsp</result>
+		  	<result name="fail">fail.jsp</result>
+			<result name="input">fail.jsp</result>
+		</action>
+		
+		<!-- 更新gridtype -->
+		<action name="updateGridType" class="gridTypeAction" method="update" >
+		  	<result name="success">/admin/ScatteredGrid/addScatteredGridType.jsp</result>
+		  	<result name="fail">/admin/ScatteredGrid/updateScatteredGridType.jsp</result>
+			<result name="input">fail.jsp</result>
+		</action>
+		
+		<!-- 删除gridtype -->
+		<action name="deleGridType" class="gridTypeAction" method="dele" >
+		  	<result name="success">/admin/ScatteredGrid/addScatteredGridType.jsp</result>
+		  	<result name="fail">/admin/ScatteredGrid/updateScatteredGridType.jsp</result>
+			<result name="input">fail.jsp</result>
+		</action>
+		
+		
+		
+		<!--             rendtype管理                       -->
+		<!-- 新建rendtype -->
+		<action name="saveRendType" class="scatteredGridRendTypeMakeAction" method="save" >
+		  	<result name="success">/admin/ScatteredGrid/addScatteredRendType.jsp</result>
+		  	<result name="fail">/admin/fail.jsp</result>
+			<result name="input">fail.jsp</result>
+		</action>
+		
+		<!-- showAll -->
+		<action name="showAllRendType" class="scatteredGridRendTypeMakeAction" method="showAll" >
+		  	<result name="success">#</result>
+			<result name="input">fail.jsp</result>
+		</action>
+		
+		<!-- dele -->
+		<action name="deleRendType" class="scatteredGridRendTypeMakeAction" method="dele" >
+		  	<result name="success">/admin/ScatteredGrid/addScatteredRendType.jsp</result>
+			<result name="input">fail.jsp</result>
+		</action>
+		
+		<!-- update -->
+		<action name="updateRendType" class="scatteredGridRendTypeMakeAction" method="update" >
+		  	<result name="success">/admin/ScatteredGrid/addScatteredRendType.jsp</result>
+		  	<result name="fail">/admin/ScatteredGrid/updateScatteredRendType.jsp</result>
+			<result name="input">fail.jsp</result>
+		</action>
+		
+		
+		
+		
+		<!--             goodstype管理                       -->
+		<!-- 新建goodstype -->
+		<action name="saveGoodsType" class="goodsTypeAction" method="saveGoodsType" >
+		  	<result name="success">/admin/addScatteredGoogsType.jsp</result>
+		  	<result name="fail">/admin/addScatteredGoogsType.jsp</result>
+			<result name="input">fail.jsp</result>
+		</action>
+		
+		<!-- ShowAll goodstype -->
+		<action name="showAllGoodsType" class="goodsTypeAction" method="showAllGoodsType" >
+		  	<result name="success">#</result>
+			<result name="input">fail.jsp</result>
+		</action>
+		
+		
+		<!-- update goodstype -->
+		<action name="update" class="goodsTypeAction" method="update" >
+		  	<result name="success">/admin/addScatteredGoogsType.jsp</result>
+			<result name="fail">/admin/ScatteredGrid/fail.jsp</result>
+			<result name="input">/admin/ScatteredGrid/fail.jsp</result>
+		</action>
+		
+		
+		<!-- dele goodstype -->
+		<action name="dele" class="goodsTypeAction" method="dele" >
+		  	<result name="success">/admin/addScatteredGoogsType.jsp</result>
+			<result name="input">/admin/ScatteredGrid/fail.jsp</result>
+		</action>
+		
+		
+		<!--             Goods管理                       -->
+		<!-- 上传商品 -->
+		<action name="uploadGoods" class="scatteredGridGoodsAction" method="uploadGoods">
+			
+			<result name="success">/ScatteredGrid/manage/manageDoSuccess.jsp</result>
+			<result name="fail">/ScatteredGrid/manage/fail.jsp</result>
+			<result name="input">/ScatteredGrid/login.jsp</result>
+		</action>
+		
+		<!-- ShowAll goods -->
+		<action name="showAllGoods_by_page_user" class="scatteredGridGoodsAction" method="showAllGoods_by_page_user" >
+		  	<result name="success">/ScatteredGrid/manage/manageShowGoods.jsp</result>
+			<result name="input">/ScatteredGrid/login.jsp</result>
+		</action>
+		
+		<!-- showAllGoods_by_page_admin -->
+		<action name="showAllGoods_by_page_admin" class="scatteredGridGoodsAction" method="showAllGoods_by_page_admin" >
+		  	<result name="success">/admin/ScatteredGrid/showAllGoods.jsp</result>
+			<result name="input">/admin/ScatteredGrid/fail.jsp</result>
+		</action>
+		
+		
+			<!-- showAllGoods_by_page_admin_gridid -->
+		<action name="showAllGoods_by_page_admin_gridid" class="scatteredGridGoodsAction" method="showAllGoods_by_page_admin_gridid" >
+		  	<result name="success">/admin/ScatteredGrid/showAllGoods2.jsp</result>
+			<result name="input">/admin/ScatteredGrid/fail.jsp</result>
+		</action>
+		
+		<!-- Show 在架 goods -->
+		<action name="showAllExhibitGoods" class="scatteredGridGoodsAction" method="showAllExhibitGoods" >
+		  	<result name="success">/ScatteredGrid/manage/manageExhibitGoods.jsp</result>
+			<result name="input">/ScatteredGrid/login.jsp</result>
+		</action>
+		
+		<!-- 置顶商品 -->
+		<action name="zhidingSGoods_user" class="scatteredGridGoodsAction" method="zhidingSGoods_user">
+			<result name="success" type="chain">showAllExhibitGoods</result>
+			<result name="fail">/ScatteredGrid/manage/fail.jsp</result>
+			<result name="input">/ScatteredGrid/login.jsp</result> 
+		</action>
+		
+		<!-- 可上架位置 -->
+		<action name="keepCanShowGoodsList" class="scatteredGridGoodsAction" method="keepCanShowGoodsList" >
+		  	<result name="success">/ScatteredGrid/manage/managePutAwayGoods.jsp</result>
+			<result name="input">/ScatteredGrid/login.jsp</result>
+		</action>
+		
+		<!-- 上架 -->
+		<action name="putAwayGoods" class="scatteredGridGoodsAction" method="putAwayGoods" >
+		  	<result name="success" type="chain">showAllGoods_by_page_user</result>
+		  	<result name="fail">/ScatteredGrid/fail.jsp</result>
+			<result name="input">/ScatteredGrid/login.jsp</result>
+		</action>
+		
+		<!-- 下架 -->
+		<action name="undercarriage" class="scatteredGridGoodsAction" method="undercarriage" >
+		  	<result name="success" type="chain">showAllGoods_by_page_user</result>
+		  	<result name="success_2" type="chain">showAllExhibitGoods</result>
+		  	<result name="fail">/ScatteredGrid/fail.jsp</result>
+			<result name="input">/ScatteredGrid/login.jsp</result>
+		</action>
+		
+		<!-- 恢复物品使用   旧库存中 -->
+		<action name="resume_admin" class="scatteredGridGoodsAction" method="resume_admin" >
+		  	<result name="success" type="chain">showAllGoods_by_page_admin</result>
+		  	<result name="fail" type="chain">showAllGoods_by_page_admin</result>
+			<result name="input" type="chain">showAllGoods_by_page_admin</result>
+		</action>
+		
+		<!-- 转到违禁物品中 -->
+		<action name="contraband_admin" class="scatteredGridGoodsAction" method="contraband_admin" >
+		  	<result name="success" type="chain">showAllGoods_by_page_admin</result>
+		  	<result name="fail" type="chain">showAllGoods_by_page_admin</result>
+			<result name="input" type="chain">showAllGoods_by_page_admin</result>
+		</action>
+		
+		<!-- 转到旧存库中 -->
+		<action name="turnToTheOldGoods" class="scatteredGridGoodsAction" method="turnToTheOldGoods" >
+		  	<result name="success" type="chain">showAllGoods_by_page_user</result>
+			<result name="input">/ScatteredGrid/login.jsp</result>
+		</action>
+		
+		<!-- 转到已下架中 -->
+		<action name="turnToTheUndercarriage" class="scatteredGridGoodsAction" method="turnToTheUndercarriage" >
+		  	<result name="success">/ScatteredGrid/manage/showuploadphoto.jsp</result>
+			<result name="input">/ScatteredGrid/manage/showuploadphoto.jsp</result>
+		</action>
+		
+		<!-- 删除 -->
+		<action name="deleGoods_user" class="scatteredGridGoodsAction" method="deleGoods_user" >
+		  	<result name="success" type="chain">showAllGoods_by_page_user</result>
+		  	<result name="fail">/ScatteredGrid/fail.jsp</result>
+			<result name="input">/ScatteredGrid/login.jsp</result>
+		</action>
+		
+		<!-- 删除选中的商品 -->
+		<action name="deleGoodsChoice_user" class="scatteredGridGoodsAction" method="deleGoodsChoice_user" >
+		  	
+			<result name="input">/ScatteredGrid/login.jsp</result>
+		</action>
+		
+		<!-- 判断goodsname是否存在 -->
+		<action name="justGoodsname" class="scatteredGridGoodsAction" method="justGoodsname" >
+		  	<result name="success" type="chain">#</result>
+		  	<result name="fail">#</result>
+			<result name="input">/ScatteredGrid/login.jsp</result>
+		</action>
+		
+		<!-- 查看一个商品信息 -->
+		<action name="findGoods" class="scatteredGridGoodsAction" method="findGoods" >
+		  	<result name="success">/ScatteredGrid/manage/manageShowOneGoods.jsp</result>
+		  	<result name="success_2">/ScatteredGrid/manage/manageUploadGoods.jsp</result>
+		  	<result name="fail">/ScatteredGrid/manage/fail.jsp</result>
+			<result name="input">/ScatteredGrid/login.jsp</result>
+		</action>
+		
+		<!-- 查看一个商品信息 -->
+		<action name="findGoods_admin" class="scatteredGridGoodsAction" method="findGoods_admin" >
+		  	<result name="success">/admin/ScatteredGrid/manageShowOneGoods.jsp</result>
+		  	<result name="fail">/admin/ScatteredGrid/fail.jsp</result>
+			<result name="input">/admin/ScatteredGrid/fail.jsp</result>
+		</action>
+		
+		<!-- find_truename -->
+		<action name="findGoodsName" class="scatteredGridGoodsAction" method="findGoodsName" >
+			<result name="success">/admin/ScatteredGrid/manageShowOneGoods.jsp</result>
+			<result name="fail">/admin/ScatteredGrid/find.jsp</result>
+			<result name="input">/admin/ScatteredGrid/fail.jsp</result>
+		</action>
+		
+		<!-- 售出商品-->
+		<action name="workoffGoods" class="scatteredGridGoodsAction" method="workoffGoods" >
+		  	<result name="success" type="chain">showAllGoods_by_page_user</result>
+		  	<result name="fail" type="chain">showAllGoods_by_page_user</result>
+		  	<result name="success_2" type="chain">showAllExhibitGoods</result>
+		  	<result name="fail_2" type="chain">showAllExhibitGoods</result>
+			<result name="input">/ScatteredGrid/login.jsp</result>
+		</action>
+		<!-- findGoods_updata -->
+		<action name="findGoods_updata" class="scatteredGridGoodsAction" method="findGoods_updata" >
+			<result name="success">/ScatteredGrid/manage/manageUpdataGoods.jsp</result>
+			<result name="fail">/ScatteredGrid/manage/fail.jsp</result>
+			<result name="input">/ScatteredGrid/manage/fail.jsp</result>
+		</action>
+		
+		
+		
+		<!--                 Preferential管理                                            -->
+		<!-- 显示全部-->
+		<action name="showAllPreferential_user" class="scatteredGridPreferentialAction" method="showAllPreferential_user" >
+		  	<result name="success">/ScatteredGrid/manage/manageShowPreferential.jsp</result>
+			<result name="input">/fail.jsp</result>
+		</action>
+		
+		<!-- 显示全部-->
+		<action name="showAllPreferential_admin" class="scatteredGridPreferentialAction" method="showAllPreferential_admin" >
+		  	<result name="success">/admin/ScatteredGrid/manageShowPreferential.jsp</result>
+			<result name="input">/fail.jsp</result>
+		</action>
+		
+		<!-- 添加优惠信息-->
+		<action name="savePreferential" class="scatteredGridPreferentialAction" method="savePreferential" >
+		  	<result name="success" type="chain">showAllPreferential_user</result>
+		  	<result name="fail" type="chain">showAllPreferential_user</result>
+			<result name="input">/ScatteredGrid/login.jsp</result>
+		</action>
+		
+		<!-- 置顶优惠信息-->
+		<action name="zhiding_user" class="scatteredGridPreferentialAction" method="zhiding_user" >
+		  	<result name="success" type="chain">showAllPreferential_user</result>
+		  	<result name="fail">/ScatteredGrid/manage/fail.jsp</result>
+			<result name="input">/ScatteredGrid/login.jsp</result>
+		</action>
+		
+		<!-- 上架其他优惠信息-->
+		<action name="updateUseOld" class="scatteredGridPreferentialAction" method="updateUseOld" >
+		  	<result name="success" type="chain">showAllPreferential_user</result>
+		  	<result name="fail" type="chain">showAllPreferential_user</result>
+			<result name="input">/ScatteredGrid/login.jsp</result>
+		</action>
+		
+		<!-- 下架优惠信息-->
+		<action name="undercarriagePreferential_user" class="scatteredGridPreferentialAction" method="undercarriagePreferential_user" >
+		  	<result name="success" type="chain">showAllPreferential_user</result>
+		  	<result name="fail" type="chain">showAllPreferential_user</result>
+			<result name="input">/ScatteredGrid/login.jsp</result>
+		</action>
+		
+		<!-- 强制下架优惠信息-->
+		<action name="undercarriagePreferential_admin" class="scatteredGridPreferentialAction" method="undercarriagePreferential_admin" >
+		  	<result name="success" type="chain">showAllPreferential_admin</result>
+		  	<result name="fail" type="chain">showAllPreferential_admin</result>
+			<result name="input" type="chain">showAllPreferential_admin</result>
+		</action>
+		
+		<!-- 恢复优惠信息-->
+		<action name="resumePreferential_admin" class="scatteredGridPreferentialAction" method="resumePreferential_admin" >
+		  	<result name="success" type="chain">showAllPreferential_admin</result>
+		  	<result name="fail" type="chain">showAllPreferential_admin</result>
+			<result name="input" type="chain">showAllPreferential_admin</result>
+		</action>
+		
+		<!-- 删除已经下架的优惠信息-->
+		<action name="delePreferential_user" class="scatteredGridPreferentialAction" method="delePreferential_user" >
+		  	<result name="success" type="chain">showAllPreferential_user</result>
+		  	<result name="fail" type="chain">showAllPreferential_user</result>
+			<result name="input">/ScatteredGrid/login.jsp</result>
+		</action>
+		
+		
+		
+		<!--                 grid管理                                            -->
+		
+		<!-- 更新账号_user使用 -->
+		<action name="update_user_scatteredGrid" class="scatteredGridAction" method="update_user" >
+		  	<result name="success">/ScatteredGrid/manage/manageShowGridtInfo.jsp</result>
+		  	<result name="fail">/ScatteredGrid/manage/manageShowGridtInfo.jsp</result>
+			<result name="input">/ScatteredGrid/login.jsp</result>
+		</action>
+		
+		<!-- 显示gridInfo user使用 -->
+		<action name="showGridAllInfo_user1" class="scatteredGridAction" method="showGridAllInfo_user" >
+		  	<result name="success">/ScatteredGrid/manage/manageShowGridtInfo.jsp</result>
+		  	<result name="fail">/ScatteredGrid/manage/manageShowGridtInfo.jsp</result>
+			<result name="input">/ScatteredGrid/login.jsp</result>
+		</action>
+		
+		
+		<!-- 显示showAllGrid_by_page_user使用 -->
+		<action name="showAllGrid_by_page_user" class="scatteredGridAction" method="showAllGrid_by_page_user" >
+		  	<result name="success">/admin/ScatteredGrid/showAllScatteredGrid.jsp</result>
+			<result name="input">/admin/ScatteredGrid/fail.jsp</result>
+		</action>
+		
+		<!-- find_gridname使用 -->
+		<action name="find_gridname" class="scatteredGridAction" method="find_gridname" >
+		  	<result name="success">/admin/ScatteredGrid/showOneScatteredGrid.jsp</result>
+			<result name="fail">/admin/ScatteredGrid/find.jsp</result>
+			<result name="input">/admin/ScatteredGrid/find.jsp</result>
+		</action>
+		
+		
+		
+		<!--                 doGoodsNote管理                                            -->
+		<!-- 显示gridInfo user使用 -->
+		<action name="showDoGoodsNote_by_page" class="scatteredGridDoGoodsNoteAction" method="showDoGoodsNote_by_page" >
+		  	<result name="success">/ScatteredGrid/manage/manageWorkOffGoodsNote.jsp</result>
+		  	<result name="fail">/ScatteredGrid/manage/fail.jsp</result>
+			<result name="input">/ScatteredGrid/login.jsp</result>
+		</action>
+		
+		<!-- 显示gridInfo admin使用 -->
+		<action name="showDoGoodsNote_by_page_admin" class="scatteredGridDoGoodsNoteAction" method="showDoGoodsNote_by_page_admin" >
+		  	<result name="success">/admin/ScatteredGrid/manageWorkOffGoodsNote.jsp</result>
+		  	<result name="fail">/admin/ScatteredGrid/fail.jsp</result>
+			<result name="input">/admin/ScatteredGrid/fail.jsp</result>
+		</action>
+		
+		
+		<!-- 显示rollback user使用 -->
+		<action name="rollback" class="scatteredGridDoGoodsNoteAction" method="rollback" >
+		  	<result name="success" type="chain">showDoGoodsNote_by_page</result>
+		  	<result name="fail">/ScatteredGrid/manage/fail.jsp</result>
+			<result name="input">/ScatteredGrid/login.jsp</result>
+		</action>
+		
+	</package>
+</struts>

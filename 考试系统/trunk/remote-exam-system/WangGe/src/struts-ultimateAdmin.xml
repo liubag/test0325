@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!--  action -->
+	<package name="ultimate" extends="struts-default">
+		
+		<!--            UltimateAdminAction管理                                   -->
+		<!-- login -->
+		<action name="admin_login" class="ultimateAdminAction" method="login" >
+			<result name="success">/admin/manage.jsp</result>
+			<result name="fail">/adminLogin.jsp</result>
+			<result name="input">/adminLogin.jsp</result>
+		</action>
+
+		<!-- login -->
+		<action name="admin_exit" class="ultimateAdminAction" method="exit" >
+			<result name="success">/adminLogin.jsp</result>
+			<result name="input">/adminLogin.jsp</result>
+		</action>
+
+	</package>
+</struts>

@@ -1,0 +1,115 @@
+.mydnew_break {
+    background-color: #FFFFFF;
+    line-height: 18px;
+    margin: 0 auto;
+    padding: 12px 0 11px;
+    width: 960px;
+}
+.mydnew_break span {
+    color: #666666;
+}
+.mydnew_break a, .mydnew_break a:hover {
+    color: #0B3B8B;
+}
+.mydnew_sidel {
+    border-top: 1px solid #A4D7CA;
+    width: 170px;
+	float:left;
+}
+.mydnew_sidel_title {
+    position: relative;
+}
+.mydnew_sidel_title h3 {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color #A4D7CA #A4D7CA;
+    border-right: 1px solid #A4D7CA;
+    border-style: none solid solid;
+    border-width: medium 1px 1px;
+    font-weight: bold;
+    height: 26px;
+    line-height: 26px;
+    padding: 1px 0 0 12px;
+}
+.mydnew_sidel_title h3 a {
+    color: #5B5B5B;
+    left: 0;
+    position: relative;
+    right: auto;
+    top: 0;
+}
+.mydnew_sidel_title h3 a:hover, .mydnew_sidel_title h3 a.current {
+    color: #009C74;
+}
+.mydnew_sidel_title a {
+    position: absolute;
+    right: 11px;
+    top: 8px;
+}
+.mydnew_sidel .my_href, .mydnew_sidel .my_content {
+    -moz-border-bottom-colors: none;
+    -moz-border-image: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    border-color: -moz-use-text-color #A4D7CA #A4D7CA;
+    border-right: 1px solid #A4D7CA;
+    border-style: none solid solid;
+    border-width: medium 1px 1px;
+    line-height: 26px;
+    width: 168px;
+}
+.mydnew_sidel li {
+    padding-left: 13px;
+}
+.mydnew_sidel .my_content {
+    background: none repeat scroll 0 0 transparent;
+}
+.mydnew_sidel li a:hover {
+    color: #009C74;
+}
+.mydnew_sidel li a.current, .mydnew_sidel li a.current:hover {
+    color: #009C74;
+    font-weight: bold;
+}
+.mydnew_sidel li .new, .mydnew_sidel li .up {
+    display: inline-block;
+    margin-left: 5px;
+    text-indent: -2000px;
+    width: 30px;
+}
+
+.mydnew_sidel li a {
+    color: #404040;
+    display: inline-block;
+    line-height: 26px;
+    padding-left: 11px;
+    position: relative;
+    width: 144px;
+}
+.mydnew_sidel li a img {
+    margin-left: 4px;
+    position: absolute;
+    top: 6px;
+}
+.wrapper {
+    font: 12px "宋体",Arial,Helvetica,sans-serif;
+    margin: 0 auto;
+    width: 1024px;
+}
+.right {
+    float:right;
+    margin-left: 10px;
+	display : block ;
+    overflow: hidden;
+   	width: 800px;
+}
+#iframe{
+width: 800px;
+height:580px;
+float:left;
+overflow: hidden;
+}

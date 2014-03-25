@@ -1,0 +1,26 @@
+/* CSS Document */
+
+
+
+
+
+.high{
+padding-top:8px;
+float:left;
+color:#FF0000;
+}
+
+.onError{
+float:left;
+font-size:17px;
+background:#FFE0E9 url(../pic/reg3.gif) no-repeat 0 center;
+padding-left:25px;
+}
+
+.onSuccess{
+float:left;
+font-size:17px;
+background:#E9FBEB url(../pic/reg4.gif) no-repeat 0 center;
+padding-left:25px;
+}
+

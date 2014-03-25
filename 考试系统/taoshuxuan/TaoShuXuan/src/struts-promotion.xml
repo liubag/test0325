@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="struts-promotion" extends="struts-default"> 
+	
+		<!-- 分页显示优惠信息 -->
+		<action name="showPromotion_by_page" class="promotionAction" method="showPromotion_by_page">
+			<result name="success1">/admin/showExpirePromotion.jsp</result>	
+			<result name="success2">/admin/showNotExpirePromotion.jsp</result>	
+			<result name="input">/admin/fail.jsp</result>		
+		</action>
+		
+		
+		<!-- 添加优惠信息 -->
+		<action name="addPromotion" class="promotionAction" method="addPromotion">	
+			<result name="success" type="chain">showPromotion_by_page</result>	
+			<result name="input">/admin/fail.jsp</result>
+		</action>
+		
+		<!-- 删除优惠信息 -->
+		<action name="deletePromotion" class="promotionAction" method="deletePromotion">	
+		</action>
+
+		<!-- 获取优惠信息 -->
+		<action name="gainPromotion" class="promotionAction" method="gainPromotion">					
+			<result name="success">/admin/showOrModifyNotExpirePromotion.jsp</result>	
+			<result name="input">/admin/fail.jsp</result>	
+		</action>
+		
+		<!-- 修改未过期优惠信息 -->
+		<action name="updatePromotion" class="promotionAction" method="updatePromotion">					
+			<result name="success" type="chain">showPromotion_by_page</result>	
+			<result name="input">/admin/fail.jsp</result>	
+		</action>
+		
+		<!-- 删除未过期优惠信息 -->
+		<action name="findNotExpirePromotion_by_time" class="promotionAction" method="findNotExpirePromotion_by_time">	
+		</action>
+	</package> 
+</struts>

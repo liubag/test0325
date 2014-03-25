@@ -1,0 +1,57 @@
+/* CSS Document */
+
+*{
+margin:0px auto;
+padding:0px;
+border:none 0px;
+font-family:"ËÎÌו","Times New Roman", Times, serif;
+font-size:14px;
+background-repeat:no-repeat;
+text-decoration: none;
+}
+
+body{
+width:995px;
+height:575px;
+background-color:#fff3d2;
+}
+
+table{
+width:100%;
+}
+
+.box{
+float:left;
+width:137px;
+margin-left:5%;
+margin-bottom:5px;
+height:172px;
+}
+
+.top{
+float:left;
+width:136px;
+height:113px;
+background-image:url(../pic/gezi1.jpg);
+}
+
+.bottom{
+float:left;
+width:136px;
+height:60px;
+color:#642604;
+background-image:url(../pic/gezi2.jpg);
+}
+
+img{
+margin-left:1px;
+width:134px;
+height:110px;
+border-radius:12px 12px 0px 0px ;
+}
+
+.ms{
+width:130px;
+margin:3px 0px 0px 3px;
+text-align:left;
+}

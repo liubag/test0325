@@ -1,0 +1,45 @@
+*{
+margin:0px auto;
+padding:0px;
+font-family:"ËÎÌו","Times New Roman", Times, serif;
+font-size:14px;
+background-repeat:no-repeat;
+}
+
+body{
+width:995px;
+height:575px;
+background-color:#fff3d2;
+}
+
+table{
+width:80%;
+}
+
+#text{
+overflow:hidden;
+width:100%;
+}
+#zkxinxi{
+	overflow: hidden;
+	width:100%;
+}
+
+.td3{
+height:30px;
+padding-left:55%;
+}
+
+.anniu{
+margin-left:20px;
+background-color:#d8be98;
+border:dashed 1px #d8be98;
+}
+
+.text_red{
+	color: red;
+}
+
+.text_black{
+	color: black;
+}

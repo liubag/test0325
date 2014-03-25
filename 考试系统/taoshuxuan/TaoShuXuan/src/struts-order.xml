@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="struts-order" extends="struts-default"> 
+		<!-- 显示待审核订单 -->
+		<action name="show_order" class="orderAction" method="show_order">
+			<result name="0">/staff/audit_order.jsp</result>
+			<result name="1">/staff/shipments.jsp</result>
+			<result name="2">/staff/show_audit_fail_order.jsp</result>
+			<result name="3">/staff/show_delivered_order.jsp</result>
+			<result name="4">/staff/worked_order.jsp</result>
+			<result name="input"></result>
+		</action>
+		
+		<!-- 获取某个会员的订单 -->
+		<action name="show_order_by_customer" class="orderAction" method="show_order_by_customer">
+			<result name="success">/customer/personalCenter/myOrder.jsp</result>
+			<result name="input">/customer/personalCenter/fail.jsp</result>
+		</action>
+		
+		<!-- 删除会员的订单 -->
+		<action name="deleteOrder" class="orderAction" method="deleteOrder">
+		</action>
+		
+		<!-- 对订单进行操作 -->
+		<action name="audit_order" class="orderAction" method="audit_order">
+		</action>
+		
+		<!-- 进行发货操作 -->
+		<action name="deliver_goods" class="orderAction" method="deliver_goods">
+		</action>
+		 
+		<!-- 显示已发货的订单 -->
+		<action name="show_delivered_order" class="orderAction" method="show_delivered_order">
+			<result name="success">/staff/delivered_order.jsp</result>
+			<result name="input"></result>
+		</action>
+		<!-- 根据ID显示订单 -->
+		<action name="showBookInOrder" class="orderAction" method="showBookInOrder">
+			<result name="success">/staff/show_book_in_order.jsp</result>
+		</action>
+		
+		<!-- 会员提交订单 -->
+		<action name="commitOrder" class="orderAction" method="commitOrder">
+			<result name="success">/customer/shoppingcart/submit_orders_success.jsp</result>
+			<result name="input"></result>
+		</action>
+	</package> 
+</struts>

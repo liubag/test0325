@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="Struts2_exam" extends="struts-default"> 						
+		<action name="showExamInfo" class="com.aspsystem.action.ExamAction" method="showExamInfo">
+			<result name="success">/student/examRule.jsp</result>
+			<result name="fail">/public/error.jsp</result>
+		</action>
+		<action name="cutOptions" class="com.aspsystem.action.ExamAction" method="cutOptions">
+			<result name="success" type="chain">showExamInfo</result>
+			<result name="fail" >/public/error.jsp</result>
+		</action>
+		<action name="doExam" class="com.aspsystem.action.ExamAction" method="doExam">
+			<result name="success">/student/doExam.jsp</result>
+			<result name="fail">/public/error.jsp</result>
+		</action>
+		<action name="saveExam" class="com.aspsystem.action.ExamAction" method="saveAnswerToAnswerNote">
+			<result name="success" type="chain">doExam</result>
+			<result name="success1">/public/success.jsp</result>
+			<result name="fail">/public/error.jsp</result>
+		</action>
+		<action name="showExam" class="com.aspsystem.action.ExamAction" method="showExam">
+			<result name="success">/student/default.jsp</result>
+			<result name="fail">/public/error.jsp</result>
+		</action>
+		
+		<action name="checkIsExamBegin" class="com.aspsystem.action.ExamAction" method="checkIsExamBegin"></action>
+		<action name="addExam" class="examAction" method="addExam">
+			<result name="success" type="chain">showExam_by_page</result>
+			<result name="input">/public/error.jsp</result>
+		</action>
+		
+		<action name="showExam_by_page" class="examAction" method="showExam_by_page">
+			<result name="success">/admin/admin_taoTiManager.jsp</result>
+			<result name="input">/public/error.jsp</result>
+		</action>
+		
+		<action name="deletExam" class="examAction" method="deletExam">
+			<result name="success" type="chain">showExam_by_page</result>
+			<result name="input">/public/error.jsp</result>
+		</action>
+		
+		<action name="deletExamBatch" class="examAction" method="deletExamBatch">
+			<result name="success" type="chain">showExam_by_page</result>
+			<result name="input">/public/error.jsp</result>
+		</action>
+		
+		<action name="gainExamByTime" class="examAction" method="gainExamByTime">
+			<result name="success">/teacher/teacher_checkGrades.jsp</result>
+			<result name="input">/public/error.jsp</result>
+		</action>
+	</package> 
+</struts>
+

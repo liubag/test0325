@@ -1,0 +1,711 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<!-- 品牌网格 action -->
+	<package name="brandgrid" extends="struts-default">
+		
+		
+		<!--            brandgridAction管理                                   -->
+		<!-- enrollBrandgrid -->
+		<action name="enrollBrandgrid" class="brandgridAction" method="enrollBrandgrid" >
+			<result name="success">/admin/BrandGrid/success.jsp</result>
+			<result name="fail">/admin/BrandGrid/fail.jsp</result>
+			<result name="input">/admin/BrandGrid/fail.jsp</result>
+		</action>
+		
+		<!-- justBrandgridName -->
+		<action name="justBrandgridName" class="brandgridAction" method="justBrandgridName"  >
+			<result name="input">/admin/BrandGrid/enrollBrandgrid.jsp</result>
+		</action>
+		<!-- show Brandgrid -->
+		<action name="showAllBrandgrid" class="brandgridAction" method="showAllBrandgrid" >
+			<result name="success">/admin/BrandGrid/showAllBrandgrid.jsp</result>
+			<result name="input">/admin/BrandGrid/fail.jsp</result>
+		</action>
+		<!-- makeBrandgrid_l_true -->
+		<action name="makeBrandgrid_l_true" class="brandgridAction" method="makeBrandgrid_l_true" >
+			<result name="success">#</result>
+			<result name="input">#</result>
+		</action>
+		
+		<!-- makeBrandgrid_l_false -->
+		<action name="makeBrandgrid_l_false" class="brandgridAction" method="makeBrandgrid_l_false" >
+			<result name="success">#</result>
+			<result name="input">#</result>
+		</action>
+		
+		<!-- findBrandgrid_admin -->
+		<action name="findBrandgrid_admin" class="brandgridAction" method="findBrandgrid_admin" >
+			<result name="success">/admin/BrandGrid/enrollBrandgrid.jsp</result>
+			<result name="fail">/admin/BrandGrid/fail.jsp</result>
+			<result name="input">/admin/BrandGrid/fail.jsp</result>
+		</action>
+		<!-- updateHasGrids -->
+		<action name="updateHasGrids" class="brandgridAction" method="updateHasGrids" >
+			<result name="success">/admin/BrandGrid/success.jsp</result>
+			<result name="input">/admin/BrandGrid/fail.jsp</result>
+		</action>
+		<!-- xuyue -->
+		<action name="brandgrid_xuyue" class="brandgridAction" method="brandgrid_xuyue" >
+			<result name="success" type="chain">showAllBrandgrid</result>
+			<result name="fail">/admin/BrandGrid/fail.jsp</result>
+			<result name="input">/admin/BrandGrid/fail.jsp</result>
+		</action>
+		<!-- zhuxiao -->
+		<action name="brandgrid_zhuxiao" class="brandgridAction" method="zhuxiao" >
+			<result name="success" type="chain">showAllBrandgrid</result>
+			<result name="fail">/admin/BrandGrid/fail.jsp</result>
+			<result name="input">/admin/BrandGrid/fail.jsp</result>
+		</action>
+		<!-- jihuo -->
+		<action name="brandgrid_jihuo" class="brandgridAction" method="jihuo" >
+			<result name="success" type="chain">showAllBrandgrid</result>
+			<result name="fail">/admin/BrandGrid/fail.jsp</result>
+			<result name="input">/admin/BrandGrid/fail.jsp</result>
+		</action>
+		<!-- find_brandowner brandowner-->
+		<action name="find_brandowner" class="brandgridAction" method="find_brandowner" >
+			<result name="success">/Brand/brandmanage/zhanghuxinxi.jsp</result>
+			<result name="fail">/Brand/brandmanage/fail.jsp</result>
+			<result name="input">/Brand/brandmanage/fail.jsp</result>
+		</action>
+		<!-- uploadGridLogo_owner -->
+		<action name="uploadGridLogo_owner" class="brandgridAction" method="uploadGridLogo_owner" >
+			<result name="success">/Brand/brandmanage/gridInfo.jsp</result>
+			<result name="fail">/Brand/brandmanage/fail.jsp</result>
+			<result name="input">/Brand/brandmanage/fail.jsp</result>
+		</action>
+		<!-- bangdingIP_brandowner brandowner-->
+		<action name="bangdingIP_brandowner" class="brandgridAction" method="bangdingIP_brandowner" >
+			<result name="success" type="chain">find_brandowner</result>
+			<result name="fail">/Brand/brandmanage/fail.jsp</result>
+			<result name="input">/Brand/brandmanage/fail.jsp</result>
+		</action>
+		<!-- updataQQ_brandgrid brandowner-->
+		<action name="updataQQ_brandgrid" class="brandgridAction" method="updataQQ_brandgrid" >
+			<result name="success" type="chain">find_brandowner</result>
+			<result name="fail">/Brand/brandmanage/fail.jsp</result>
+			<result name="input">/Brand/brandmanage/fail.jsp</result>
+		</action>
+		
+		
+		<!--            brandgridGridAction管理                                   -->
+		<!-- showAllGrid_by_page -->
+		<action name="showAllGrid_by_page" class="brandgridGridAction" method="showAllGrid_by_page" >
+			<result name="success">/admin/BrandGrid/_showAllBrandgridGrid.jsp</result>
+			<result name="input">/admin/BrandGrid/fail.jsp</result>
+		</action>
+		<!-- showGrids_All -->
+		<action name="showGrids_All" class="brandgridGridAction" method="showGrids_All" >
+			<result name="success">/admin/BrandGrid/updateHasGrids.jsp</result>
+			<result name="input">/admin/BrandGrid/fail.jsp</result>
+		</action>
+		<!-- getGeNum_l_brandowner -->
+		<action name="getGeNum_l_brandowner" class="brandgridGridAction" method="getGeNum_l_brandowner" >
+			<result name="success"></result>
+			<result name="input"></result>
+		</action>
+		<!-- find_grid_admin -->
+		<action name="find_grid_admin" class="brandgridGridAction" method="find_grid_admin" >
+			<result name="success">/admin/BrandGrid/dialog_grid.jsp</result>
+			<result name="input">/admin/BrandGrid/fail.jsp</result>
+		</action>
+		<!-- showAllGrid_by_page_owner brandowner -->
+		<action name="showAllGrid_by_page_owner" class="brandgridGridAction" method="showAllGrid_by_page_owner" >
+			<result name="success">/Brand/brandmanage/pinpaifenbutu.jsp</result>
+			<result name="salesmanage">/Brand/salesmanage/pinpaifenbutu.jsp</result>
+			<result name="input">/Brand/brandmanage/fail.jsp</result>
+		</action>
+		<!-- updataGridNo_brandowner brandowner -->
+		<action name="updataGridNo_brandowner" class="brandgridGridAction" method="updataGridNo_brandowner" >
+			<result name="success" type="chain">showAllGrid_by_page_owner</result>
+			<result name="input">/Brand/brandmanage/fail.jsp</result>
+		</action>
+		<!-- getAllNum_l_brandowner brandowner -->
+		<action name="getAllNum_l_brandowner" class="brandgridGridAction" method="getAllNum_l_brandowner" >
+			<result name="success"></result>
+			<result name="input"></result>
+		</action>
+		<!-- justGridNo_owner brandowner -->
+		<action name="justGridNo_owner" class="brandgridGridAction" method="justGridNo_owner" >
+			<result name="input"></result>
+		</action>
+		<!-- justGridAddgoods_no_owner brandowner -->
+		<action name="justGridAddgoods_no_owner" class="brandgridGridAction" method="justGridAddgoods_no_owner" >
+			<result name="input"></result>
+		</action>
+		
+		
+		
+		
+		
+		<!--            brandgridOwnerAction管理                                   -->
+		<!-- justOwnerName -->
+		<action name="justOwnerName" class="brandgridOwnerAction" method="justOwnerName"  >
+			<result name="input">/admin/BrandGrid/enrollBrandgrid.jsp</result>
+		</action>
+		<!-- justOwnerUserName -->
+		<action name="justOwnerUserName" class="brandgridOwnerAction" method="justOwnerUserName" >
+			<result name="input">/admin/BrandGrid/enrollBrandgrid.jsp</result>
+		</action>
+		
+		<!-- login brandowner-->
+		<action name="login_brandowner" class="brandgridOwnerAction" method="login_brandowner" >
+			<result name="success">/Brand/brandmanage/brandmanage.jsp</result>
+			<result name="fail">/Brand/brandowner_login.jsp</result>
+			<result name="input">/Brand/brandowner_login.jsp</result>
+		</action>
+	
+		<!-- exit brandowner-->
+		<action name="exit_brandowner" class="brandgridOwnerAction" method="exit_brandowner" >
+			<result name="success">/Brand/brandowner_login.jsp</result>
+			<result name="input">/Brand/brandowner_login.jsp</result>
+		</action>
+		<!-- updataUsername brandowner-->
+		<action name="updataUsername_brandowner2" class="brandgridOwnerAction" method="updataUsername_brandowner2" >
+			<result name="success">/Brand/brandowner_login.jsp</result>
+			<result name="fail">/Brand/brandmanage/fail.jsp</result>
+			<result name="input">/Brand/brandmanage/fail.jsp</result>
+		</action>
+		<!-- updataPw_brandowner brandowner-->
+		<action name="updataPw_brandowner2" class="brandgridOwnerAction" method="updataPw_brandowner2" >
+			<result name="success">/Brand/brandowner_login.jsp</result>
+			<result name="fail">/Brand/brandmanage/fail.jsp</result>
+			<result name="input">/Brand/brandmanage/fail.jsp</result>
+		</action>
+		<!-- jusrOwnerUsername_brandowner brandowner-->
+		<action name="jusrOwnerUsername_brandowner" class="brandgridOwnerAction" method="jusrOwnerUsername_brandowner" >
+			<result name="success"></result>
+			<result name="input"></result>
+		</action>
+		
+		
+		
+		
+		
+		
+		
+		<!--            brandgridGridtypeAction管理                                   -->
+		<!-- addGridType -->
+		<action name="addBrandGridGridType" class="brandgridGridtypeAction" method="addGridType" >
+			<result name="success">/admin/BrandGrid/addBrandGridGridType.jsp</result>
+			<result name="fail">/admin/BrandGrid/addBrandGridGridType.jsp</result>
+			<result name="input">/admin/BrandGrid/fail.jsp</result>
+		</action>
+		
+		<!-- showAllBrandGridGridType -->
+		<action name="showAllBrandGridGridType" class="brandgridGridtypeAction" method="showAllGridType" />
+	
+		
+		<!-- addGridType -->
+		<action name="deleBrandGridGridType" class="brandgridGridtypeAction" method="dele" >
+			<result name="success">/admin/BrandGrid/addBrandGridGridType.jsp</result>
+			<result name="fail">/admin/BrandGrid/addBrandGridGridType.jsp</result>
+			<result name="input">/admin/BrandGrid/fail.jsp</result>
+		</action>
+		
+		<!-- updateGridType -->
+		<action name="updateBrandGridGridType" class="brandgridGridtypeAction" method="update" >
+			<result name="success">/admin/BrandGrid/addBrandGridGridType.jsp</result>
+			<result name="fail">/admin/BrandGrid/addBrandGridGridType.jsp</result>
+			<result name="input">/admin/BrandGrid/fail.jsp</result>
+		</action>
+		
+			
+		<!--            brandgridGridOwnerAction管理                                   -->
+		<!-- showAllGridOwner_by_page -->
+		<action name="showAllGridOwner_by_page" class="brandgridGridOwnerAction" method="showAllGridOwner_by_page" >
+			<result name="success">/admin/BrandGrid/_showAllGridOwner.jsp</result>
+			<result name="fail">/admin/BrandGrid/fail.jsp</result>
+			<result name="input">/admin/BrandGrid/fail.jsp</result>
+		</action>
+		
+		<!-- showAllGridOwner_by_page_owner brandowner-->
+		<action name="showAllGridOwner_by_page_owner" class="brandgridGridOwnerAction" method="showAllGridOwner_by_page_owner" >
+			<result name="success">/Brand/brandmanage/gezhuxinxi.jsp</result>
+			<result name="fail">/Brand/brandmanage/fail.jsp</result>
+			<result name="input">/Brand/brandmanage/fail.jsp</result>
+		</action>
+		
+		<!-- find_id_toShowDialog -->
+		<action name="find_id_toShowDialog" class="brandgridGridOwnerAction" method="find_id_toShowDialog" >
+			<result name="success">/admin/BrandGrid/dialog_gridOwner.jsp</result>
+			<result name="input">/admin/BrandGrid/dialog_gridOwner.jsp</result>
+		</action>
+		
+		<!-- login gridowner-->
+		<action name="login_gridowner" class="brandgridGridOwnerAction" method="login_gridowner" >
+			<result name="success">/Brand/gridmanage/gridmanage.jsp</result>
+			<result name="fail">/Brand/gridowner_login.jsp</result>
+			<result name="input">/Brand/gridowner_login.jsp</result>
+		</action>
+	
+		<!-- exit gridowner-->
+		<action name="exit_gridowner" class="brandgridGridOwnerAction" method="exit_gridowner" >
+			<result name="success">/Brand/gridowner_login.jsp</result>
+			<result name="input">/Brand/gridowner_login.jsp</result>
+		</action>
+		
+		<!-- justGridOwnerUserName brandowner-->
+		<action name="justGridOwnerUserName" class="brandgridGridOwnerAction" method="justGridOwnerUserName" >
+			<result name="input"></result>
+		</action>
+		
+		<!-- justGridOwnerTrueName brandowner-->
+		<action name="justGridOwnerTrueName" class="brandgridGridOwnerAction" method="justGridOwnerTrueName" >
+			<result name="input"></result>
+		</action>
+		
+		<!-- addBrandgridGridOwner brandowner-->
+		<action name="addBrandgridGridOwner" class="brandgridGridOwnerAction" method="addBrandgridGridOwner" >
+			<result name="success">/Brand/brandmanage/success.jsp</result>
+			<result name="fail">/Brand/brandmanage/success.jsp</result>
+			<result name="input">/Brand/brandmanage/fail.jsp</result>
+		</action>
+		
+		<!-- zhuxiao_gridGridOwner brandowner-->
+		<action name="zhuxiao_gridGridOwner" class="brandgridGridOwnerAction" method="zhuxiao_gridGridOwner" >
+			<result name="success">/Brand/brandmanage/success.jsp</result>
+			<result name="fail">/Brand/brandmanage/fail.jsp</result>
+			<result name="input">/Brand/brandmanage/fail.jsp</result>
+		</action>
+		
+		<!-- jihuo_gridGridOwner brandowner-->
+		<action name="jihuo_gridGridOwner" class="brandgridGridOwnerAction" method="jihuo_gridGridOwner" >
+			<result name="success" type="chain">showAllGridOwner_by_page_owner</result>
+			<result name="fail">/Brand/brandmanage/fail.jsp</result>
+			<result name="input">/Brand/brandmanage/fail.jsp</result>
+		</action>
+		<!-- find_gridOwner_brandowner brandowner -->
+		<action name="find_gridOwner_brandowner" class="brandgridGridOwnerAction" method="find_gridOwner" >
+			<result name="success">/Brand/brandmanage/tianjiagezhu.jsp</result>
+			<result name="input">/Brand/brandmanage/fail.jsp</result>
+		</action>
+		<!-- justUserName_griowner gridowner-->
+		<action name="justUserName_griowner" class="brandgridGridOwnerAction" method="justUserName_griowner" >
+			<result name="input"></result>
+		</action>
+		<!-- updataUsername_gridowner gridowner-->
+		<action name="updataUsername_gridowner" class="brandgridGridOwnerAction" method="updataUsername_gridowner" >
+			<result name="success">/Brand/gridowner_login.jsp</result>
+			<result name="fail">/Brand/gridmanage/fail.jsp</result>
+			<result name="input">/Brand/gridmanage/fail.jsp</result>
+		</action>
+		<!-- updataPw_gridowner gridowner-->
+		<action name="updataPw_gridowner" class="brandgridGridOwnerAction" method="updataPw_gridowner" >
+			<result name="success">/Brand/gridowner_login.jsp</result>
+			<result name="fail">/Brand/gridmanage/fail.jsp</result>
+			<result name="input">/Brand/gridmanage/fail.jsp</result>
+		</action>
+		<!-- findgridowner_gridowner gridowner-->
+		<action name="findgridowner_gridowner" class="brandgridGridOwnerAction" method="findgridowner_gridowner" >
+			<result name="success">/Brand/gridmanage/zhanghuxinxi.jsp</result>
+			<result name="gezhixinxi">/Brand/gridmanage/gridInfo.jsp</result>
+			<result name="fail">/Brand/gridmanage/fail.jsp</result>
+			<result name="input">/Brand/gridmanage/fail.jsp</result>
+		</action>
+		<!-- updataGridName_gridowner gridowner-->
+		<action name="updataGridName_gridowner" class="brandgridGridOwnerAction" method="updataGridName_gridowner" >
+			<result name="success" type="chain">findgridowner_gridowner</result>
+			<result name="fail">/Brand/gridmanage/fail.jsp</result>
+			<result name="input">/Brand/gridmanage/fail.jsp</result>
+		</action>
+		<!-- justGridName_gridowner gridowner-->
+		<action name="justGridName_gridowner" class="brandgridGridOwnerAction" method="justGridName_gridowner" >
+			<result name="input"></result>
+		</action>
+		<!-- cleanPhotoFolder_gridowner -->
+		<action name="cleanPhotoFolder_gridowner" class="brandgridGridOwnerAction" method="cleanPhotoFolder_gridowner" >
+			<result name="input"></result>
+		</action>
+		<!-- uploadGridLogo_gridowner gridowner-->
+		<action name="uploadGridLogo_gridowner" class="brandgridGridOwnerAction" method="uploadGridLogo_gridowner" >
+			<result name="success" type="chain">findgridowner_gridowner</result>
+			<result name="fail">/Brand/gridmanage/fail.jsp</result>
+			<result name="input">/Brand/gridmanage/fail.jsp</result>
+		</action>
+		
+		
+		
+		
+		
+		<!--            brandgridSalesmanAction管理                                   -->
+		<!-- showsalse -->
+		<action name="showAllSalse_by_page" class="brandgridSalesmanAction" method="showAllSalse_by_page" >
+			<result name="success">/admin/BrandGrid/_showAllSalesman.jsp</result>
+			<result name="fail">/admin/BrandGrid/fail.jsp</result>
+			<result name="input">/admin/BrandGrid/fail.jsp</result>
+		</action>
+		
+		
+		<!-- login salesowner-->
+		<action name="login_salesowner" class="brandgridSalesmanAction" method="login_salesowner" >
+			<result name="success">/Brand/salesmanage/salesmanage.jsp</result>
+			<result name="fail">/Brand/salesman_login.jsp</result>
+			<result name="input">/Brand/salesman_login.jsp</result>
+		</action>
+	
+		<!-- exit salesowner-->
+		<action name="exit_salesowner" class="brandgridSalesmanAction" method="exit_salesowner" >
+			<result name="success">/Brand/salesman_login.jsp</result>
+			<result name="input">/Brand/salesman_login.jsp</result>
+		</action>
+		
+		<!-- justsalesmanUserName brandowner -->
+		<action name="justsalesmanUserName" class="brandgridSalesmanAction" method="justsalesmanUserName" >
+			<result name="input"></result>
+		</action>
+		<!-- justsalesmanIdcard brandowner -->
+		<action name="justsalesmanIdcard" class="brandgridSalesmanAction" method="justsalesmanIdcard" >
+			<result name="input"></result>
+		</action>
+		<!-- addSalesman brandowner -->
+		<action name="addSalesman_brandowner" class="brandgridSalesmanAction" method="addSalesman" >
+			<result name="success">/Brand/brandmanage/success.jsp</result>
+			<result name="fail">/Brand/brandmanage/fail.jsp</result>
+			<result name="input">/Brand/brandmanage/fail.jsp</result>
+		</action>
+		<!-- showSalesMen_brandowner brandowner -->
+		<action name="showSalesMen_brandowner" class="brandgridSalesmanAction" method="showSalesMen_brandowner" >
+			<result name="success">/Brand/brandmanage/shouhuoyuanxinxi.jsp</result>
+			<result name="fail">/Brand/brandmanage/fail.jsp</result>
+			<result name="input">/Brand/brandmanage/fail.jsp</result>
+		</action>
+		<!-- zhuxiao_salesman brandowner -->
+		<action name="zhuxiao_salesman" class="brandgridSalesmanAction" method="zhuxiao_salesman" >
+			<result name="success" type="chain">showSalesMen_brandowner</result>
+			<result name="fail">/Brand/brandmanage/fail.jsp</result>
+			<result name="input">/Brand/brandmanage/fail.jsp</result>
+		</action>
+		<!-- jihuo_salesman brandowner -->
+		<action name="jihuo_salesman" class="brandgridSalesmanAction" method="jihuo_salesman" >
+			<result name="success" type="chain">showSalesMen_brandowner</result>
+			<result name="fail">/Brand/brandmanage/fail.jsp</result>
+			<result name="input">/Brand/brandmanage/fail.jsp</result>
+		</action>
+		<!-- findSalesman_brandowner brandowner -->
+		<action name="findSalesman_brandowner" class="brandgridSalesmanAction" method="findSalesman_brandowner" >
+			<result name="success">/Brand/brandmanage/shouhuoyuan.jsp</result>
+			<result name="fail">/Brand/brandmanage/fail.jsp</result>
+			<result name="input">/Brand/brandmanage/fail.jsp</result>
+		</action>
+		<!-- getSalesName_l_brandowner brandowner -->
+		<action name="getSalesName_l_brandowner" class="brandgridSalesmanAction" method="getSalesName_l_brandowner" >
+			<result name="success"></result>
+			<result name="input"></result>
+		</action>
+		
+		
+		
+		<!--            brandgridGoodsAction管理                                   -->
+		<!-- addGridType -->
+		<action name="showAllGridGoods_by_page" class="brandgridGoodsAction" method="showAllGridGoods_by_page" >
+			<result name="success">/admin/BrandGrid/_showAllGoods.jsp</result>
+			<result name="fail">/admin/BrandGrid/fail.jsp</result>
+			<result name="input">/admin/BrandGrid/fail.jsp</result>
+		</action>
+		<!-- show_All_Goods_brandOwner  brandowner-->
+		<action name="show_All_Goods_brandOwner" class="brandgridGoodsAction" method="show_All_Goods_brandOwner" >
+			<result name="success01">/Brand/brandmanage/dangqianshangjia.jsp</result>
+			<result name="success02">/Brand/brandmanage/shenpixiajia.jsp</result>
+			<result name="success04">/Brand/brandmanage/dangqianxiajia.jsp</result>
+			<result name="success05">/Brand/brandmanage/jiukucun.jsp</result>
+			<result name="fail">/Brand/brandmanage/fail.jsp</result>
+			<result name="input">/Brand/brandmanage/fail.jsp</result>
+			<result name="s_success01">/Brand/salesmanage/dangqianshangjia.jsp</result>
+			<result name="s_success02">/Brand/salesmanage/shenpixiajia.jsp</result>
+			<result name="s_success04">/Brand/salesmanage/dangqianxiajia.jsp</result>
+			<result name="s_success05">/Brand/salesmanage/jiukucun.jsp</result>
+			<result name="s_fail">/Brand/salesmanage/fail.jsp</result>
+			<result name="s_input">/Brand/salesmanage/fail.jsp</result>
+		</action>
+		
+		<!-- findGoods_byName_user -->
+		<action name="findGI_user" class="brandgridGoodsAction" method="findGoods_byID_user" >
+			<result name="success">#</result>
+			<result name="fail">/fail.jsp</result>
+			<result name="input">/fail.jsp</result>
+			<result name="g_success">/Brand/gridmanage/goodsUpdata.jsp</result>
+			<result name="g_fail">/Brand/gridmanage/fail.jsp</result>
+			<result name="g_input">/Brand/gridmanage/fail.jsp</result>
+			<result name="s_success">/Brand/salesmanage/goodsUpdata.jsp</result>
+			<result name="s_fail">/Brand/salesmanage/fail.jsp</result>
+			<result name="s_input">/Brand/salesmanage/fail.jsp</result>
+		</action>
+		<!-- justGoodsName_util -->
+		<action name="justGoodsName_util" class="brandgridGoodsAction" method="justGoodsName_util" >
+			<result name="input">#</result>
+		</action>
+		<!-- uploadOrUploadGoods_gridowner -->
+		<action name="uploadOrUploadGoods_gridowner" class="brandgridGoodsAction" method="uploadOrUploadGoods_gridowner" >
+			<result name="success">/Brand/gridmanage/success.jsp</result>
+			<result name="fail">/Brand/gridmanage/fail.jsp</result>
+			<result name="input">/Brand/gridmanage/fail.jsp</result>
+		</action>
+		<!-- show_All_Goods_gridOwner -->
+		<action name="show_All_Goods_gridOwner" class="brandgridGoodsAction" method="show_All_Goods_gridOwner" >
+			<result name="goodsJkc">/Brand/gridmanage/goodsJkc.jsp</result>
+			<result name="goodsSc">/Brand/gridmanage/goodsSc.jsp</result>
+			<result name="goodsYs">/Brand/gridmanage/goodsYs.jsp</result>
+			<result name="goodsYx">/Brand/gridmanage/goodsYx.jsp</result>
+			<result name="fail">/Brand/gridmanage/fail.jsp</result>
+			<result name="input">/Brand/gridmanage/fail.jsp</result>
+		</action>
+		<!-- doGoodsStatu_gridowner -->
+		<action name="doGoodsStatu_gridowner" class="brandgridGoodsAction" method="doGoodsStatu_gridowner" >
+			<result name="success" type="chain">show_All_Goods_gridOwner</result>
+			<result name="fail">/Brand/gridmanage/fail.jsp</result>
+			<result name="input">/Brand/gridmanage/fail.jsp</result>
+		</action>
+		<!-- turnToTheUGoods_gridowner -->
+		<action name="turnToTheUGoods_gridowner" class="brandgridGoodsAction" method="turnToTheUGoods_gridowner" >
+			<result name="success">/Brand/gridmanage/dialog_yuZ.jsp</result>
+			<result name="fail">/Brand/gridmanage/dialog_yuZ.jsp</result>
+			<result name="input">/Brand/gridmanage/dialog_yuZ.jsp</result>
+		</action>
+		<!-- quexiao_gridowner -->
+		<action name="quexiao_gridowner" class="brandgridGoodsAction" method="quexiao_gridowner" >
+			<result name="success" type="chain">show_All_Goods_gridOwner</result>
+			<result name="fail">/Brand/gridmanage/fail.jsp</result>
+			<result name="input">/Brand/gridmanage/fail.jsp</result>
+		</action>
+		<!-- deleGoods_gridowner -->
+		<action name="deleGoods_gridowner" class="brandgridGoodsAction" method="deleGoods_gridowner" >
+			<result name="success" type="chain">show_All_Goods_gridOwner</result>
+			<result name="fail">/Brand/gridmanage/fail.jsp</result>
+			<result name="input">/Brand/gridmanage/fail.jsp</result>
+		</action>
+		<!-- zhiding_gridowner -->
+		<action name="zhiding_gridowner" class="brandgridGoodsAction" method="zhiding_gridowner" >
+			<result name="success" type="chain">show_All_Goods_gridOwner</result>
+			<result name="fail">/Brand/gridmanage/fail.jsp</result>
+			<result name="input">/Brand/gridmanage/fail.jsp</result>
+		</action>
+		<!-- turnToTheOldGoods_gridowner -->
+		<action name="turnToTheOldGoods_gridowner" class="brandgridGoodsAction" method="turnToTheOldGoods_gridowner" >
+			<result name="success" type="chain">show_All_Goods_gridOwner</result>
+			<result name="fail">/Brand/gridmanage/fail.jsp</result>
+			<result name="input">/Brand/gridmanage/fail.jsp</result>
+		</action>
+		<!-- show_SHGoods_gridowner gridowner-->
+		<action name="show_SHGoods_gridowner" class="brandgridGoodsAction" method="show_SHGoods_gridowner" >
+			<result name="success">/Brand/gridmanage/fabutongshishenqingshangjia.jsp</result>
+			<result name="input">/Brand/gridmanage/fail.jsp</result>
+		</action>
+		<!-- goodsTG_salesman salesman-->
+		<action name="goodsTG_salesman" class="brandgridGoodsAction" method="goodsTG_salesman" >
+			<result name="success" type="chain">show_All_Goods_brandOwner</result>
+			<result name="fail">/Brand/salesmanage/fail.jsp</result>
+			<result name="input">/Brand/salesmanage/fail.jsp</result>
+		</action>
+		<!-- goodsHuiGun_salesman salesman-->
+		<action name="goodsHuiGun_salesman" class="brandgridGoodsAction" method="goodsHuiGun_salesman" >
+			<result name="success" type="chain">show_All_Goods_brandOwner</result>
+			<result name="fail">/Brand/salesmanage/fail.jsp</result>
+			<result name="input">/Brand/salesmanage/fail.jsp</result>
+		</action>
+		<!-- goodsBuTG_salesman salesman-->
+		<action name="goodsBuTG_salesman" class="brandgridGoodsAction" method="goodsBuTG_salesman" >
+			<result name="success" type="chain">show_All_Goods_brandOwner</result>
+			<result name="fail">/Brand/salesmanage/fail.jsp</result>
+			<result name="input">/Brand/salesmanage/fail.jsp</result>
+		</action>
+		<!-- updataGoods_salesman salesman-->
+		<action name="updataGoods_salesman" class="brandgridGoodsAction" method="updataGoods_salesman" >
+			<result name="success" type="chain">show_All_Goods_brandOwner</result>
+			<result name="fail">/Brand/salesmanage/fail.jsp</result>
+			<result name="input">/Brand/salesmanage/fail.jsp</result>
+		</action>
+		<!-- justGoodsFor_salesman salesman-->
+		<action name="justGoodsFor_salesman" class="brandgridGoodsAction" method="justGoodsFor_salesman" >
+		</action>
+		<!-- jieSuan_salesman salesman-->
+		<action name="jieSuan_salesman" class="brandgridGoodsAction" method="jieSuan_salesman" >
+		</action>
+		
+		
+		
+		
+		
+		
+		<!--            brandgridPreferentialAction管理                                   -->
+		<!-- showAllBP_by_page  admin-->
+		<action name="showAllBP_by_page" class="brandgridPreferentialAction" method="showAllPreferential_by_page" >
+			<result name="success">/admin/BrandGrid/_showAllPreferential.jsp</result>
+			<result name="fail">/admin/BrandGrid/fail.jsp</result>
+			<result name="input">/admin/BrandGrid/fail.jsp</result>
+		</action>
+		<!-- show_All_Prefere_brandOwner  brandowner-->
+		<action name="show_All_Prefere_brandOwner" class="brandgridPreferentialAction" method="show_All_Prefere_brandOwner" >
+			<result name="success01">/Brand/brandmanage/dangqianshangjiayouhui.jsp</result>
+			<result name="success02">/Brand/brandmanage/shenpiyouhui.jsp</result>
+			<result name="success03">/Brand/brandmanage/dangqianxiajiayouhui.jsp</result>
+			<result name="fail">/Brand/brandmanage/fail.jsp</result>
+			<result name="input">/Brand/brandmanage/fail.jsp</result>
+			<result name="s_success01">/Brand/salesmanage/dangqianshangjiayouhui.jsp</result>
+			<result name="s_success02">/Brand/salesmanage/shenpiyouhui.jsp</result>
+			<result name="s_success03">/Brand/salesmanage/dangqianxiajiayouhui.jsp</result>
+			<result name="s_fail">/Brand/salesmanage/fail.jsp</result>
+			<result name="s_input">/Brand/salesmanage/fail.jsp</result>
+		</action>
+		<!-- preTG_salesman  salesman -->
+		<action name="preTG_salesman" class="brandgridPreferentialAction" method="preTG_salesman" >
+			<result name="success" type="chain">show_All_Prefere_brandOwner</result>
+			<result name="fail">/Brand/salesmanage/fail.jsp</result>
+			<result name="input">/Brand/salesmanage/fail.jsp</result>
+		</action>
+		<!-- preTG_salesman  salesman -->
+		<action name="preHG_salesman" class="brandgridPreferentialAction" method="preHG_salesman" >
+			<result name="success" type="chain">show_All_Prefere_brandOwner</result>
+			<result name="fail">/Brand/salesmanage/fail.jsp</result>
+			<result name="input">/Brand/salesmanage/fail.jsp</result>
+		</action>
+		<!-- preBuTG_salesman  salesman -->
+		<action name="preBuTG_salesman" class="brandgridPreferentialAction" method="preBuTG_salesman" >
+			<result name="success" type="chain">show_All_Prefere_brandOwner</result>
+			<result name="fail">/Brand/salesmanage/fail.jsp</result>
+			<result name="input">/Brand/salesmanage/fail.jsp</result>
+		</action>
+		<!-- addPreferen_gridowner -->
+		<action name="addPreferen_gridowner" class="brandgridPreferentialAction" method="addPreferen_gridowner" >
+			<result name="success">/Brand/gridmanage/success.jsp</result>
+			<result name="fail">/Brand/gridmanage/fail.jsp</result>
+			<result name="input">/Brand/gridmanage/fail.jsp</result>
+		</action>
+		<!-- isCanAddPer_gridowner -->
+		<action name="isCanAddPer_gridowner" class="brandgridPreferentialAction" method="isCanAddPer_gridowner" >
+			<result name="input"></result>
+		</action>
+		<!-- showAllPre_page_gridowner -->
+		<action name="showAllPre_page_gridowner" class="brandgridPreferentialAction" method="showAllPre_page_gridowner" >
+			<result name="success">/Brand/gridmanage/qitayouhuizhuangtai.jsp</result>
+			<result name="succese_yiwang">/Brand/gridmanage/yiwangyouhuixinxi.jsp</result>
+			<result name="input">/Brand/gridmanage/fail.jsp</result>
+		</action>
+		<!-- delePre_girdOwner -->
+		<action name="delePre_girdOwner" class="brandgridPreferentialAction" method="delePre_girdOwner" >
+			<result name="success" type="chain">showAllPre_page_gridowner</result>
+			<result name="fail">/Brand/gridmanage/fail.jsp</result>
+			<result name="input">/Brand/gridmanage/fail.jsp</result>
+		</action>
+		<!-- quxiaoPre_girdOwner -->
+		<action name="quxiaoPre_girdOwner" class="brandgridPreferentialAction" method="quxiaoPre_girdOwner" >
+			<result name="success" type="chain">showAllPre_page_gridowner</result>
+			<result name="fail">/Brand/gridmanage/fail.jsp</result>
+			<result name="input">/Brand/gridmanage/fail.jsp</result>
+		</action>
+		<!-- chongxinPre_girdOwner -->
+		<action name="chongxinPre_girdOwner" class="brandgridPreferentialAction" method="chongxinPre_girdOwner" >
+			<result name="success" type="chain">showAllPre_page_gridowner</result>
+			<result name="fail">/Brand/gridmanage/fail.jsp</result>
+			<result name="input">/Brand/gridmanage/fail.jsp</result>
+		</action>
+		<!-- findPreUpata_grid -->
+		<action name="findPreUpata_grid" class="brandgridPreferentialAction" method="findPreUpata_grid" >
+			<result name="success">/Brand/gridmanage/xiugaiyouhui.jsp</result>
+			<result name="fail">/Brand/gridmanage/fail.jsp</result>
+			<result name="input">/Brand/gridmanage/fail.jsp</result>
+		</action>
+		<!-- sxiajiaPre_girdOwner -->
+		<action name="sxiajiaPre_girdOwner" class="brandgridPreferentialAction" method="sxiajiaPre_girdOwner" >
+			<result name="success" type="chain">showAllPre_page_gridowner</result>
+			<result name="fail">/Brand/gridmanage/fail.jsp</result>
+			<result name="input">/Brand/gridmanage/fail.jsp</result>
+		</action>
+		<!-- preSQSJ_gridowner -->
+		<action name="preSQSJ_gridowner" class="brandgridPreferentialAction" method="preSQSJ_gridowner" >
+			<result name="success" type="chain">showAllPre_page_gridowner</result>
+			<result name="fail">/Brand/gridmanage/fail.jsp</result>
+			<result name="input">/Brand/gridmanage/fail.jsp</result>
+		</action>
+		<!-- zhidingPre_gridowner -->
+		<action name="zhidingPre_gridowner" class="brandgridPreferentialAction" method="zhidingPre_gridowner" >
+			<result name="success" type="chain">showAllPre_page_gridowner</result>
+			<result name="fail">/Brand/gridmanage/fail.jsp</result>
+			<result name="input">/Brand/gridmanage/fail.jsp</result>
+		</action>
+		
+		
+		
+		<!--            brandgridSellnoteAction管理                                   -->
+		<!-- addGridType -->
+		<action name="showAllSellnote_by_page" class="brandgridSellnoteAction" method="showAllSellnote_by_page" >
+			<result name="success">/admin/BrandGrid/_showAllSellnote.jsp</result>
+			<result name="fail">/admin/BrandGrid/fail.jsp</result>
+			<result name="input">/admin/BrandGrid/fail.jsp</result>
+		</action>
+		<!-- show_All_Notes_brandOwner -->
+		<action name="show_All_Notes_brandOwner" class="brandgridSellnoteAction" method="show_All_Notes_brandOwner" >
+			<result name="success">/Brand/brandmanage/xiaoshoujilu.jsp</result>
+			<result name="input">/Brand/brandmanage/fail.jsp</result>
+			<result name="s_success">/Brand/salesmanage/xiaoshoujilu.jsp</result>
+			<result name="s_input">/Brand/salesmanage/fail.jsp</result>
+		</action>
+		<!-- show_All_Notes_gridOwner -->
+		<action name="show_All_Notes_gridOwner" class="brandgridSellnoteAction" method="show_All_Notes_gridOwner" >
+			<result name="success">/Brand/gridmanage/xiaoshoujilu1.jsp</result>
+			<result name="input">/Brand/gridmanage/fail.jsp</result>
+		</action>
+		<!-- huigun_sales -->
+		<action name="huigun_sales" class="brandgridSellnoteAction" method="huigun_sales" >
+			<result name="success" type="chain">show_All_Notes_brandOwner</result>
+			<result name="input">/Brand/salesmanage/fail.jsp</result>
+		</action>
+		<!-- for_daying -->
+		<action name="for_daying" class="brandgridSellnoteAction" method="for_daying" >
+			<result name="success">/Brand/showOther/print.jsp</result>
+			<result name="fail">/Brand/fail.jsp</result>
+			<result name="input">/Brand/fail.jsp</result>
+		</action>
+	
+	
+	
+	
+		<!--            brandgridInfocoteAction管理                                   -->
+		<!-- save_brandowner brandowner -->
+		<action name="save_brandowner" class="brandgridInfocoteAction" method="save_brandowner" >
+			<result name="success">/Brand/brandmanage/success.jsp</result>
+			<result name="input">/Brand/brandmanage/fail.jsp</result>
+		</action>
+		<!-- updata_brandowner brandowner -->
+		<action name="updata_brandowner" class="brandgridInfocoteAction" method="updata_brandowner" >
+			<result name="success">/Brand/brandmanage/success.jsp</result>
+			<result name="input">/Brand/brandmanage/fail.jsp</result>
+		</action>
+		<!-- dele_brandowner brandowner -->
+		<action name="dele_brandowner" class="brandgridInfocoteAction" method="dele_brandowner" >
+			<result name="success">/Brand/brandmanage/success.jsp</result>
+			<result name="input">/Brand/brandmanage/fail.jsp</result>
+		</action>
+		<!-- find_id_brandowner brandowner -->
+		<action name="find_id_brandowner" class="brandgridInfocoteAction" method="find_id_brandowner" >
+			<result name="success">/Brand/brandmanage/dialog_updateIf.jsp</result>
+			<result name="input">/Brand/brandmanage/fail.jsp</result>
+		</action>
+		<!-- show_by_page_brandowner brandowner -->
+		<action name="show_by_page_brandowner" class="brandgridInfocoteAction" method="show_by_page_brandowner" >
+			<result name="success">/Brand/brandmanage/gonggaolan.jsp</result>
+			<result name="input">/Brand/brandmanage/fail.jsp</result>
+		</action>
+		<!-- xiajia_brandowner brandowner -->
+		<action name="xiajia_brandowner" class="brandgridInfocoteAction" method="xiajia_brandowner" >
+			<result name="success" type="chain">show_by_page_brandowner</result>
+			<result name="input">/Brand/brandmanage/fail.jsp</result>
+		</action>
+		<!-- shangjia_brandowner brandowner -->
+		<action name="shangjia_brandowner" class="brandgridInfocoteAction" method="shangjia_brandowner" >
+			<result name="success" type="chain">show_by_page_brandowner</result>
+			<result name="input">/Brand/brandmanage/fail.jsp</result>
+		</action>
+		
+		
+		
+		<!--            brandgridGradenoteAction管理                                   -->
+		<action name="getShijian_min_owner" class="brandgridGradenoteAction" method="getShijian_min_owner">			
+		</action>
+		
+		
+	</package>
+</struts>

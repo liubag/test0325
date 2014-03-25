@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="struts-catagory" extends="struts-default"> 
+		<!-- 分页显示图书分类信息 -->
+		<action name="showCatagory_by_page" class="catagoryAction" method="showCatagory_by_page">
+			<result name="success">/admin/bookClassify.jsp</result>	
+			<result name="input">/admin/fail.jsp</result>		
+		</action>
+		
+		<!-- 修改图书分类 -->
+		<action name="changeCatagoryName" class="catagoryAction" method="changeCatagoryName">
+		</action>
+		
+		<!-- 打折 -->
+		<action name="changeCatagoryDiscount" class="catagoryAction" method="changeCatagoryDiscount">
+		</action>
+		
+		<!-- 查询此分类是否还有子类或图书-->
+		<action name="findSubCatagory" class="catagoryAction" method="findSubCatagory">
+		</action>
+		
+		<!-- 查图书所有一级分类-->
+		<action name="findFirstCatagory" class="catagoryAction" method="findFirstCatagory">
+		</action>
+		
+		<!-- 查图书所有二级分类-->
+		<action name="gainSecondCatagory" class="catagoryAction" method="gainSecondCatagory">
+		</action>
+		
+		<!-- 查图书某一一级分类下的二级分类-->
+		<action name="findSecondCatagory" class="catagoryAction" method="findSecondCatagory">
+		</action>
+		
+		<!-- 根据分类名称查询-->
+		<action name="findCatagory" class="catagoryAction" method="findCatagory">
+		</action>
+		
+		<!-- 添加分类-->
+		<action name="addCatagory" class="catagoryAction" method="addCatagory">
+			<result name="success" type="chain">showCatagory_by_page</result>	
+			<result name="input">/admin/fail.jsp</result>
+		</action>
+	</package> 
+</struts>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="WangGe"
+  id="myeclipse.1319421935859"
+  context-root="/WangGe"
+  j2ee-spec="5.0"
+  archive="WangGe.war">
+  <attributes>
+    <attribute name="webrootdir" value="/WebRoot" />
+  </attributes>
+</project-module>
+

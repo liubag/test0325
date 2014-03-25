@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    color: #404040;
+    font-family: 宋体  Arial Helvetica sans-serif;
+    font-size: 12px;
+}
+a {
+    color: #1A66B3;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+img {
+    border: 0 none;
+}
+* ul, * ol, * li {
+    list-style: none outside none;
+}
+h1, h3, h4, h5, h6 {
+    font-size: 12px;
+    font-weight: normal;
+}
+.dashed {
+    background: url("../images/dashed.gif") repeat-x scroll 0 0 transparent;
+    font-size: 0;
+    height: 1px;
+    line-height: 1px;
+}
+.dot {
+    letter-spacing: -3px;
+}
+.clear {
+    clear: both;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+}
+.liclear {
+    clear: both;
+    float: none;
+    font-size: 0;
+    height: 0;
+    line-height: 0;
+}
+input{
+	size:20px;
+	height:21px;
+}
+.high{
+	color: red;
+}
+
+.required{
+	width:150px;
+}
+.formtips {
+
+    padding: 2px;
+    width: 130px;
+}
+.onError {
+    background:  url(../images/reg3.gif) no-repeat scroll 0 center #FFE0E9;
+    padding-left: 25px;;
+    height: 20px;
+}
+.onSuccess {
+    background:  url(../images/reg4.gif) no-repeat scroll 0 center #E9FBEB;
+    padding-left: 25px;
+    height: 20px;
+}
+.bookImage{
+	border: 1px solid #DDDDDD;
+    max-width: 160px;
+    padding: 2px;
+}

@@ -1,0 +1,86 @@
+*{
+margin:0px auto;
+padding:0px;
+font-family:"ËÎÌו","Times New Roman", Times, serif;
+font-size:16px;
+margin:0 auto;
+background-repeat:no-repeat;
+}
+
+body{
+width:995px;
+height:575px;
+background-color:#fff3d2;
+}
+
+table{
+width:70%;
+}
+
+td{
+height:50px;
+padding-top:2px;
+}
+
+#top{
+margin-left:47%;
+height:30px;
+font-size:20px;
+color:#590808;
+} 
+
+a{
+text-decoration:none;
+}
+
+.td2{
+border-top:dashed 2px #d8cfb8;
+}
+
+.td2,.td3 , .td4{
+vertical-align:middle;
+border-bottom:dashed 2px #d8cfb8;
+padding-left:25%;
+}
+
+.td4{
+padding-left:48%;
+}
+
+#tu{
+background-color:#FFFFFF;
+width:176px;
+height:150px; 
+margin:0 auto;
+border-radius:12px;
+display:block;
+}
+
+#shangchuan{
+display:none;
+text-align:center;
+width:176px;
+height:150px; 
+}
+.anniu{
+margin-left:20px;
+background-color:#d8be98;
+border:dashed 1px #d8be98;
+}
+img{
+border-radius:12px;
+width:176px;
+height:150px; 
+}
+
+span #xiugai{
+width:35px;
+display:block;
+}
+
+#xiugai{
+cursor:pointer;
+}
+#msure{
+display:none;
+}

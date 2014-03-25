@@ -1,0 +1,98 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	margin:0;
+	padding:0;
+}
+.form1 ul{
+	margin:50px 0 0 80px;
+}
+.form1 .reg-header{
+	margin-left:530px;
+	height:50px;
+	font-size:36px;
+}
+.form1 li.field {
+    height: 46px;
+    padding: 10px 2px 2px;
+	margin: 0 0 0 200px;
+}
+.form1 li.field font{
+   font-size: 14px;
+}
+.form1 li.field label {
+    float: left;
+    font-size: 14px;
+    height: 26px;
+    line-height: 26px;
+    text-align: right;
+    width: 98px;
+}
+
+li{
+	list-style: none outside none;
+	 width: 550px;
+}
+.form1 {
+    margin: 0 auto 20px;
+    padding: 10px 300px 0 0;
+	
+}
+.form1 .field-text {
+    border: 1px solid #DB9238;
+    font-size: 14px;
+    height: 30px;
+    margin: 0 5px;
+    padding: 2px;
+    width: 196px;
+	background: url("../../../audience/images/text-background.png") no-repeat scroll 0 0 white;
+}
+
+.form1 .input .field-span {
+	display:inline-block;
+    border: 1px solid #DB9238;
+    font-size: 14px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 2px;
+    width: 186px;
+	
+}
+
+.form1 .high {
+    color: #FF0000;
+   
+}
+.form1 li.hover {
+    background-color: #FCEFE3;
+}
+
+.form1 .submit-field {
+	height: 46px;
+    margin: 0 0 0 255px;
+    
+}
+li.submit-field .input {
+    margin-left: 90px;
+}
+.form1 .submit-field .submit-btn{
+	 background-image: url("../../../audience/images/save_button.png");
+    border: 0 none;
+	 width:82px;
+	 height:30px;
+    cursor: pointer;
+    margin-top: 13px;
+    text-indent: -23556px;
+}
+
+.onError {
+    background: url("../../../audience/images/reg3.gif") no-repeat scroll 0 center #FFE0E9;
+    font-size: 14px;
+    padding-left: 25px;
+}
+.onSuccess {
+    background: url("../../../audience/images/reg4.gif") no-repeat scroll 0 center #E9FBEB;
+   font-size: 14px;
+    padding-left: 25px;
+}

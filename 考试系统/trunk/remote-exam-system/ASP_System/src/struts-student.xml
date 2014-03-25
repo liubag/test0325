@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="Struts2_student" extends="struts-default"> 						
+		<action name="userLogin" class="studentAction" method="login">
+			<result name="success" type="chain">showExam</result>
+			<result name="input">login.jsp</result>
+		</action>
+		<action name="studentChangePassword" class="studentAction" method="changePassword">
+			<result name="success" type="chain">studentLogout</result>
+			<result name="fail">/public/error.jsp</result>
+		</action>
+		<action name="studentLogout" class="studentAction" method="logout">
+			<result name="success">/login.jsp</result>
+			<result name="success1">/public/success.jsp</result>	
+		</action>
+		
+		<action name="showStudent_by_page" class="studentAction" method="showStudent_by_page">
+			<result name="success">/admin/admin_studentManager.jsp</result>
+			<result name="input">/public/error.jsp</result>
+		</action>
+		
+		<action name="addStudent" class="studentAction" method="addStudent">
+			<result name="success" type="chain">showStudent_by_page</result>
+			<result name="input">/public/error.jsp</result>
+		</action>
+		
+		<action name="delStudent" class="studentAction" method="delStudent">
+			<result name="success" type="chain">showStudent_by_page</result>
+			<result name="input">/public/error.jsp</result>
+		</action>
+		
+		<action name="deletStudentBatch" class="studentAction" method="deletStudentBatch">
+			<result name="success" type="chain">showStudent_by_page</result>
+			<result name="input">/public/error.jsp</result>
+		</action>
+		
+		<action name="findStudentById" class="studentAction" method="findStudentById">
+			
+		</action>
+	</package> 
+	
+</struts>

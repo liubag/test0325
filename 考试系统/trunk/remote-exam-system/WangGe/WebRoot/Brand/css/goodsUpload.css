@@ -1,0 +1,99 @@
+/* CSS Document */
+
+*{
+margin:0px auto;
+padding:0px;
+font-family:"ËÎÌו","Times New Roman", Times, serif;
+font-size:14px;
+}
+
+body{
+width:980px;
+height:575px;
+background-color:#fff3d2;
+}
+
+table{
+width:100%;
+}
+
+td{
+
+padding-top:2px;
+border-top:dashed 2px #d8cfb8;
+}
+
+
+td a{
+text-decoration:none;
+}
+
+.td5{
+height:30px;
+width:475px;
+font-size:15px;
+text-align:right;
+padding-top:8px;
+}
+
+.td6{
+height:30px;
+width:475px;
+padding-top:8px;
+text-align:left;
+font-size:15px;
+}
+
+
+.td8{
+padding-left:18%;
+}
+
+#text{
+width:100%;
+}
+
+.input1{
+height:24px;
+padding-top:6px;
+font-size:15px;
+text-align:left;
+float:left;
+}
+
+.anniu{
+background-color:#d8be98;
+border:dashed 1px #d8be98;
+}
+
+.select1{
+float:left;
+}
+
+
+.high{
+float:left;
+color:#FF0000;
+}
+
+.onError{
+float:left;
+font-size:17px;
+background:#FFE0E9 url(../pic/reg3.gif) no-repeat 0 center;
+padding-left:25px;
+}
+
+.onSuccess{
+float:left;
+font-size:17px;
+background:#E9FBEB url(../pic/reg4.gif) no-repeat 0 center;
+padding-left:25px;
+}
+
+.pstrength-minchar .pstrength-info{
+clear:right;
+}
+
+#editor{
+padding:0xp;
+}

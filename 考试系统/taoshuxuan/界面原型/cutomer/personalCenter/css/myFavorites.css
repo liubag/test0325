@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* CSS Document */
+
+.temp_navi {
+    height: 25px;   
+}
+.temp_navi_title {
+	float:left;
+}
+.temp_navi_search{
+	float:right;
+}
+.mydd_temp_title{
+	height: 20px;  
+	}
+.mydd_temp_nav{
+	float:left;
+}
+.mydd_temp_paixu{
+	float:right;
+}
+.mydnew_break {
+    background-color: #FFFFFF;
+    line-height: 18px;
+    padding: 12px 0 11px;
+    width: 960px;
+}
+.select{
+	color: rgb(64, 64, 64);
+}
+.mydd_temp_choose button {
+    background: url("../images/newbtn_bg.gif") no-repeat scroll 0 -40px transparent;
+    border: 0 none;
+    float: right;
+    height: 21px;
+    line-height: 22px;
+    margin: 7px 10px 0 0;
+    overflow: hidden;
+    width: 64px;
+}
+td{
+	padding-right:20px;
+}
+.row02 img{
+	width:60px;
+	height:60px;
+	border: 1px solid #CCCCCC;
+}
+.mydd_temp_choose{
+	height:33px;
+	background: none repeat scroll 0 0 #F9F9F9;
+}
+.temp_check{
+	float:left;
+	margin-top:10px;
+}
+.temp_choose{
+	float:right;}
+.mydd_temp_list span{
+	display:block;	
+}
+td .row05,.discount{
+	width:100px;
+	display:block;
+}

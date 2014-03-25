@@ -1,0 +1,50 @@
+/* CSS Document */
+
+*{
+margin:0px auto;
+border:0px;
+padding:0px;
+font-family:"ËÎÌו","Times New Roman", Times, serif;
+font-size:14px;
+}
+
+body{
+width:995px;
+height:575px;
+background-color:#fff3d2;
+}
+
+table{
+width:100%;
+}
+
+td{
+height:33px;
+padding-top:5px;
+font-size:16px;
+border-top:dashed 2px #d8cfb8;
+vertical-align:middle;
+}
+
+td a{
+text-decoration:none;
+}
+
+#top{
+margin-left:47%;
+height:30px;
+font-size:20px;
+color:#590808;
+}
+
+.td5{
+text-align:right;
+}
+
+.td6{
+text-align:left;
+}
+
+.even{
+background-color:#f3e7c6;
+}

@@ -1,0 +1,17 @@
+.table
+{
+	border:0;
+}
+.table_td_11,.table_td_12,.table_td_21,.table_td_22
+{
+  width:auto;
+  border:solid 1px;
+}
+.table_td_11,.table_td_21
+{
+  text-align:right;
+}
+.table_td_12,.table_td_22
+{
+  text-align:left; 
+}

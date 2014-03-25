@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="struts-book" extends="struts-default"> 
+		<!-- 分页显示图书信息 -->
+		<action name="showBook_by_page" class="bookAction" method="showBook_by_page">
+			<result name="success">/admin/showBook.jsp</result>	
+			<result name="input">/admin/fail.jsp</result>		
+		</action>
+		
+		<!-- 查找图书库存 -->
+		<action name="findBookInventory" class="bookAction" method="findBookInventory">		
+		</action>
+		
+		<!-- 上传图片 -->
+		<action name="uploadFile" class="uploadUtilAction" method="uploadFile">		
+		</action>
+		
+		<!-- 上传图书 -->
+		<action name="addBook" class="bookAction" method="addBook">
+			<result name="success" type="chain">showBook_by_page</result>	
+			<result name="input">/admin/fail.jsp</result>		
+		</action>
+		
+		<!-- 打折 -->
+		<action name="changeBookDiscount" class="bookAction" method="changeBookDiscount">		
+		</action>
+		
+		<!-- 添加库存 -->
+		<action name="changeBookStorage_num" class="bookAction" method="changeBookStorage_num">		
+		</action>
+		
+		<!-- 获取图书 -->
+		<action name="gainBook" class="bookAction" method="gainBook">		
+			<result name="success">showOrModifyBook.jsp</result>	
+			<result name="input">/admin/fail.jsp</result>	
+		</action>
+		
+		<!-- 显示图书 -->
+		<action name="showbook" class="bookAction" method="gainBook">		
+			<result name="success">/goods.jsp</result>	
+			<result name="input">/admin/fail.jsp</result>	
+		</action>
+		
+		<!-- 修改图书 -->
+		<action name="updateBook" class="bookAction" method="updateBook">		
+			<result name="success" type="chain">showBook_by_page</result>		
+			<result name="input">/admin/fail.jsp</result>	
+		</action>
+	</package> 
+</struts>
